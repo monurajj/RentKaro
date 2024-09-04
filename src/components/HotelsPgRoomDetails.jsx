@@ -1,0 +1,140 @@
+import React, { useState } from 'react';
+import data from '../../data.json';
+
+const HotelsPgRoomDetails = () => {
+  return (
+    <div className="min-h-screen p-8 flex flex-col items-center">
+      {data.map((item, index) => {
+        if (item.id && item.id.startsWith("Rooms")) {
+          return (
+            <div
+              key={index}
+              className="bg-white shadow-lg border border-gray-300 rounded-lg p-6 flex flex-col md:flex-row w-full max-w-7xl mb-8"
+            >
+              {/* Image Slideshow */}
+              <div className="md:w-1/4 w-full">
+                <ImageSlideshow images={Object.values(item.Images)} />
+              </div>
+
+              {/* Name and Basic Details */}
+              <div className="md:w-1/4 w-full md:pl-6 mb-4 md:mb-0">
+                <h2 className="text-2xl font-bold text-green-600 mb-2">
+                  {item.Name}
+                </h2>
+                <p className="text-gray-700 mb-2">
+                  <strong>Type:</strong> {item.Type}
+                </p>
+                <p className="text-gray-700 mb-2">
+                  <strong>Location:</strong> {item.State}, {item.Address}
+                </p>
+                <div className="flex items-center mb-2">
+                  <span className="text-yellow-500 text-lg">★</span>
+                  <p className="ml-2 text-gray-600">
+                    {item.Rating} ({item.TotalRating} ratings) - {item.Review}
+                  </p>
+                </div>
+                <p className="text-gray-800 text-xl font-semibold mb-2">
+                  ₹{item.ActualPrice} <span className="text-sm">/ per month</span>
+                </p>
+                <p className="text-red-500 mb-4">
+                  {item.TotalDiscount}% off (Original Price: ₹{item.TotalPrice})
+                </p>
+                {/* <p className="text-gray-700 mb-4">
+                  {item.Description}
+                </p> */}
+
+                {/* Buttons */}
+                {/* Buttons */}
+                <div className="flex space-x-4 mt-4">
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    View Details
+                  </button>
+                  <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                    Book Now
+                  </button>
+                </div>
+
+              </div>
+
+              {/* Facilities */}
+              <div className="md:w-1/4 w-full md:pl-6 mb-4 md:mb-0">
+                <h3 className="text-xl font-semibold text-blue-600 mb-2">Facilities</h3>
+                <ul className="list-disc list-inside text-gray-700">
+                  <li>Floor No: {item.Facilities.FloorNo}</li>
+                  <li>Attached Bathroom: {item.Facilities.AttachedBathroom}</li>
+                  {/* <li>Last Payment Date: {item.Facilities.LastPaymentDate}</li> */}
+                  <li>Security Charges: {item.Facilities.SecurityCharges}</li>
+                  <li>Room Size: {item.Facilities.RoomSize}</li>
+                  {/* <li>Furnishing: {item.Facilities.Furnishing}</li> */}
+                  <li>Balcony: {item.Facilities.Balcony}</li>
+                  {/* <li>Kitchen Access: {item.Facilities.KitchenAccess}</li> */}
+                  {/* <li>Laundry Facilities: {item.Facilities.LaundryFacilities}</li> */}
+                  <li>Parking: {item.Facilities.Parking}</li>
+                  {/* <li>Power Backup: {item.Facilities.PowerBackup}</li> */}
+                </ul>
+              </div>
+
+              {/* Other Facilities */}
+              <div className="md:w-1/4 w-full md:pl-6 mb-4 md:mb-0">
+                <h3 className="text-xl font-semibold text-blue-600 mb-2">Other Facilities</h3>
+                <ul className="list-disc list-inside text-gray-700">
+                  {item.OtherFacilities?.AC && <li>AC: {item.OtherFacilities.AC}</li>}
+                  {item.OtherFacilities?.FreeWifi && <li>Free Wifi: {item.OtherFacilities.FreeWifi}</li>}
+                  {item.OtherFacilities?.TV && <li>TV: {item.OtherFacilities.TV}</li>}
+                  {item.OtherFacilities?.Elevator && <li>Elevator: {item.OtherFacilities.Elevator}</li>}
+                  {item.OtherFacilities?.WorkingSpace && <li>Working Space: {item.OtherFacilities.WorkingSpace}</li>}
+                  {/* {item.OtherFacilities?.Gym && <li>Gym: {item.OtherFacilities.Gym}</li>}
+                  {item.OtherFacilities?.GameRoom && <li>Game Room: {item.OtherFacilities.GameRoom}</li>}
+                  {item.OtherFacilities?.Cafeteria && <li>Cafeteria: {item.OtherFacilities.Cafeteria}</li>}
+                  {item.OtherFacilities?.Terrace && <li>Terrace: {item.OtherFacilities.Terrace}</li>} */}
+                </ul>
+              </div>
+
+            </div>
+          );
+        }
+        return null;
+      })}
+    </div>
+  );
+};
+
+const ImageSlideshow = ({ images }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  return (
+    <div className="relative">
+      <img
+        src={images[currentImageIndex]}
+        alt="Room"
+        className="w-full h-48 object-cover rounded-lg mb-4"
+      />
+      {/* Previous Button */}
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 transform -translate-y-1/2 left-2 text-white bg-gray-800 bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
+      >
+        ❮
+      </button>
+      {/* Next Button */}
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 transform -translate-y-1/2 right-2 text-white bg-gray-800 bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
+      >
+        ❯
+      </button>
+    </div>
+  );
+};
+
+export default HotelsPgRoomDetails;
