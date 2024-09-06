@@ -55,7 +55,7 @@ const Modal = ({ isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className="absolute fixed right-0 inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-end z-40 "
+          className="absolute fixed right-0 inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-end z-40 rounded-tl-[8rem] border border-4 rounded"
           onClick={handleOverlayClick}
         >
           <div

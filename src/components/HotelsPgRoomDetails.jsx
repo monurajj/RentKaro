@@ -1,7 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import data from '../../data.json';
 
 const HotelsPgRoomDetails = () => {
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchRooms = async () => {
+  //     try {
+  //       const response = await fetch('http://localhost:5001/jai/rooms');
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       const result = await response.json();
+  //       setData(result);
+  //     } catch (error) {
+  //       setError(error.message);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchRooms();
+  // }, []);
+
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error}</div>;
+
+
+console.log(data,"daatatsjdfgs")
+
+
   return (
     <div className="min-h-screen p-8 flex flex-col items-center">
       {data.map((item, index) => {
@@ -44,12 +74,11 @@ const HotelsPgRoomDetails = () => {
                 </p> */}
 
                 {/* Buttons */}
-                {/* Buttons */}
                 <div className="flex space-x-4 mt-4">
-                  <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                  <button className="btn-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                     View Details
                   </button>
-                  <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                  <button className="btn-11 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
                     Book Now
                   </button>
                 </div>
