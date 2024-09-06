@@ -8,6 +8,112 @@
       "Image04": "https://i.ibb.co/tQ7kqWn/roomrent03.webp"
     }
   },
+  {
+    "id": "AboutpageImage",
+    "Images": {
+      "Image01": "https://i.ibb.co/W2wTC0X/aboutus01.jpg",
+      "Image02": "https://i.ibb.co/85pspy8/aboutus02.jpg",
+      "Image03": "https://i.ibb.co/C2YqKhk/aboutus03.jpg",
+      "Image04": "https://i.ibb.co/CwtxGMH/aboutus04.jpg",
+      "Image05": "https://i.ibb.co/dcW3rB5/aboutus05.jpg"
+    }
+  },
+    {
+      "id": "Rooms01",
+      "Name": "Urban Oasis Hostel",
+      "Type": "Hostels",
+      "State": "Bangalore",
+      "City": "Bangalore",
+      "RoomType": "Solo, Couples, Groups",
+      "Occupancy": "3",
+      "Gender": "All",
+      "Address": "Tech Park Road, Whitefield",
+      "Landmark": "Near Whitefield Metro Station",
+      "Rating": "4.6",
+      "TotalRating": "1.2k",
+      "Review": "Excellent",
+      "TotalPrice": "4000",
+      "TotalDiscount": "20",
+      "ActualPrice": "3200",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-10-01",
+      "MinimumStay": "1 month",
+      "Description": "Modern hostel with a vibrant community, perfect for digital nomads and young professionals.",
+      "OwnerContacts": "9876543210",
+      "OwnerName": "Rahul Sharma",
+      "Facilities": {
+        "FloorNo": "04",
+        "TotalFloors": "6",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-05 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "150 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Shared",
+        "LaundryFacilities": "Available",
+        "Parking": "Bike parking available",
+        "PowerBackup": "24/7"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required before check-out",
+        "GuestPolicy": "No overnight guests allowed",
+        "PetPolicy": "No pets allowed",
+        "SmokingPolicy": "No smoking inside the building",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in",
+        "RentKroSupportTeam": "Available 24/7 for any queries or assistance"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "In common area",
+        "Elevator": "Yes",
+        "WorkingSpace": "Dedicated co-working area",
+        "Gym": "Basic fitness equipment available",
+        "GameRoom": "Table tennis and board games",
+        "Cafeteria": "Open from 7 AM to 10 PM",
+        "Terrace": "Rooftop garden with seating area"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 500m",
+        "Supermarket": "2 minute walk",
+        "PublicTransport": "Metro station at 5 minute walk",
+        "Hospital": "Multi-specialty hospital within 2 km",
+        "Bank/ATM": "ATM in the building"
+      },
+      "Images": {
+        "Link01":"https://i.ibb.co/f0mHNGJ/Taj-Hotels01.jpg",
+        "Link02":"https://i.ibb.co/bzxDVDH/Taj-Hotel02.jpg",
+        "Link03":"https://i.ibb.co/1vDkLdR/Taj-hotels03.jpg"
+      },
+      "VirtualTour": "https://virtualtour.urbanoasishostel.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays over 3 months",
+        "EarlyBirdDiscount": "5% off for bookings made 2 months in advance"
+      },
+      "Reviews": [
+        {
+          "UserName": "John D.",
+          "Rating": 5,
+          "Comment": "Great location and friendly staff. The co-working space was a big plus!",
+          "Date": "2024-08-15"
+        },
+        {
+          "UserName": "Priya S.",
+          "Rating": 4,
+          "Comment": "Clean rooms and good amenities. Wish the kitchen was a bit larger.",
+          "Date": "2024-07-22"
+        }
+      ]
+    },
+
+
+
+
     {
       "id": "Rooms04",
       "Name": "Urban Oasis Hostel",
@@ -193,95 +299,264 @@
       ]
     },
     {
-      "id": "Rooms04",
-      "Name": "Urban Oasis Hostel",
-      "Type": "Hostels",
-      "State": "Bangalore",
-      "City": "Bangalore",
-      "RoomType": "Solo, Couples, Groups",
-      "Occupancy": "3",
-      "Gender": "All",
-      "Address": "Tech Park Road, Whitefield",
-      "Landmark": "Near Whitefield Metro Station",
-      "Rating": "4.6",
-      "TotalRating": "1.2k",
-      "Review": "Excellent",
-      "TotalPrice": "4000",
-      "TotalDiscount": "20",
-      "ActualPrice": "3200",
+      "id": "Rooms05",
+      "Name": "Green Meadows PG",
+      "Type": "PG",
+      "State": "Mumbai",
+      "City": "Mumbai",
+      "RoomType": "Solo, Sharing",
+      "Occupancy": "2",
+      "Gender": "Female",
+      "Address": "Palm Beach Road, Navi Mumbai",
+      "Landmark": "Opposite Palm Beach Mall",
+      "Rating": "4.2",
+      "TotalRating": "900",
+      "Review": "Very Good",
+      "TotalPrice": "5000",
+      "TotalDiscount": "10",
+      "ActualPrice": "4500",
       "Availability": "Yes",
-      "AvailableFrom": "2024-10-01",
-      "MinimumStay": "1 month",
-      "Description": "Modern hostel with a vibrant community, perfect for digital nomads and young professionals.",
-      "OwnerContacts": "9876543210",
-      "OwnerName": "Rahul Sharma",
+      "AvailableFrom": "2024-09-15",
+      "MinimumStay": "2 months",
+      "Description": "Comfortable PG for working women with easy access to transportation and amenities.",
+      "OwnerContacts": "9876543111",
+      "OwnerName": "Seema Verma",
       "Facilities": {
-        "FloorNo": "04",
-        "TotalFloors": "6",
+        "FloorNo": "02",
+        "TotalFloors": "5",
+        "AttachedBathroom": "No",
+        "LastPaymentDate": "05-10 of each month",
+        "SecurityCharges": "Half Month Payment in Advance",
+        "RoomSize": "120 sq ft",
+        "Furnishing": "Semi Furnished",
+        "Balcony": "No",
+        "KitchenAccess": "Available",
+        "LaundryFacilities": "Available",
+        "Parking": "Car parking available",
+        "PowerBackup": "Partial"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Visitors allowed until 8 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "Allowed on balcony",
+        "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "Personal",
+        "Elevator": "Yes",
+        "WorkingSpace": "No",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 300m",
+        "Supermarket": "Next door",
+        "PublicTransport": "Bus stop at 2 minute walk",
+        "Hospital": "1 km away",
+        "Bank/ATM": "500m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/sRXFv7c/pg01.jpg",
+        "Link02": "https://i.ibb.co/yd1DkZh/pg02.jpg",
+        "Link03": "https://i.ibb.co/ScM9f5T/pg03.jpg"
+      },
+      "VirtualTour": "https://virtualtour.greenmeadows.com",
+      "BookingOptions": {
+        "InstantBook": false,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "15% off for stays over 6 months",
+        "EarlyBirdDiscount": "No"
+      },
+      "Reviews": [
+        {
+          "UserName": "Aisha M.",
+          "Rating": 4,
+          "Comment": "Affordable and clean, but the Wi-Fi can be slow.",
+          "Date": "2024-06-10"
+        }
+      ]
+    },
+    {
+      "id": "Rooms06",
+      "Name": "Blue Sky Co-Living",
+      "Type": "Co-Living",
+      "State": "Delhi",
+      "City": "New Delhi",
+      "RoomType": "Solo, Shared",
+      "Occupancy": "4",
+      "Gender": "All",
+      "Address": "Connaught Place",
+      "Landmark": "Near Rajiv Chowk Metro Station",
+      "Rating": "4.8",
+      "TotalRating": "1.5k",
+      "Review": "Excellent",
+      "TotalPrice": "6000",
+      "TotalDiscount": "25",
+      "ActualPrice": "4500",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-25",
+      "MinimumStay": "1 month",
+      "Description": "Premium co-living space for professionals, offering luxury and convenience in the heart of Delhi.",
+      "OwnerContacts": "9812345678",
+      "OwnerName": "Nikhil Gupta",
+      "Facilities": {
+        "FloorNo": "06",
+        "TotalFloors": "10",
         "AttachedBathroom": "Yes",
-        "LastPaymentDate": "01-05 of each month",
-        "SecurityCharges": "One Month Payment in Advance",
-        "RoomSize": "150 sq ft",
+        "LastPaymentDate": "03-07 of each month",
+        "SecurityCharges": "Two Month Payment in Advance",
+        "RoomSize": "180 sq ft",
         "Furnishing": "Fully Furnished",
         "Balcony": "Yes",
-        "KitchenAccess": "Shared",
-        "LaundryFacilities": "Available",
-        "Parking": "Bike parking available",
+        "KitchenAccess": "Fully equipped",
+        "LaundryFacilities": "Yes",
+        "Parking": "Bike & Car parking available",
         "PowerBackup": "24/7"
       },
       "Policies": {
-        "RoomLeavingCriteria": "One month notice required before check-out",
-        "GuestPolicy": "No overnight guests allowed",
-        "PetPolicy": "No pets allowed",
-        "SmokingPolicy": "No smoking inside the building",
-        "CancellationPolicy": "Free cancellation up to 7 days before check-in",
-        "RentKroSupportTeam": "Available 24/7 for any queries or assistance"
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Overnight guests allowed with prior notice",
+        "PetPolicy": "Pets allowed",
+        "SmokingPolicy": "Designated areas only",
+        "CancellationPolicy": "Free cancellation up to 3 days before check-in"
       },
       "OtherFacilities": {
         "AC": "Yes",
         "FreeWifi": "Yes",
-        "TV": "In common area",
+        "TV": "In-room TV",
         "Elevator": "Yes",
         "WorkingSpace": "Dedicated co-working area",
-        "Gym": "Basic fitness equipment available",
-        "GameRoom": "Table tennis and board games",
-        "Cafeteria": "Open from 7 AM to 10 PM",
-        "Terrace": "Rooftop garden with seating area"
+        "Gym": "Fully equipped gym",
+        "GameRoom": "Available",
+        "Cafeteria": "Open 24/7",
+        "Terrace": "Panoramic city view"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 100m",
+        "Supermarket": "5 minute walk",
+        "PublicTransport": "Metro station within 5 minutes",
+        "Hospital": "Multi-specialty hospital within 1 km",
+        "Bank/ATM": "ATM within building"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/RnYfy56/coliving01.jpg",
+        "Link02": "https://i.ibb.co/SxNvm29/coliving02.jpg",
+        "Link03": "https://i.ibb.co/cJxF9Md/coliving03.jpg"
+      },
+      "VirtualTour": "https://virtualtour.blueskycoliving.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays over 2 months",
+        "EarlyBirdDiscount": "10% off for bookings made 1 month in advance"
+      },
+      "Reviews": [
+        {
+          "UserName": "Raj S.",
+          "Rating": 5,
+          "Comment": "Fantastic place! Everything you need in a co-living space.",
+          "Date": "2024-07-14"
+        },
+        {
+          "UserName": "Megha T.",
+          "Rating": 4,
+          "Comment": "Loved the location, but the gym needs more equipment.",
+          "Date": "2024-08-01"
+        }
+      ]
+    },
+    {
+      "id": "Rooms07",
+      "Name": "Sunny Days PG",
+      "Type": "PG",
+      "State": "Pune",
+      "City": "Pune",
+      "RoomType": "Solo",
+      "Occupancy": "1",
+      "Gender": "Male",
+      "Address": "Baner Road",
+      "Landmark": "Near D-Mart",
+      "Rating": "4.1",
+      "TotalRating": "700",
+      "Review": "Good",
+      "TotalPrice": "3500",
+      "TotalDiscount": "5",
+      "ActualPrice": "3325",
+      "Availability": "No",
+      "AvailableFrom": "2024-11-01",
+      "MinimumStay": "3 months",
+      "Description": "A peaceful and affordable PG accommodation for students and professionals.",
+      "OwnerContacts": "9823456789",
+      "OwnerName": "Akash Patil",
+      "Facilities": {
+        "FloorNo": "03",
+        "TotalFloors": "4",
+        "AttachedBathroom": "No",
+        "LastPaymentDate": "04-08 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "100 sq ft",
+        "Furnishing": "Unfurnished",
+        "Balcony": "No",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "No",
+        "Parking": "No parking available",
+        "PowerBackup": "No"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Two weeks notice required",
+        "GuestPolicy": "Guests allowed until 7 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking",
+        "CancellationPolicy": "Free cancellation up to 10 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "No",
+        "TV": "No",
+        "Elevator": "No",
+        "WorkingSpace": "No",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "No"
       },
       "NearbyAmenities": {
         "Restaurants": "Within 500m",
-        "Supermarket": "2 minute walk",
-        "PublicTransport": "Metro station at 5 minute walk",
-        "Hospital": "Multi-specialty hospital within 2 km",
-        "Bank/ATM": "ATM in the building"
+        "Supermarket": "D-Mart next door",
+        "PublicTransport": "Bus stop 3 minutes away",
+        "Hospital": "500m away",
+        "Bank/ATM": "200m away"
       },
       "Images": {
-        "Link01":"https://i.ibb.co/f0mHNGJ/Taj-Hotels01.jpg",
-        "Link02":"https://i.ibb.co/bzxDVDH/Taj-Hotel02.jpg",
-        "Link03":"https://i.ibb.co/1vDkLdR/Taj-hotels03.jpg"
+        "Link01": "https://i.ibb.co/kxYwsWr/pg04.jpg",
+        "Link02": "https://i.ibb.co/WGDKwTf/pg05.jpg"
       },
-      "VirtualTour": "https://virtualtour.urbanoasishostel.com",
+      "VirtualTour": "https://virtualtour.sunnydayspg.com",
       "BookingOptions": {
-        "InstantBook": true,
+        "InstantBook": false,
         "RequestToBook": true
       },
       "SpecialOffers": {
-        "LongTermDiscount": "10% off for stays over 3 months",
+        "LongTermDiscount": "No",
         "EarlyBirdDiscount": "5% off for bookings made 2 months in advance"
       },
       "Reviews": [
         {
-          "UserName": "John D.",
-          "Rating": 5,
-          "Comment": "Great location and friendly staff. The co-working space was a big plus!",
-          "Date": "2024-08-15"
-        },
-        {
-          "UserName": "Priya S.",
+          "UserName": "Rohit K.",
           "Rating": 4,
-          "Comment": "Clean rooms and good amenities. Wish the kitchen was a bit larger.",
-          "Date": "2024-07-22"
+          "Comment": "Affordable, but basic facilities.",
+          "Date": "2024-05-18"
         }
       ]
     }
+  
 ]
