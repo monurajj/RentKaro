@@ -10,13 +10,14 @@ import {
   Info,
   Hotel,
   Bed,
+  ChevronRight
 } from "lucide-react";
 import { FaUserCircle } from "react-icons/fa";
+import { div } from "framer-motion/client";
 
 const Modal = ({ isOpen, onClose }) => {
   const [isDesktopView, setIsDesktopView] = useState(false);
 
-  // Check if the view is desktop or not
   useEffect(() => {
     const checkIsDesktopView = () => {
       setIsDesktopView(window.innerWidth >= 768);
@@ -29,7 +30,7 @@ const Modal = ({ isOpen, onClose }) => {
   }, []);
 
   if (!isDesktopView || !isOpen) {
-    return null; // Don't render the modal if not in desktop view or if not open
+    return null;
   }
 
   const menuItems = [
@@ -52,50 +53,63 @@ const Modal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <>
-      {isOpen && (
-        <div
-          className="absolute fixed right-0 inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-end z-40 rounded-tl-[8rem] border border-4 rounded"
-          onClick={handleOverlayClick}
-        >
-          <div
-            className={`bg-white h-full shadow-lg transform transition-transform duration-300 ease-in-out rounded-tl-[2rem] rounded-bl-[2rem] ${
-              isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          >
-            <div className="flex gap-4 justify-between items-center p-4 bg-gradient-to-r from-blue-600 to-green-400 rounded-tl-[8rem]">
-              <FaUserCircle className="text-white text-2xl" />
-              <p className="text-2xl font- text-white">Sign In</p>
-              <p className="text-2xl font- text-white">Register</p>
+    <div className="">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-end z-50 transition-opacity duration-300"
+      onClick={handleOverlayClick}
+    >
+      <div
+        className={`bg-white h-full w-96 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full">
+          <div className="bg-gradient-to-r from-blue-600 to-green-400 p-6 text-white">
+            
+            <div className="flex items-center space-x-4">
+              <FaUserCircle className="text-4xl" />
+              <div>
+                <button className="font-semibold hover:underline">Sign In</button>
+                <span className="mx-2">|</span>
+                <button className="font-semibold hover:underline">Register</button>
+              </div>
+              <div className="flex justify-between items-center">
+
               <button
                 onClick={onClose}
                 className="text-white hover:text-gray-200 transition-colors duration-150"
               >
-                <X size={28} />
+                <X size={24} />
               </button>
             </div>
-            <nav className="p-6 overflow-y-auto h-screen">
-              {menuItems.map((item, index) => (
-                <React.Fragment key={index}>
-                  <button className="w-full flex items-center text-left py-4 px-6 mb-4 mt-4 text-gray-700 gap-4 hover:bg-gradient-to-r hover:from-blue-100 hover:to-green-100 hover:text-blue-600 rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 group">
-                    <item.icon
-                      className="text-gray-400 group-hover:text-blue-500 transition duration-150 ease-in-out"
-                      size={20}
-                    />
-                    <span className="font-medium group-hover:font-bold transition duration-150 ease-in-out">
-                      {item.name}
-                    </span>
-                  </button>
-                  {index !== menuItems.length - 1 && (
-                    <hr className="my-4 border-gray-200" />
-                  )}
-                </React.Fragment>
-              ))}
-            </nav>
+            </div>
+          </div>
+          <nav className="flex-grow overflow-y-auto p-4">
+            {menuItems.map((item, index) => (
+              <button
+                key={index}
+                className="w-full flex items-center justify-between text-left py-4 px-4 mb-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 group"
+              >
+                <div className="flex items-center">
+                  <item.icon
+                    className="text-gray-400 group-hover:text-blue-500 transition duration-150 ease-in-out mr-4"
+                    size={20}
+                  />
+                  <span className="font-medium group-hover:font-semibold transition duration-150 ease-in-out">
+                    {item.name}
+                  </span>
+                </div>
+                <ChevronRight className="text-gray-400 group-hover:text-blue-500 transition duration-150 ease-in-out" size={16} />
+              </button>
+            ))}
+          </nav>
+          <div className="p-4 bg-gray-100">
+            <p className="text-sm text-gray-500 text-center">© 2024 Your Company. All rights reserved.</p>
           </div>
         </div>
-      )}
-    </>
+      </div>
+    </div>
+    </div>
   );
 };
 

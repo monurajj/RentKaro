@@ -3,9 +3,14 @@ import { Search, Users, Shield, ThumbsUp, Smile } from "lucide-react";
 import { Home, ShieldCheck, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import SlideshowImage from "./slideshowImageAbout";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const AboutUs = () => {
+  const router = useRouter();
+
+  const handleClickGetStarted = () => {
+    router.push('/DashBoard/AllRooms');
+  };
   return (
     <div className="">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -197,48 +202,52 @@ const AboutUs = () => {
               step of the way.
             </p>
             </motion.div>
+
+            
             {/* Additional Icons with Emotional Appeal */}
-            <div className="mt-10 flex items-center justify-center space-x-4">
-              <div className="text-center">
-                <Home
-                  className="text-green-600 h-12 w-12 mx-auto"
-                  aria-hidden="true"
-                />
-                <p className="mt-2 text-lg font-medium text-gray-900">
-                  Find Your Space
-                </p>
-              </div>
+<div className="mt-10 flex items-center justify-center space-x-4">
+  <div className="text-center group">
+    <Home
+      className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:scale-125 group-hover:translate-y-1 duration-300 ease-in-out"
+      aria-hidden="true"
+    />
+    <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:scale-105 group-hover:translate-y-1 duration-300 ease-in-out">
+      Find Your Space
+    </p>
+  </div>
 
-              <div className="text-center">
-                <Users
-                  className="text-green-600 h-12 w-12 mx-auto"
-                  aria-hidden="true"
-                />
-                <p className="mt-2 text-lg font-medium text-gray-900">
-                  Join a Vibrant Community
-                </p>
-              </div>
+  <div className="text-center group">
+    <Users
+      className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:rotate-12 group-hover:scale-110 duration-300 ease-in-out"
+      aria-hidden="true"
+    />
+    <p className="mt-2 text-lg font-medium text-gray-900 transition-opacity duration-300 group-hover:opacity-75">
+      Join a Vibrant Community
+    </p>
+  </div>
 
-              <div className="text-center">
-                <ThumbsUp
-                  className="text-green-600 h-12 w-12 mx-auto"
-                  aria-hidden="true"
-                />
-                <p className="mt-2 text-lg font-medium text-gray-900">
-                  Reliable Support
-                </p>
-              </div>
-            </div>
+  <div className="text-center group">
+    <ThumbsUp
+      className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:skew-y-3 group-hover:scale-110 duration-300 ease-in-out"
+      aria-hidden="true"
+    />
+    <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:-translate-y-1 group-hover:scale-105 duration-300 ease-in-out">
+      Reliable Support
+    </p>
+  </div>
+</div>
+
           </motion.div>
 
           <div className="mt-10 flex justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="btn-1 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
-            >
-              Get Started
-            </motion.button>
-          </div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          className="btn-1 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
+          onClick={handleClickGetStarted}
+        >
+          Get Started
+        </motion.button>
+      </div>
         </motion.div>
       </div>
     </div>

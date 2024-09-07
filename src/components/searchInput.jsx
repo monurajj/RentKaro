@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaSearchLocation, FaFilter, FaMoneyBillWave, FaUsers, FaBed, FaHotel, FaHome } from 'react-icons/fa';
 import { MdNearMe } from 'react-icons/md';
 import { RiArrowDropDownLine } from 'react-icons/ri';
+import Filter from './FilterOptions'
 
 const FilterOption = ({ icon: Icon, label }) => (
   <button
@@ -46,7 +47,8 @@ const SearchInput = () => {
       </form>
 
       <div className="flex items-center gap-4">
-        <div className="flex items-center">
+        <Filter></Filter>
+        {/* <div className="flex items-center">
           <FaFilter className="text-green-600" />
           <h1 className="text-gray-700 font-semibold ml-2">Filter By</h1>
         </div>
@@ -57,7 +59,7 @@ const SearchInput = () => {
           <FilterOption icon={FaHotel} label="Hostels" />
           <FilterOption icon={FaBed} label="Rooms" />
           <FilterOption icon={FaHome} label="PG's" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

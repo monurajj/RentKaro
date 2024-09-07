@@ -1,37 +1,11 @@
-import React, { useState ,useEffect} from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
 import data from '../../data.json';
 
+
+
 const HotelsPgRoomDetails = () => {
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchRooms = async () => {
-  //     try {
-  //       const response = await fetch('http://localhost:5001/jai/rooms');
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       const result = await response.json();
-  //       setData(result);
-  //     } catch (error) {
-  //       setError(error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchRooms();
-  // }, []);
-
-  // if (loading) return <div>Loading...</div>;
-  // if (error) return <div>Error: {error}</div>;
-
-
-console.log(data,"daatatsjdfgs")
-
-
+  
   return (
     <div className="min-h-screen p-8 flex flex-col items-center">
       {data.map((item, index) => {
@@ -69,15 +43,18 @@ console.log(data,"daatatsjdfgs")
                 <p className="text-red-500 mb-4">
                   {item.TotalDiscount}% off (Original Price: ₹{item.TotalPrice})
                 </p>
-                {/* <p className="text-gray-700 mb-4">
+                {/* <p className="text-gray-700 mb-4 ">
                   {item.Description}
                 </p> */}
 
                 {/* Buttons */}
                 <div className="flex space-x-4 mt-4">
-                  <button className="btn-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                  
+                  <Link className="btn-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  href={`AllRooms/${item.id}`}>
                     View Details
-                  </button>
+                  </Link>
+
                   <button className="btn-11 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
                     Book Now
                   </button>
@@ -112,14 +89,11 @@ console.log(data,"daatatsjdfgs")
                   {item.OtherFacilities?.TV && <li>TV: {item.OtherFacilities.TV}</li>}
                   {item.OtherFacilities?.Elevator && <li>Elevator: {item.OtherFacilities.Elevator}</li>}
                   {item.OtherFacilities?.WorkingSpace && <li>Working Space: {item.OtherFacilities.WorkingSpace}</li>}
-                  {/* {item.OtherFacilities?.Gym && <li>Gym: {item.OtherFacilities.Gym}</li>}
-                  {item.OtherFacilities?.GameRoom && <li>Game Room: {item.OtherFacilities.GameRoom}</li>}
-                  {item.OtherFacilities?.Cafeteria && <li>Cafeteria: {item.OtherFacilities.Cafeteria}</li>}
-                  {item.OtherFacilities?.Terrace && <li>Terrace: {item.OtherFacilities.Terrace}</li>} */}
                 </ul>
               </div>
 
             </div>
+            
           );
         }
         return null;

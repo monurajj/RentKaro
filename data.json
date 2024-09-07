@@ -79,7 +79,7 @@
         "Supermarket": "2 minute walk",
         "PublicTransport": "Metro station at 5 minute walk",
         "Hospital": "Multi-specialty hospital within 2 km",
-        "Bank/ATM": "ATM in the building"
+        "BankATM": "ATM in the building"
       },
       "Images": {
         "Link01":"https://i.ibb.co/f0mHNGJ/Taj-Hotels01.jpg",
@@ -175,7 +175,7 @@
         "Supermarket": "2 minute walk",
         "PublicTransport": "Metro station at 5 minute walk",
         "Hospital": "Multi-specialty hospital within 2 km",
-        "Bank/ATM": "ATM in the building"
+        "BankATM": "ATM in the building"
       },
       "Images": {
         "Link01":"https://i.ibb.co/f0mHNGJ/Taj-Hotels01.jpg",
@@ -267,7 +267,7 @@
         "Supermarket": "2 minute walk",
         "PublicTransport": "Metro station at 5 minute walk",
         "Hospital": "Multi-specialty hospital within 2 km",
-        "Bank/ATM": "ATM in the building"
+        "BankATM": "ATM in the building"
       },
       "Images": {
         "Link01":"https://i.ibb.co/f0mHNGJ/Taj-Hotels01.jpg",
@@ -358,7 +358,7 @@
         "Supermarket": "Next door",
         "PublicTransport": "Bus stop at 2 minute walk",
         "Hospital": "1 km away",
-        "Bank/ATM": "500m away"
+        "BankATM": "500m away"
       },
       "Images": {
         "Link01": "https://i.ibb.co/sRXFv7c/pg01.jpg",
@@ -443,7 +443,7 @@
         "Supermarket": "5 minute walk",
         "PublicTransport": "Metro station within 5 minutes",
         "Hospital": "Multi-specialty hospital within 1 km",
-        "Bank/ATM": "ATM within building"
+        "BankATM": "ATM within building"
       },
       "Images": {
         "Link01": "https://i.ibb.co/RnYfy56/coliving01.jpg",
@@ -534,7 +534,7 @@
         "Supermarket": "D-Mart next door",
         "PublicTransport": "Bus stop 3 minutes away",
         "Hospital": "500m away",
-        "Bank/ATM": "200m away"
+        "BankATM": "200m away"
       },
       "Images": {
         "Link01": "https://i.ibb.co/kxYwsWr/pg04.jpg",
@@ -557,6 +557,176 @@
           "Date": "2024-05-18"
         }
       ]
+    },
+    {
+      "id": "Rooms08",
+      "Name": "Bright View PG",
+      "Type": "PG",
+      "State": "Bangalore",
+      "City": "Bangalore",
+      "RoomType": "Shared",
+      "Occupancy": "2",
+      "Gender": "Female",
+      "Address": "Koramangala 6th Block",
+      "Landmark": "Near Forum Mall",
+      "Rating": "4.5",
+      "TotalRating": "1200",
+      "Review": "Excellent",
+      "TotalPrice": "4000",
+      "TotalDiscount": "10",
+      "ActualPrice": "3600",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-10-15",
+      "MinimumStay": "6 months",
+      "Description": "Cozy and well-maintained PG ideal for working professionals and students.",
+      "OwnerContacts": "9901234567",
+      "OwnerName": "Priya Mehra",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "5",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "05-08 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "120 sq ft",
+        "Furnishing": "Semi-Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "Covered parking available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month's notice required",
+        "GuestPolicy": "Guests allowed until 9 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "Yes",
+        "GameRoom": "No",
+        "Cafeteria": "Yes",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 300m",
+        "Supermarket": "500m away",
+        "PublicTransport": "Metro station 5 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "200m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/album/image01.jpg",
+        "Link02": "https://i.ibb.co/album/image02.jpg"
+      },
+      "VirtualTour": "https://virtualtour.brightviewpg.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays longer than 12 months",
+        "EarlyBirdDiscount": "5% off for bookings made 1 month in advance"
+      },
+      "Reviews": [
+        {
+          "UserName": "Sonia R.",
+          "Rating": 5,
+          "Comment": "Lovely place with all necessary amenities.",
+          "Date": "2024-06-22"
+        }
+      ]
+    },
+    {
+      "id": "Rooms09",
+      "Name": "Green Meadow PG",
+      "Type": "PG",
+      "State": "Delhi",
+      "City": "New Delhi",
+      "RoomType": "Shared",
+      "Occupancy": "3",
+      "Gender": "Female",
+      "Address": "South Extension",
+      "Landmark": "Near South Ex Market",
+      "Rating": "4.3",
+      "TotalRating": "950",
+      "Review": "Very Good",
+      "TotalPrice": "5000",
+      "TotalDiscount": "15",
+      "ActualPrice": "4250",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-11-01",
+      "MinimumStay": "3 months",
+      "Description": "A spacious and well-ventilated PG with a friendly environment for students and working women.",
+      "OwnerContacts": "9876543210",
+      "OwnerName": "Neha Sharma",
+      "Facilities": {
+        "FloorNo": "01",
+        "TotalFloors": "4",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-09 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "150 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "Available for a small fee",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month's notice required",
+        "GuestPolicy": "Guests allowed until 8 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking",
+        "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "Yes",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 200m",
+        "Supermarket": "100m away",
+        "PublicTransport": "Metro station 5 minutes away",
+        "Hospital": "1.2km away",
+        "BankATM": "100m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/album/image03.jpg",
+        "Link02": "https://i.ibb.co/album/image04.jpg"
+      },
+      "VirtualTour": "https://virtualtour.greenmeadowpg.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "15% off for stays longer than 6 months",
+        "EarlyBirdDiscount": "10% off for bookings made 1 month in advance"
+      },
+      "Reviews": [
+        {
+          "UserName": "Anita P.",
+          "Rating": 4,
+          "Comment": "Spacious and well-maintained, but a bit noisy.",
+          "Date": "2024-07-30"
+        }
+      ]
     }
+    
+    
   
 ]
