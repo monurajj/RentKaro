@@ -7,9 +7,12 @@ import { Home, Hotel, Building, UserPlus } from 'lucide-react';
 import AboutUs from '@/components/AboutUs'
 import LookingFor from '@/components/LookingFor'
 import { motion } from "framer-motion";
+// import { useRouter } from 'next/router';
+// import { useRouter } from 'next/navigation';
 
 
 export default function HomePage() {
+  // const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = Object.values(data[0].Images);
   // console.log(images, "images")
@@ -73,7 +76,7 @@ export default function HomePage() {
     </div>
 
       <div className="item-center w-full bg-blue-100 p-4 md:p-8">
-            <AboutUs></AboutUs>
+            <AboutUs ></AboutUs>
       </div>
   
     </div>

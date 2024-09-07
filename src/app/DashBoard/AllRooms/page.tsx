@@ -1,5 +1,6 @@
 "use client";
 import HotelsPgRoomDetails from '@/components/HotelsPgRoomDetails';
+import { Home, Hotel, Building, UserPlus, Search } from 'lucide-react';
 import SearchInput from '@/components/searchInput';
 import { useEffect, useState } from 'react';
 import data from "../../../../data.json"
@@ -8,6 +9,11 @@ export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = Object.values(data[0].Images);
   // console.log(images, "images")
+  const options = [
+    { name: 'PG\'s', icon: Building },
+    { name: 'Rooms', icon: Home },
+    { name: 'Hostels', icon: Hotel },
+  ];
 
   const punchlines = [
     "Find Your Perfect Stay with Just One Click",
@@ -58,7 +64,29 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-      
+
+{/* selected options pgs/rooms/hostels */}
+<div className="w-full bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col items-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {options.map(({ name, icon: Icon }) => (
+            <button
+              key={name}
+              className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+            >
+              <Icon className="mr-3" size={24} />
+              <span className="text-lg">{name}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
       {/* Search and Filters */}
       <div className="w-full bg-blue-100 p-4 md:p-8">
         {/* Filter by and search input */}
