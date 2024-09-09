@@ -16,7 +16,7 @@ const HotelsPgRoomDetails = () => {
               className="bg-white shadow-lg border border-gray-300 rounded-lg p-6 flex flex-col md:flex-row w-full max-w-7xl mb-8"
             >
               {/* Image Slideshow */}
-              <div className="md:w-1/4 w-full">
+              <div className="md:w-1/4 w-full mt-[2rem]">
                 <ImageSlideshow images={Object.values(item.Images)} />
               </div>
 

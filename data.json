@@ -117,7 +117,7 @@
     {
       "id": "Rooms04",
       "Name": "Urban Oasis Hostel",
-      "Type": "Hostels",
+      "Type": "PG",
       "State": "Bangalore",
       "City": "Bangalore",
       "RoomType": "Solo, Couples, Groups",
@@ -209,7 +209,7 @@
     {
       "id": "Rooms04",
       "Name": "Urban Oasis Hostel",
-      "Type": "Hostels",
+      "Type": "Room",
       "State": "Bangalore",
       "City": "Bangalore",
       "RoomType": "Solo, Couples, Groups",
@@ -386,7 +386,7 @@
     {
       "id": "Rooms06",
       "Name": "Blue Sky Co-Living",
-      "Type": "Co-Living",
+      "Type": "room",
       "State": "Delhi",
       "City": "New Delhi",
       "RoomType": "Solo, Shared",

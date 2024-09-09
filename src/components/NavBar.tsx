@@ -6,11 +6,17 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import logoImage from "../assets/DemoLogo.png"
 import { GiHamburgerMenu } from "react-icons/gi";
 import SidePanel from "@/Modal/sidePanelOptiions";
+import { useRouter } from "next/navigation";
 
 
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const router = useRouter();
+  
+  const handleClickRoomOwner =()=>{
+    router.replace('./DashBoard/OwnerDetails')
+  }
 
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
@@ -43,22 +49,22 @@ function NavBar() {
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-x-6 text-black">
-              <Link href="#Home" className="relative group">
+              <button className="relative group" onClick={handleClickRoomOwner}>
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Room Owner
                 </p>
                 <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
+              </button>
 
-              <Link href="#AboutUs" className="relative group">
+              <Link href="#AboutUs" className="relative group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Sign In
                 </p>
-                <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left "></span>
               </Link>
               <div className="flex flex-col justify-center items-start gap-[2px] flex-1 border-r-[1px] border-gray-300">
                 </div>
-              <button className="relative flex group">
+              <button className="relative flex group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Sign Up
                 </p>

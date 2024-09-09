@@ -62,7 +62,7 @@ const RoomDetails = ({ room }) => {
               <p className="font-semibold text-blue-600 text-lg">₹{savings}</p>
             </div>
 
-            <button className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Book Now</button>
+            <button className="btn-1 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Book Now</button>
           </div>
         </div>
 

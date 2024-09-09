@@ -2,6 +2,7 @@
 import HotelsPgRoomDetails from '@/components/HotelsPgRoomDetails';
 import { Home, Hotel, Building, UserPlus, Search } from 'lucide-react';
 import SearchInput from '@/components/searchInput';
+import FilterComponent from '@/components/FilterOptions';
 import { useEffect, useState } from 'react';
 import data from "../../../../data.json"
 
@@ -66,7 +67,7 @@ export default function HomePage() {
       </div>
 
 {/* selected options pgs/rooms/hostels */}
-<div className="w-full bg-blue-100 py-12 px-4 sm:px-6 lg:px-8">
+<div className="w-full bg-blue-100 py-10 px-4 sm:px-6 lg:px-8">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,9 +89,11 @@ export default function HomePage() {
 
 
       {/* Search and Filters */}
-      <div className="w-full bg-blue-100 p-4 md:p-8">
-        {/* Filter by and search input */}
+      <div className="bg-blue-100 p-4 md:pl-8 md:pr-8">
           <SearchInput></SearchInput>
+      </div>
+      <div className=" bg-blue-100 p-4 md:pl-8 md:pr-8 ">
+          <FilterComponent></FilterComponent>
       </div>
 
         {/* hotelsPgRoomsDetails */}
