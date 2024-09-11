@@ -7,7 +7,8 @@ import data from "../../data.json"
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = Object.values(data[0].Images);
-  // console.log(images, "images")
+
+  
 
   const punchlines = [
     "Find Your Perfect Stay with Just One Click",
@@ -21,7 +22,7 @@ export default function HomePage() {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [images.length]);

@@ -1,12 +1,12 @@
 "use client";
+import SidePanel from "@/Modal/sidePanelOptiions";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logoImage from "../assets/DemoLogo.png"
 import { GiHamburgerMenu } from "react-icons/gi";
-import SidePanel from "@/Modal/sidePanelOptiions";
-import { useRouter } from "next/navigation";
+import logoImage from "../assets/DemoLogo.png";
 
 
 function NavBar() {
@@ -15,7 +15,7 @@ function NavBar() {
   const router = useRouter();
   
   const handleClickRoomOwner =()=>{
-    router.replace('./DashBoard/OwnerDetails')
+    router.push('/DashBoard/OwnerDetails')
   }
 
   const togglePanel = () => {
@@ -49,12 +49,12 @@ function NavBar() {
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-x-6 text-black">
-              <button className="relative group" onClick={handleClickRoomOwner}>
+              <Link className="relative group" href={"/DashBoard/OwnerDetails"} >
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Room Owner
                 </p>
                 <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </button>
+              </Link>
 
               <Link href="#AboutUs" className="relative group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">

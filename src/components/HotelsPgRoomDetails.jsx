@@ -4,6 +4,7 @@ import data from '../../data.json';
 
 
 
+
 const HotelsPgRoomDetails = () => {
   
   return (
