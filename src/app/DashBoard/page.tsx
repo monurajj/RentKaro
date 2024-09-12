@@ -1,26 +1,15 @@
-"use client";
-import HotelsPgRoomDetails from '@/components/HotelsPgRoomDetails';
-import SearchInput from '@/components/searchInput';
-import { useEffect, useState } from 'react';
-import data from "../../../data.json"
-import { Home, Hotel, Building, UserPlus } from 'lucide-react';
-import AboutUs from '@/components/AboutUs'
-import LookingFor from '@/components/LookingFor'
-import { motion } from "framer-motion";
-// import { useRouter } from 'next/router';
-// import { useRouter } from 'next/navigation';
-
+"use client"
+import React, { useEffect, useState } from 'react';
+import AboutUs from '@/components/AboutUs';
+import LookingFor from '@/components/LookingFor';
+import data from "../../../data.json";
+// import { useTabContext } from '@/context/pagecontext';
 
 export default function HomePage() {
-  // const router = useRouter();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = Object.values(data[0].Images);
-  // console.log(images, "images")
-  const options = [
-    { name: 'PG\'s', icon: Building },
-    { name: 'Rooms', icon: Home },
-    { name: 'Hostels', icon: Hotel },
-  ];
+
+  
   const punchlines = [
     "Find Your Perfect Stay with Just One Click",
     "No More Running Around - Book Instantly",
@@ -40,8 +29,8 @@ export default function HomePage() {
 
   return (
     <div className="w-full min-h-screen relative overflow-hidden">
-      {/*row 1st = Slideshow container */}
-      <div className="w-full h-[30vh] md:h-[40vh] relative overflow-hidden">
+      {/* Slideshow container */}
+      <div className="w-full relative" style={{ paddingBottom: '20.25%' }}>
         {images.map((image, index) => (
           <div
             key={index}
@@ -65,20 +54,20 @@ export default function HomePage() {
                 Your one-stop solution for hassle-free accommodation booking.
               </p>
             </div>
-
-
           </div>
         ))}
       </div>
 
+      {/* Looking For section */}
       <div className="w-full bg-blue-100 p-4 md:p-8">
-      <LookingFor></LookingFor>
-    </div>
-
-      <div className="item-center w-full bg-blue-100 p-4 md:p-8">
-            <AboutUs ></AboutUs>
+        <LookingFor />
       </div>
-  
+
+      {/* About Us section */}
+      <div className="item-center w-full bg-blue-100 p-4 md:p-8">
+        <AboutUs />
+      </div>
+      
     </div>
   );
 }

@@ -1,23 +1,17 @@
 "use client";
+import SidePanel from "@/Modal/sidePanelOptiions";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logoImage from "../assets/DemoLogo.png"
 import { GiHamburgerMenu } from "react-icons/gi";
-import SidePanel from "@/Modal/sidePanelOptiions";
-import { useRouter } from "next/navigation";
+import logoImage from "../assets/DemoLogo.png";
 
 
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
-  const router = useRouter();
-  
-  const handleClickRoomOwner =()=>{
-    router.replace('./DashBoard/OwnerDetails')
-  }
-
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
   };
@@ -49,14 +43,14 @@ function NavBar() {
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-x-6 text-black">
-              <button className="relative group" onClick={handleClickRoomOwner}>
+              <Link className="relative group" href={"/DashBoard/OwnerDetails"} >
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Room Owner
                 </p>
                 <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </button>
+              </Link>
 
-              <Link href="#AboutUs" className="relative group mt-[0.34rem]">
+              <Link href="#signIn" className="relative group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Sign In
                 </p>
@@ -64,12 +58,12 @@ function NavBar() {
               </Link>
               <div className="flex flex-col justify-center items-start gap-[2px] flex-1 border-r-[1px] border-gray-300">
                 </div>
-              <button className="relative flex group mt-[0.34rem]">
+              <Link href={"/SignUp"} className="relative flex group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Sign Up
                 </p>
                 <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </button>
+              </Link>
 
               <button
                 className="relative flex group h-[2rem] w-[2rem] -mr-[2rem]"

@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Search, Users, Shield, ThumbsUp, Smile } from "lucide-react";
 import { Home, ShieldCheck, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import SlideshowImage from "./slideshowImageAbout";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useTabContext } from "@/context/pagecontext";
 
 const AboutUs = () => {
-  const router = useRouter();
+  const { activeTab, setActiveTab } = useTabContext();
+  const handleClickGetStarted=(ActiveValue)=>{
+    setActiveTab(activeTab)
+  }
 
-  const handleClickGetStarted = () => {
-    router.push('/DashBoard/AllRooms');
-  };
   return (
     <div className="">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -190,64 +191,64 @@ const AboutUs = () => {
               Your Trusted Partner in Finding the Perfect Home
             </p>
             <motion.div
-            className="mt-4 flex items-center justify-center space-x-2" // Reduced spacing using space-x-2
-            initial={{ y: 0 }}
-            animate={{ y: [0, -10, 0] }} // Simple floating animation
-            transition={{ repeat: Infinity, duration: 3 }} // Loop animation
-          >
-            <p className="mt-5 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Our platform was built with you in mind. Whether you're searching
-              for a cozy apartment or a larger family space, Rentkaro ensures a
-              seamless and transparent process. We are here to guide you every
-              step of the way.
-            </p>
+              className="mt-4 flex items-center justify-center space-x-2" // Reduced spacing using space-x-2
+              initial={{ y: 0 }}
+              animate={{ y: [0, -10, 0] }} // Simple floating animation
+              transition={{ repeat: Infinity, duration: 3 }} // Loop animation
+            >
+              <p className="mt-5 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Our platform was built with you in mind. Whether you're
+                searching for a cozy apartment or a larger family space,
+                Rentkaro ensures a seamless and transparent process. We are here
+                to guide you every step of the way.
+              </p>
             </motion.div>
 
-            
             {/* Additional Icons with Emotional Appeal */}
-<div className="mt-10 flex items-center justify-center space-x-4">
-  <div className="text-center group">
-    <Home
-      className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:scale-125 group-hover:translate-y-1 duration-300 ease-in-out"
-      aria-hidden="true"
-    />
-    <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:scale-105 group-hover:translate-y-1 duration-300 ease-in-out">
-      Find Your Space
-    </p>
-  </div>
+            <div className="mt-10 flex items-center justify-center space-x-4">
+              <div className="text-center group">
+                <Home
+                  className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:scale-125 group-hover:translate-y-1 duration-300 ease-in-out"
+                  aria-hidden="true"
+                />
+                <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:scale-105 group-hover:translate-y-1 duration-300 ease-in-out">
+                  Find Your Space
+                </p>
+              </div>
 
-  <div className="text-center group">
-    <Users
-      className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:rotate-12 group-hover:scale-110 duration-300 ease-in-out"
-      aria-hidden="true"
-    />
-    <p className="mt-2 text-lg font-medium text-gray-900 transition-opacity duration-300 group-hover:opacity-75">
-      Join a Vibrant Community
-    </p>
-  </div>
+              <div className="text-center group">
+                <Users
+                  className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:rotate-12 group-hover:scale-110 duration-300 ease-in-out"
+                  aria-hidden="true"
+                />
+                <p className="mt-2 text-lg font-medium text-gray-900 transition-opacity duration-300 group-hover:opacity-75">
+                  Join a Vibrant Community
+                </p>
+              </div>
 
-  <div className="text-center group">
-    <ThumbsUp
-      className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:skew-y-3 group-hover:scale-110 duration-300 ease-in-out"
-      aria-hidden="true"
-    />
-    <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:-translate-y-1 group-hover:scale-105 duration-300 ease-in-out">
-      Reliable Support
-    </p>
-  </div>
-</div>
-
+              <div className="text-center group">
+                <ThumbsUp
+                  className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:skew-y-3 group-hover:scale-110 duration-300 ease-in-out"
+                  aria-hidden="true"
+                />
+                <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:-translate-y-1 group-hover:scale-105 duration-300 ease-in-out">
+                  Reliable Support
+                </p>
+              </div>
+            </div>
           </motion.div>
 
-          <div className="mt-10 flex justify-center">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          className="btn-1 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
-          onClick={handleClickGetStarted}
-        >
-          Get Started
-        </motion.button>
-      </div>
+          <Link className="mt-10 flex justify-center"
+          href={"/DashBoard/AllRooms"} >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="btn-1 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
+              
+              onClick={handleClickGetStarted('pg')}
+            >
+              Get Started
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>

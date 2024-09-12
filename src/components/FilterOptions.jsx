@@ -199,7 +199,7 @@ const FilterComponent = () => {
   const [selectedStates, setSelectedStates] = useState([]);
   const [isMobileModalOpen, setIsMobileModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeFilters, setActiveFilters] = useState(['price', 'occupancy', 'facilities', 'sort', 'state']);
+  const [activeFilters, setActiveFilters] = useState(['price','occupancy', 'facilities', 'sort', 'state']);
 
   useEffect(() => {
     const checkIfMobile = () => setIsMobile(window.innerWidth < 768);
