@@ -1,22 +1,14 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { Building, Home, Hotel } from 'lucide-react';
-import HotelsPgRoomDetails from '@/components/HotelsPgRoomDetails';
-import SearchInput from '@/components/searchInput';
 import AboutUs from '@/components/AboutUs';
 import LookingFor from '@/components/LookingFor';
 import data from "../../../data.json";
+// import { useTabContext } from '@/context/pagecontext';
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = Object.values(data[0].Images);
 
-
-  const options = [
-    { name: 'PG\'s', icon: Building },
-    { name: 'Rooms', icon: Home },
-    { name: 'Hostels', icon: Hotel },
-  ];
   
   const punchlines = [
     "Find Your Perfect Stay with Just One Click",

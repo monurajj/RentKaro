@@ -1,12 +1,40 @@
 import Link from 'next/link';
-import { useState } from 'react';
-import data from '../../data.json';
-
-
-
+import { useState, useEffect } from 'react';
+import { useTabContext } from '@/context/pagecontext';
 
 const HotelsPgRoomDetails = () => {
-  
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { activeTab } = useTabContext();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      setError(null);
+      const url = `http://localhost:5001/jai/rooms/roomtype/${activeTab}`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Failed to retrieve data');
+        }
+        const fetchedData = await response.json();
+        setData(fetchedData);
+      } catch (err) {
+        setError(err.message);
+        console.error("Error fetching data:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [activeTab]);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+
   return (
     <div className="min-h-screen p-8 flex flex-col items-center">
       {data.map((item, index) => {

@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Search, Users, Shield, ThumbsUp, Smile } from "lucide-react";
 import { Home, ShieldCheck, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import SlideshowImage from "./slideshowImageAbout";
 import Link from "next/link";
+import { useTabContext } from "@/context/pagecontext";
 
 const AboutUs = () => {
+  const { activeTab, setActiveTab } = useTabContext();
+  const handleClickGetStarted=(ActiveValue)=>{
+    setActiveTab(activeTab)
+  }
 
   return (
     <div className="">
@@ -239,7 +244,7 @@ const AboutUs = () => {
               whileHover={{ scale: 1.05 }}
               className="btn-1 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
               
-              // onClick={handleClickGetStarted}
+              onClick={handleClickGetStarted('pg')}
             >
               Get Started
             </motion.button>

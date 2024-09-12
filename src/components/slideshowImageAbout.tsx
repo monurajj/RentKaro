@@ -8,15 +8,15 @@ const SlideshowAboutPage = () => {
   
   // Fetching about page data
   const aboutPageData = data.find(item => item.id === "AboutpageImage");
-  console.log('Fetched aboutPageData:', aboutPageData);
+  // console.log('Fetched aboutPageData:', aboutPageData);
   
   // Extracting images array
   const images = aboutPageData ? Object.values(aboutPageData.Images) : [];
-  console.log('Images array:', images);
+  // console.log('Images array:', images);
 
   useEffect(() => {
     if (images.length === 0) {
-      console.log('No images available for the slideshow');
+      // console.log('No images available for the slideshow');
       return;
     }
     
@@ -24,19 +24,19 @@ const SlideshowAboutPage = () => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => {
         const newIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
-        console.log(`Switching to image index: ${newIndex}`);
+        // console.log(`Switching to image index: ${newIndex}`);
         return newIndex;
       });
     }, 1000);
 
     // Clean up interval on component unmount
     return () => {
-      console.log('Clearing interval');
+      // console.log('Clearing interval');
       clearInterval(interval);
     };
   }, [images.length]);
 
-  console.log('Current image index:', currentImageIndex);
+  // console.log('Current image index:', currentImageIndex);
 
   return (
     <div className="w-auto h-[50vh] md:h-[40vh] relative overflow-hidden">
