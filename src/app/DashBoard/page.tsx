@@ -22,7 +22,7 @@ export default function HomePage() {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -30,12 +30,12 @@ export default function HomePage() {
   return (
     <div className="w-full min-h-screen relative overflow-hidden">
       {/* Slideshow container */}
-      <div className="w-full relative" style={{ paddingBottom: '20.25%' }}>
+      <div className="w-full h-[30vh] md:h-[40vh] relative overflow-hidden">
         {images.map((image, index) => (
           <div
             key={index}
             className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           >
             <div className="relative w-full h-full overflow-hidden">

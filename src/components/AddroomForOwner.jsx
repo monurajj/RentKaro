@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 const RoomAdd = () => {
@@ -73,147 +74,151 @@ const RoomAdd = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-8 bg-white shadow-lg rounded-lg text-black">
-      <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">Add Your Room Details</h1>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Room Details Inputs */}
-        <div>
-          <label className="block text-green-600 font-semibold">Room Name</label>
-          <input
-            type="text"
-            name="name"
-            value={roomDetails.name}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
+    <div className="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8 bg-white shadow-lg rounded-lg text-black">
+      <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-6 sm:mb-8">Add Your Room Details</h1>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Room Details Inputs */}
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Room Name</label>
+            <input
+              type="text"
+              name="name"
+              value={roomDetails.name}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Room Type</label>
+            <input
+              type="text"
+              name="type"
+              value={roomDetails.type}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">State</label>
+            <input
+              type="text"
+              name="state"
+              value={roomDetails.state}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">City</label>
+            <input
+              type="text"
+              name="city"
+              value={roomDetails.city}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Room Type (Solo/Couples/Groups)</label>
+            <input
+              type="text"
+              name="roomType"
+              value={roomDetails.roomType}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Occupancy</label>
+            <input
+              type="number"
+              name="occupancy"
+              value={roomDetails.occupancy}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Gender Allowed</label>
+            <select
+              name="gender"
+              value={roomDetails.gender}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            >
+              <option value="All">All</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Available From</label>
+            <input
+              type="date"
+              name="availableFrom"
+              value={roomDetails.availableFrom}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Minimum Stay (Months)</label>
+            <input
+              type="text"
+              name="minimumStay"
+              value={roomDetails.minimumStay}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Room Size (sq ft)</label>
+            <input
+              type="text"
+              name="roomSize"
+              value={roomDetails.roomSize}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Total Price (₹)</label>
+            <input
+              type="number"
+              name="totalPrice"
+              value={roomDetails.totalPrice}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-green-600 font-semibold mb-1">Discount (%)</label>
+            <input
+              type="number"
+              name="totalDiscount"
+              value={roomDetails.totalDiscount}
+              onChange={handleChange}
+              className="w-full p-2 border border-blue-300 rounded"
+              required
+            />
+          </div>
         </div>
+
+        {/* Description Field */}
         <div>
-          <label className="block text-green-600 font-semibold">Room Type</label>
-          <input
-            type="text"
-            name="type"
-            value={roomDetails.type}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">State</label>
-          <input
-            type="text"
-            name="state"
-            value={roomDetails.state}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">City</label>
-          <input
-            type="text"
-            name="city"
-            value={roomDetails.city}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Room Type (Solo/Couples/Groups)</label>
-          <input
-            type="text"
-            name="roomType"
-            value={roomDetails.roomType}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Occupancy</label>
-          <input
-            type="number"
-            name="occupancy"
-            value={roomDetails.occupancy}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Gender Allowed</label>
-          <select
-            name="gender"
-            value={roomDetails.gender}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          >
-            <option value="All">All</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Available From</label>
-          <input
-            type="date"
-            name="availableFrom"
-            value={roomDetails.availableFrom}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Minimum Stay (Months)</label>
-          <input
-            type="text"
-            name="minimumStay"
-            value={roomDetails.minimumStay}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Room Size (sq ft)</label>
-          <input
-            type="text"
-            name="roomSize"
-            value={roomDetails.roomSize}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Total Price (₹)</label>
-          <input
-            type="number"
-            name="totalPrice"
-            value={roomDetails.totalPrice}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-green-600 font-semibold">Discount (%)</label>
-          <input
-            type="number"
-            name="totalDiscount"
-            value={roomDetails.totalDiscount}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-          />
-        </div>
-        <div className="col-span-2">
-          <label className="block text-green-600 font-semibold">Description</label>
+          <label className="block text-green-600 font-semibold mb-1">Description</label>
           <textarea
             name="description"
             value={roomDetails.description}
@@ -225,13 +230,13 @@ const RoomAdd = () => {
         </div>
 
         {/* Image Upload (Multiple) */}
-        <div className="col-span-2">
-          <label className="block text-green-600 font-semibold">Room Images</label>
+        <div>
+          <label className="block text-green-600 font-semibold mb-1">Room Images</label>
           <input
             type="file"
             name="images"
             accept="image/*"
-            multiple // Allow multiple files
+            multiple
             onChange={handleImageChange}
             className="w-full p-2 border border-blue-300 rounded"
           />
@@ -239,31 +244,19 @@ const RoomAdd = () => {
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {roomDetails.imagePreviews.map((preview, index) => (
               <div key={index} className="text-center">
-                <img src={preview} alt={`Room Image ${index + 1}`} className="w-full h-48 object-cover rounded-lg" />
+                <img 
+                src={preview} alt={`Room Image ${index + 1}`} className="w-full h-48 object-cover rounded-lg" />
                 <p className="text-sm mt-2">{roomDetails.images[index].name}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Description Field */}
-        <div className="col-span-2">
-          <label className="block text-green-600 font-semibold">Description</label>
-          <textarea
-            name="description"
-            value={roomDetails.description}
-            onChange={handleChange}
-            className="w-full p-2 border border-blue-300 rounded"
-            required
-            rows="4"
-          />
-        </div>
-
         {/* Submit Button */}
-        <div className="col-span-2 flex justify-end">
+        <div className="flex justify-end">
           <button
             type="submit"
-            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded"
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto"
           >
             Add Room
           </button>

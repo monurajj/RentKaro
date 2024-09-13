@@ -1,13 +1,13 @@
-"use client";
+"use client"
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { FaEnvelope, FaGoogle, FaLock } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import singInImage from '../../../assets/image.png';
 import { auth, provider } from '../../lib/fireBaseConfig';
-import Image from 'next/image';
-import { FaGoogle, FaEnvelope, FaLock } from 'react-icons/fa';
-import singInImage from '../../../assets/image.png'
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -46,30 +46,28 @@ export default function Login() {
     };
 
     const handleResetPassword = () => {
-        router.push('/Authentication/reset');
+        router.push('/reset');
     };
 
     const handleNavigateToSignUp = () => {
-        router.push('/Authentication/signup');
+        router.push('/signup');
     };
 
     return (
-        <div className="flex h-screen bg-gray-100">
-            <div className="w-1/2 bg-blue-600 flex items-center justify-center">
+        <div className="flex flex-col md:flex-row md:min-h-screen bg-gray-100">
+            <div className="hidden md:flex md:w-1/2 bg-blue-100 items-center justify-center">
                 <Image
                     src={singInImage}
                     alt="Sign In"
-                    width="100%"
-                    height="100%"
-                    className="object-cover rounded-lg shadow-lg"
+                    className="rounded-lg shadow-lg max-w-full h-auto md:h-[80%] md:w-[80%] object-contain"
                 />
             </div>
 
-            <div className="w-1/2 flex items-center justify-center">
-                <div className="bg-white p-10 rounded-lg shadow-lg w-[70vh] h-[80vh]">
-                    <h1 className="text-3xl font-bold mb-8 text-center text-blue-600">Welcome Back</h1>
-                    <p className="text-center text-gray-600 mb-8">Find your perfect stay with ease</p>
-                    <form onSubmit={handleEmailSignIn} className="space-y-6">
+            <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-0">
+                <div className="bg-white p-6 md:p-10 rounded-lg shadow-lg w-full md:w-[70vh] md:h-[80vh]">
+                    <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-center text-blue-600">Welcome Back</h1>
+                    <p className="text-center text-gray-600 mb-6 md:mb-8">Find your perfect stay with ease</p>
+                    <form onSubmit={handleEmailSignIn} className="space-y-4 md:space-y-6">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                             <div className="relative rounded-md shadow-sm">
@@ -113,7 +111,7 @@ export default function Login() {
                             Forgot your password?
                         </button>
                         <button onClick={handleNavigateToSignUp} className="text-sm text-gray-600 hover:text-gray-700 transition duration-150 ease-in-out">
-                            Don't have an account? <span className="text-blue-600 font-medium">Create New One</span>
+                            Don&apos;t have an account? <span className="text-blue-600 font-medium">Create New One</span>
                         </button>
                         <div className="relative">
                             <div className="absolute inset-0 flex items-center">
