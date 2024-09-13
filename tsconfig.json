@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/searchInput.jsx", "src/app/DashBoard/testingpages/slideShowAboutPage.jsx", "src/app/DashBoard/OwnerDetails/page.jsx", "src/Modal/sidePanelOptiions.tsx", "src/app/DashBoard/AllRooms/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/searchInput.jsx", "src/app/DashBoard/testingpages/slideShowAboutPage.jsx", "src/app/DashBoard/OwnerDetails/page.jsx", "src/Modal/sidePanelOptiions.jsx", "src/app/DashBoard/AllRooms/page.jsx"],
   "exclude": ["node_modules"]
 }

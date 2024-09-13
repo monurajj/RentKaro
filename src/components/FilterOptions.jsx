@@ -5,13 +5,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const FilterOption = ({ icon: Icon, label, children, isMobile, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      setIsOpen(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setIsOpen(false);
+    }
+  };
+
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow mb-4">
+    <div 
+      className="bg-white p-4 rounded-lg shadow mb-4 h-min"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="flex items-center justify-between">
         <div 
           className="flex items-center justify-between cursor-pointer flex-grow"
-          onClick={() => setIsOpen(!isOpen)}
         >
           <div className="flex items-center">
             <Icon className="text-green-600 mr-2" />
