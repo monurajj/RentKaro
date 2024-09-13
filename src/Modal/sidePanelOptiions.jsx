@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import { Home, Info, MessageCircle, Phone, Search, User, X } from 'lucide-react';
 import Link from 'next/link';
-import { X, Home, Search, User, DollarSign, Phone, MessageCircle, Info, Hotel, Bed } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 const SidePanel = ({ isOpen, onClose }) => {
   const panelRef = useRef(null);
@@ -12,9 +12,9 @@ const SidePanel = ({ isOpen, onClose }) => {
     // { id: 'rooms', name: "Rooms", icon: Bed, href: "/DashBoard?tab=rooms" },
     // { id: 'hostels', name: "Hostels", icon: Hotel, href: "/hostels" },
     // { id: 'pg-accommodations', name: "PG Accommodations", icon: Home, href: "/pg-accommodations" },
-    { id: 'contact-us', name: "Contact Us", icon: Phone, href: "#contactUs" },
-    { id: 'chat-support', name: "Chat Support", icon: MessageCircle, href: "#contactUs" },
-    { id: 'about-us', name: "About Us", icon: Info, href: "#aboutUs" },
+    { id: 'contact-us', name: "Contact Us", icon: Phone, href: "/DashBoard#contactUs" },
+    { id: 'chat-support', name: "Chat Support", icon: MessageCircle, href: "/DashBoard#contactUs" },
+    { id: 'about-us', name: "About Us", icon: Info, href: "/DashBoard#aboutUs" },
   ];
 
   useEffect(() => {
@@ -53,9 +53,9 @@ const SidePanel = ({ isOpen, onClose }) => {
               <User size={24} />
             </div>
             <div className="text-white">
-              <Link href={'/Authentication/Login'} className="hover:underline font-semibold transition-all duration-200 ease-in-out">Sign In</Link>
+              <Link href={'/Login'} className="hover:underline font-semibold transition-all duration-200 ease-in-out">Sign In</Link>
               <span className="mx-2">|</span>
-              <Link href={'/Authentication/signup'} className="hover:underline font-semibold transition-all duration-200 ease-in-out">Register</Link>
+              <Link href={'/signup'} className="hover:underline font-semibold transition-all duration-200 ease-in-out">Register</Link>
             </div>
           </div>
           <button 

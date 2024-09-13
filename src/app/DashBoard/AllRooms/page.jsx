@@ -1,11 +1,11 @@
 "use client";
-import HotelsPgRoomDetails from "@/components/HotelsPgRoomDetails";
-import { Home, Hotel, Building, UserPlus, Search } from "lucide-react";
-import SearchInput from "@/components/searchInput";
 import FilterComponent from "@/components/FilterOptions";
+import HotelsPgRoomDetails from "@/components/HotelsPgRoomDetails";
+import SearchInput from "@/components/searchInput";
+import { useTabContext } from "@/context/pagecontext";
+import { Building, Home, Hotel } from "lucide-react";
 import { useEffect, useState } from "react";
 import data from "../../../../data.json";
-import { useTabContext } from "@/context/pagecontext";
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

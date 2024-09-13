@@ -32,7 +32,7 @@ const AboutUs = () => {
             Simplifying Your Housing Search
           </p>
           <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">
-            At Rentkaro, we're revolutionizing the way people find and rent
+            At Rentkaro, we&apos;re revolutionizing the way people find and rent
             accommodations.
           </p>
         </motion.div>
@@ -161,7 +161,7 @@ const AboutUs = () => {
 
               {/* Paragraph with Text */}
               <p className="max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Whether you're looking for your next home or you're a property
+                Whether you&apos;re looking for your next home or you&apos;re a property
                 owner ready to welcome new tenants, Rentkaro is here to make the
                 process smooth, secure, and enjoyable.
               </p>
@@ -200,7 +200,7 @@ const AboutUs = () => {
               transition={{ repeat: Infinity, duration: 3 }} // Loop animation
             >
               <p className="mt-5 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                Our platform was built with you in mind. Whether you're
+                Our platform was built with you in mind. Whether you&apos;re
                 searching for a cozy apartment or a larger family space,
                 Rentkaro ensures a seamless and transparent process. We are here
                 to guide you every step of the way.

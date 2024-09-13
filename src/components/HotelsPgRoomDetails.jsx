@@ -1,6 +1,7 @@
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { useTabContext } from '@/context/pagecontext';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const HotelsPgRoomDetails = () => {
   const [data, setData] = useState([]);

@@ -1,13 +1,13 @@
 "use client";
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '@/app/lib/fireBaseConfig';
+import { sendPasswordResetEmail } from 'firebase/auth';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { FaEnvelope } from 'react-icons/fa';
-import resetImage from '../../../assets/image.png';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import resetImage from '../../../assets/image.png';
 
 export default function Reset() {
     const [email, setEmail] = useState('');
@@ -21,7 +21,7 @@ export default function Reset() {
                 position: "top-center",
                 autoClose: 3000,
             });
-            router.push('/Authentication/login');
+            router.push('/login');
         } catch (error) {
             console.error('Error during password reset:', error);
             toast.error('Error sending reset email: ' + error.message, {
@@ -32,26 +32,26 @@ export default function Reset() {
     };
 
     const handleBackToLogin = () => {
-        router.push('/Authentication/Login');
+        router.push('/Login');
     };
 
     return (
-        <div className="flex h-screen bg-gray-100">
-            <div className="w-1/2 bg-blue-600 flex items-center justify-center">
+        <div className="flex flex-col md:flex-row md:min-h-screen bg-gray-100">
+            <div className="hidden md:flex md:w-1/2 bg-blue-100 items-center justify-center">
                 <Image
                     src={resetImage}
                     alt="Reset Password"
-                    width="100%"
-                    height="100%"
-                    className="object-cover rounded-lg shadow-lg"
+                    width={500}
+                    height={500}
+                    className="object-cover rounded-lg shadow-lg max-w-full h-auto"
                 />
             </div>
 
-            <div className="w-1/2 flex items-center justify-center">
-                <div className="bg-white p-10 rounded-lg shadow-lg w-[70vh] h-[60vh]">
-                    <h1 className="text-3xl font-bold mb-8 text-center text-blue-600">Reset Your Password</h1>
-                    <p className="text-center text-gray-600 mb-8">Enter your email to receive a password reset link</p>
-                    <form onSubmit={handleResetPassword} className="space-y-6">
+            <div className="w-full md:w-1/2 flex items-center justify-center p-4">
+                <div className="bg-white p-6 md:p-10 rounded-lg shadow-lg w-full max-w-md">
+                    <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center text-blue-600">Reset Your Password</h1>
+                    <p className="text-center text-gray-600 mb-6">Enter your email to receive a password reset link</p>
+                    <form onSubmit={handleResetPassword} className="space-y-4">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                             <div className="relative rounded-md shadow-sm">
@@ -73,7 +73,7 @@ export default function Reset() {
                             Send Reset Link
                         </button>
                     </form>
-                    <div className="mt-6 flex flex-col space-y-4">
+                    <div className="mt-4 flex flex-col space-y-4">
                         <button onClick={handleBackToLogin} className="text-sm text-gray-600 hover:text-gray-700 transition duration-150 ease-in-out">
                             Remember your password? <span className="text-blue-600 font-medium">Back to Login</span>
                         </button>
