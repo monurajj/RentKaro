@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logoImage from "../assets/DemoLogo.png";
+import logoImage from "../assets/Logo.png";
 
 
 function NavBar() {
@@ -19,38 +19,43 @@ function NavBar() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const router = useRouter();
+  const handleClickLogo=()=>{
+    router.push('./')
+  }
 
 
   return (
-    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-green-200  bg-blue-400/75 backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600 to-green-400 
+    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-green-200   backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600 to-green-400 
     ">
       <div className="w-full">
         <div className="container mx-auto px-4 h-full">
-          <div className="flex justify-between items-center h-full">
+          <div className="flex justify-between items-center h-full"
+          >
             {/* Logo */}
-            <div className="flex items-center p-1">
+            <button className="flex items-center p-1"
+            onClick={handleClickLogo}>
               <Image
                 src={logoImage}
                 alt="Logo"
-                width={60}
-                height={20}
-                className="rounded-full border-2 border-yellow-500"
+                className="w-12 h-12 object-cover rounded-full border-green-400 border-2"
               />
               <h1 className="ml-2 text-black text-2xl font-Uchen font-semibold">
                 Rent <span>करो</span>
               </h1>
-            </div>
+            </button>
+            
 
             {/* Desktop Menu */}
-            <ul className="hidden md:flex gap-x-6 text-black">
+            <ul className="hidden md:flex gap-x-6 text-black ">
               <Link className="relative group" href={"/DashBoard/OwnerDetails"} >
-                <p className="transition-all group-hover:text hover-cursor-pointer">
+                <p className="transition-all group-hover:text hover-cursor-pointer mt-[0.34rem]">
                   Room Owner
                 </p>
                 <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
 
-              <Link href="#signIn" className="relative group mt-[0.34rem]">
+              <Link href={'/Authentication/Login'} className="relative group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Sign In
                 </p>
@@ -58,7 +63,7 @@ function NavBar() {
               </Link>
               <div className="flex flex-col justify-center items-start gap-[2px] flex-1 border-r-[1px] border-gray-300">
                 </div>
-              <Link href={"/SignUp"} className="relative flex group mt-[0.34rem]">
+              <Link href={"/Authentication/signup"} className="relative flex group mt-[0.34rem]">
                 <p className="transition-all group-hover:text hover-cursor-pointer">
                   Sign Up
                 </p>

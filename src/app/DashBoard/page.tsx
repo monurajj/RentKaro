@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AboutUs from '@/components/AboutUs';
 import LookingFor from '@/components/LookingFor';
 import data from "../../../data.json";
-// import { useTabContext } from '@/context/pagecontext';
+import ContactUs from '../../components/contactUs'
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -66,6 +66,11 @@ export default function HomePage() {
       {/* About Us section */}
       <div className="item-center w-full bg-blue-100 p-4 md:p-8">
         <AboutUs />
+      </div>
+
+      {/* Contact Us section */}
+      <div className="item-center w-full bg-blue-100 p-4 md:p-8">
+        <ContactUs/>
       </div>
       
     </div>

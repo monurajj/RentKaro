@@ -68,7 +68,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/jai/rooms', async (req, res) => {
-  console.log('Route /jai/rooms hit');
+  console.log('Route /jai/rooms');
   try {
     console.log("Fetching rooms...");
     const rooms = await RoomDetails.find();

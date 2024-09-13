@@ -6,14 +6,17 @@ import SlideshowImage from "./slideshowImageAbout";
 import Link from "next/link";
 import { useTabContext } from "@/context/pagecontext";
 
+
+
 const AboutUs = () => {
   const { activeTab, setActiveTab } = useTabContext();
   const handleClickGetStarted=(ActiveValue)=>{
     setActiveTab(activeTab)
   }
+  
 
   return (
-    <div className="">
+    <div className="" id="aboutUs">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         {/* Main Title Section with Animation */}
         <motion.div
