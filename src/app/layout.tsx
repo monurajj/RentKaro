@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/footer";
 import { TabProvider } from "@/context/pagecontext";
+import { SearchProvider } from "@/context/filterContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TabProvider>
-        <NavBar />
-        {children}
-        <Footer></Footer>
-        </TabProvider>
+        <SearchProvider>
+          <TabProvider>
+            <NavBar />
+            {children}
+            <Footer></Footer>
+          </TabProvider>
+        </SearchProvider>
       </body>
     </html>
   );
