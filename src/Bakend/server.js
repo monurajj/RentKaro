@@ -97,7 +97,7 @@ app.get('/jai/rooms/roomtype/hostels', async (req, res) => {
   // console.log('Route /jai/rooms/roomtype/Hostels hit');
   try {
     console.log("Fetching PG rooms...");
-    const rooms = await RoomDetails.find({Type:"Hostels"});
+    const rooms = await RoomDetails.find({Type:"Hostel"});
     console.log("Hostels Rooms fetched:", rooms.length);
     res.json(rooms);
   } catch (err) {
@@ -110,7 +110,7 @@ app.get('/jai/rooms/roomtype/rooms', async (req, res) => {
   // console.log('Route /jai/rooms/roomtype/rooms hit');
   try {
     console.log("Fetching Rooms rooms...");
-    const rooms = await RoomDetails.find({Type:"Rooms"});
+    const rooms = await RoomDetails.find({Type:"Room"});
     console.log("Rooms Rooms fetched:", rooms.length);
     res.json(rooms);
   } catch (err) {

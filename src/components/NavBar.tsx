@@ -43,7 +43,7 @@ function NavBar() {
   // }, []);
 
   return (
-    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-green-200 backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600 to-green-400">
+    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full  backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600 to-green-400">
       <div className="w-full">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">

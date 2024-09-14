@@ -2,7 +2,7 @@
   {
     "id": "homepageImage",
     "Images": {
-      "Image01": "https://i.ibb.co/HCRw9cS/roomrent01.jpg",
+      "Image01": "https://i.ibb.co/ym9ggjs/Untitled-design.png",
       "Image02": "https://i.ibb.co/GVTBFT4/roomrent04.png",
       "Image03": "https://i.ibb.co/HCRw9cS/roomrent01.jpg",
       "Image04": "https://i.ibb.co/tQ7kqWn/roomrent03.webp"
@@ -21,7 +21,7 @@
     {
       "id": "Rooms01",
       "Name": "Urban Oasis Hostel",
-      "Type": "Hostels",
+      "Type": "Hostel",
       "State": "Bangalore",
       "City": "Bangalore",
       "RoomType": "Solo, Couples, Groups",
@@ -446,9 +446,9 @@
         "BankATM": "ATM within building"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/RnYfy56/coliving01.jpg",
-        "Link02": "https://i.ibb.co/SxNvm29/coliving02.jpg",
-        "Link03": "https://i.ibb.co/cJxF9Md/coliving03.jpg"
+        "Link01": "https://i.ibb.co/cY1nfx9/HOstel01.jpg",
+        "Link02": "https://i.ibb.co/gR6P1CN/Hostels2.jpg",
+        "Link03": "https://i.ibb.co/W54g8Qk/Hostels03.jpg"
       },
       "VirtualTour": "https://virtualtour.blueskycoliving.com",
       "BookingOptions": {
@@ -537,8 +537,8 @@
         "BankATM": "200m away"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/kxYwsWr/pg04.jpg",
-        "Link02": "https://i.ibb.co/WGDKwTf/pg05.jpg"
+        "Link01": "https://i.ibb.co/RYjjRqp/HOstels04.jpg",
+        "Link02": "https://i.ibb.co/LnQbMZ0/sacramento-dorm-hiusa-1000x550-compressor-1-778x446.jpg"
       },
       "VirtualTour": "https://virtualtour.sunnydayspg.com",
       "BookingOptions": {
@@ -621,8 +621,8 @@
         "BankATM": "200m away"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/album/image01.jpg",
-        "Link02": "https://i.ibb.co/album/image02.jpg"
+        "Link01": "https://i.ibb.co/1Tw9SbP/hostels05.jpg",
+        "Link02": "https://i.ibb.co/P4Zcbg0/hostels06.jpg"
       },
       "VirtualTour": "https://virtualtour.brightviewpg.com",
       "BookingOptions": {
@@ -705,8 +705,8 @@
         "BankATM": "100m away"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/album/image03.jpg",
-        "Link02": "https://i.ibb.co/album/image04.jpg"
+        "Link01": "https://i.ibb.co/LZPBBLH/hostels07.webp",
+        "Link02": "https://i.ibb.co/HDYbH7H/hostels07.jpg"
       },
       "VirtualTour": "https://virtualtour.greenmeadowpg.com",
       "BookingOptions": {
@@ -790,8 +790,8 @@
         "BankATM": "100m away"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/album/image03.jpg",
-        "Link02": "https://i.ibb.co/album/image04.jpg"
+        "Link01": "https://i.ibb.co/W54g8Qk/Hostels03.jpg",
+        "Link02": "https://i.ibb.co/KzbZy7v/hostels09.webp"
       },
       "VirtualTour": "https://virtualtour.greenmeadowpg.com",
       "BookingOptions": {
@@ -875,8 +875,8 @@
         "BankATM": "100m away"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/album/image03.jpg",
-        "Link02": "https://i.ibb.co/album/image04.jpg"
+        "Link01": "https://i.ibb.co/JjzqJzv/hostels10.jpg",
+        "Link02": "https://i.ibb.co/bF5VBRy/pg01.webp"
       },
       "VirtualTour": "https://virtualtour.greenmeadowpg.com",
       "BookingOptions": {
@@ -900,7 +900,7 @@
     {
       "id": "Rooms11",
       "Name": "Green Meadow PG",
-      "Type": "Rooms",
+      "Type": "Room",
       "State": "Delhi",
       "City": "New Delhi",
       "RoomType": "Shared",
@@ -960,8 +960,27 @@
         "BankATM": "100m away"
       },
       "Images": {
-        "Link01": "https://i.ibb.co/album/image03.jpg",
-        "Link02": "https://i.ibb.co/album/image04.jpg"
+        "Link01": "https://i.ibb.co/p486Bhp/Pg02.jpg",
+        "Link02": "https://i.ibb.co/9hQ1Sq8/pg03.jpg",
+        "Link03": "https://i.ibb.co/WBfbXtc/pg04.jpg",
+
+        "Link04": "https://i.ibb.co/1Mhxb1S/pg05.jpg",
+        "Link05": "https://i.ibb.co/FH11cBH/pg06.jpg",
+        "Link06": "https://i.ibb.co/xF1dnW9/pg07.jpg",
+        "Link07": "https://i.ibb.co/SPQ34w5/pg08.jpg",
+        "Link08": "https://i.ibb.co/M58N1rP/Pg09.jpg",
+        "Link09": "https://i.ibb.co/cTQZFCR/pg10.jpg",
+        "Link10": "https://i.ibb.co/K5JZPRB/rooms01.jpg",
+        "Link11": "https://i.ibb.co/FWdJ8sg/rooms03.jpg",
+        "Link12": "https://i.ibb.co/9TqHM29/rooms04.jpg",
+
+        "Link13": "https://i.ibb.co/hXR2LCB/rooms05.jpg",
+        "Link14": "https://i.ibb.co/Y8ZFQKc/rooms06.jpg",
+        "Link15": "https://i.ibb.co/KwZ5b3H/rooms07.jpg",
+
+        "Link16": "https://i.ibb.co/hYYjkLx/rooms08.jpg",
+        "Link17": "https://i.ibb.co/WcVxgVg/rooms09.jpg",
+        "Link18": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
       },
       "VirtualTour": "https://virtualtour.greenmeadowpg.com",
       "BookingOptions": {
@@ -980,8 +999,1679 @@
           "Date": "2024-07-30"
         }
       ]
-    }
-    
-    
-  
+    },
+
+
+
+
+
+
+
+    {
+      "id": "Rooms12",
+      "Name": "Sunny Side PG",
+      "Type": "PG",
+      "State": "Karnataka",
+      "City": "Bangalore",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Male",
+      "Address": "Koramangala 4th Block",
+      "Landmark": "Near Forum Mall",
+      "Rating": "4.5",
+      "TotalRating": "750",
+      "Review": "Excellent",
+      "TotalPrice": "8000",
+      "TotalDiscount": "10",
+      "ActualPrice": "7200",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-10-15",
+      "MinimumStay": "6 months",
+      "Description": "A modern PG with state-of-the-art facilities, perfect for young professionals and students in the heart of Bangalore's tech hub.",
+      "OwnerContacts": "9988776655",
+      "OwnerName": "Ravi Kumar",
+      "Facilities": {
+        "FloorNo": "03",
+        "TotalFloors": "5",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "05-10 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "120 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "No",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "Available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Two months' notice required",
+        "GuestPolicy": "Guests allowed until 10 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "Smoking allowed in designated areas only",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "Yes",
+        "GameRoom": "Yes",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 100m",
+        "Supermarket": "50m away",
+        "PublicTransport": "Bus stop 2 minutes away",
+        "Hospital": "800m away",
+        "BankATM": "200m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/1Mhxb1S/pg05.jpg",
+        "Link02": "https://i.ibb.co/FH11cBH/pg06.jpg"
+
+      },
+      "VirtualTour": "https://virtualtour.sunnysidepg.com",
+      "BookingOptions": {
+        "InstantBook": false,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "20% off for stays longer than 12 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Rahul S.",
+          "Rating": 5,
+          "Comment": "Great location and amazing facilities. Highly recommended!",
+          "Date": "2024-08-15"
+        },
+        {
+          "UserName": "Priya M.",
+          "Rating": 4,
+          "Comment": "Clean and well-maintained. The gym is a big plus.",
+          "Date": "2024-07-22"
+        }
+      ]
+    },
+
+    {
+      "id": "Rooms13",
+      "Name": "Moonlight PG",
+      "Type": "PG",
+      "State": "Maharashtra",
+      "City": "Pune",
+      "RoomType": "Double",
+      "Occupancy": "2",
+      "Gender": "Female",
+      "Address": "Viman Nagar",
+      "Landmark": "Near Phoenix Mall",
+      "Rating": "4.7",
+      "TotalRating": "530",
+      "Review": "Excellent",
+      "TotalPrice": "7000",
+      "TotalDiscount": "15",
+      "ActualPrice": "5950",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-01",
+      "MinimumStay": "3 months",
+      "Description": "Spacious double-sharing room PG for female students and working professionals in the heart of Pune.",
+      "OwnerContacts": "9876543210",
+      "OwnerName": "Meera Patel",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "4",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-05 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "100 sq ft",
+        "Furnishing": "Semi Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "No",
+        "PowerBackup": "No"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Guests allowed until 9 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "Strictly no smoking",
+        "CancellationPolicy": "Free cancellation up to 10 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "No",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 50m",
+        "Supermarket": "30m away",
+        "PublicTransport": "Metro station 5 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "150m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/M58N1rP/Pg09.jpg",
+        "Link02": "https://i.ibb.co/cTQZFCR/pg10.jpg",
+        "Link03": "https://i.ibb.co/K5JZPRB/rooms01.jpg"
+      },
+      "VirtualTour": "https://virtualtour.moonlightpg.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays longer than 6 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Anjali R.",
+          "Rating": 5,
+          "Comment": "Safe and secure for women, with easy access to all essentials.",
+          "Date": "2024-08-20"
+        },
+        {
+          "UserName": "Shreya T.",
+          "Rating": 4,
+          "Comment": "Good location but lacks power backup.",
+          "Date": "2024-07-19"
+        }
+      ]
+    },
+
+    {
+      "id": "Rooms14",
+      "Name": "Green View Hostel",
+      "Type": "Hostel",
+      "State": "Haryana",
+      "City": "Sonipat",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Male",
+      "Address": "Hauz Khas",
+      "Landmark": "Near Rishihood University",
+      "Rating": "4.3",
+      "TotalRating": "920",
+      "Review": "Good",
+      "TotalPrice": "9500",
+      "TotalDiscount": "5",
+      "ActualPrice": "9025",
+      "Availability": "No",
+      "AvailableFrom": "2024-11-01",
+      "MinimumStay": "12 months",
+      "Description": "Affordable single rooms with all essential amenities near Delhi's educational hub.",
+      "OwnerContacts": "9911223344",
+      "OwnerName": "Vikas Sharma",
+      "Facilities": {
+        "FloorNo": "01",
+        "TotalFloors": "4",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "02-05 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "110 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "Yes",
+        "Parking": "Available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Three months' notice required",
+        "GuestPolicy": "Guests allowed until 8 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking allowed",
+        "CancellationPolicy": "Free cancellation up to 14 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "No",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 200m",
+        "Supermarket": "150m away",
+        "PublicTransport": "Metro station 10 minutes away",
+        "Hospital": "500m away",
+        "BankATM": "100m away"
+      },
+      "Images": {
+         "Link01": "https://i.ibb.co/1Mhxb1S/pg05.jpg",
+        "Link02": "https://i.ibb.co/FH11cBH/pg06.jpg",
+        "Link03": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+      },
+      "VirtualTour": "https://virtualtour.greenviewhostel.com",
+      "BookingOptions": {
+        "InstantBook": false,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "15% off for stays longer than 12 months",
+        "ReferralDiscount": "10% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Rohan M.",
+          "Rating": 4,
+          "Comment": "Great value for money, but rooms could be bigger.",
+          "Date": "2024-07-30"
+        },
+        {
+          "UserName": "Sandeep K.",
+          "Rating": 5,
+          "Comment": "Best location for students, very convenient.",
+          "Date": "2024-08-05"
+        }
+      ]
+    },
+    {
+      "id": "Rooms15",
+      "Name": "Patna Elite PG",
+      "Type": "PG",
+      "State": "Bihar",
+      "City": "Patna",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Male",
+      "Address": "Boring Road",
+      "Landmark": "Near P&M Mall",
+      "Rating": "4.6",
+      "TotalRating": "620",
+      "Review": "Very Good",
+      "TotalPrice": "6000",
+      "TotalDiscount": "5",
+      "ActualPrice": "5700",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-10",
+      "MinimumStay": "6 months",
+      "Description": "Comfortable single rooms with all modern amenities, ideal for students and professionals in Patna.",
+      "OwnerContacts": "9800112233",
+      "OwnerName": "Ramesh Singh",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "4",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "05-10 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "110 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "Yes",
+        "Parking": "Available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Guests allowed until 9 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "No",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 100m",
+        "Supermarket": "70m away",
+        "PublicTransport": "Bus stop 5 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "200m away"
+      },
+      "Images": {
+        "Link13": "https://i.ibb.co/hXR2LCB/rooms05.jpg",
+        "Link14": "https://i.ibb.co/Y8ZFQKc/rooms06.jpg",
+        "Link18": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+      },
+      "VirtualTour": "https://virtualtour.patnaelitepg.com",
+      "BookingOptions": {
+        "InstantBook": false,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays longer than 12 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Saurav K.",
+          "Rating": 5,
+          "Comment": "Excellent facilities and location!",
+          "Date": "2024-07-22"
+        },
+        {
+          "UserName": "Manish T.",
+          "Rating": 4,
+          "Comment": "Good place for students but could improve on parking.",
+          "Date": "2024-08-10"
+        }
+      ]
+    },
+    {
+      "id": "Rooms16",
+      "Name": "Royal Stay Hostel",
+      "Type": "Hostel",
+      "State": "Bihar",
+      "City": "Gaya",
+      "RoomType": "Double",
+      "Occupancy": "2",
+      "Gender": "Male",
+      "Address": "Station Road",
+      "Landmark": "Near Vishnupad Temple",
+      "Rating": "4.2",
+      "TotalRating": "450",
+      "Review": "Good",
+      "TotalPrice": "5000",
+      "TotalDiscount": "8",
+      "ActualPrice": "4600",
+      "Availability": "No",
+      "AvailableFrom": "2024-11-05",
+      "MinimumStay": "9 months",
+      "Description": "Budget-friendly double-sharing rooms for male students in Gaya, Bihar.",
+      "OwnerContacts": "9876543211",
+      "OwnerName": "Amit Yadav",
+      "Facilities": {
+        "FloorNo": "03",
+        "TotalFloors": "5",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "02-07 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "90 sq ft",
+        "Furnishing": "Partially Furnished",
+        "Balcony": "No",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "No",
+        "Parking": "Available",
+        "PowerBackup": "No"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Guests allowed until 8 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "Strictly no smoking",
+        "CancellationPolicy": "Free cancellation up to 14 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "No",
+        "Elevator": "No",
+        "WorkingSpace": "No",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 150m",
+        "Supermarket": "100m away",
+        "PublicTransport": "Bus stand 5 minutes away",
+        "Hospital": "500m away",
+        "BankATM": "50m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/K5JZPRB/rooms01.jpg",
+        "Link02": "https://i.ibb.co/FWdJ8sg/rooms03.jpg",
+        "Link03": "https://i.ibb.co/9TqHM29/rooms04.jpg"
+      },
+      "VirtualTour": "https://virtualtour.royalstaygaya.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "5% off for stays longer than 9 months",
+        "ReferralDiscount": "3% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Ravi S.",
+          "Rating": 4,
+          "Comment": "Decent place but lacks kitchen access.",
+          "Date": "2024-08-18"
+        },
+        {
+          "UserName": "Arvind M.",
+          "Rating": 3,
+          "Comment": "Good for short-term stays.",
+          "Date": "2024-07-29"
+        }
+      ]
+    },
+    {
+      "id": "Rooms17",
+      "Name": "Haryana Comfort PG",
+      "Type": "PG",
+      "State": "Haryana",
+      "City": "Gurugram",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Female",
+      "Address": "Sector 14",
+      "Landmark": "Near HUDA City Centre",
+      "Rating": "4.8",
+      "TotalRating": "780",
+      "Review": "Excellent",
+      "TotalPrice": "10000",
+      "TotalDiscount": "10",
+      "ActualPrice": "9000",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-10-01",
+      "MinimumStay": "6 months",
+      "Description": "Luxury PG accommodation for female professionals in the heart of Gurugram.",
+      "OwnerContacts": "9876543212",
+      "OwnerName": "Suman Verma",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "5",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-05 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "120 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "Available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Two months notice required",
+        "GuestPolicy": "Guests allowed until 10 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "Designated smoking areas only",
+        "CancellationPolicy": "Free cancellation up to 10 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "Yes",
+        "GameRoom": "Yes",
+        "Cafeteria": "Yes",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 200m",
+        "Supermarket": "100m away",
+        "PublicTransport": "Metro station 3 minutes away",
+        "Hospital": "500m away",
+        "BankATM": "100m away"
+      },
+      "Images": {
+        
+        "Link01": "https://i.ibb.co/Y8ZFQKc/rooms06.jpg",
+        "Link02": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+      },
+      "VirtualTour": "https://virtualtour.haryanacomfortpg.com",
+      "BookingOptions": {
+        "InstantBook": false,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "15% off for stays longer than 12 months",
+        "ReferralDiscount": "7% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Priya M.",
+          "Rating": 5,
+          "Comment": "Very comfortable and secure, love the facilities!",
+          "Date": "2024-08-02"
+        },
+        {
+          "UserName": "Neha K.",
+          "Rating": 4,
+          "Comment": "A bit expensive but worth the price.",
+          "Date": "2024-09-01"
+        }
+      ]
+    },
+
+    {
+      "id": "Rooms18",
+      "Name": "Aurangabad Residency PG",
+      "Type": "PG",
+      "State": "Bihar",
+      "City": "Aurangabad",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Male",
+      "Address": "Old GT Road",
+      "Landmark": "Near Aurangabad Bus Stand",
+      "Rating": "4.4",
+      "TotalRating": "350",
+      "Review": "Very Good",
+      "TotalPrice": "4500",
+      "TotalDiscount": "7",
+      "ActualPrice": "4185",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-20",
+      "MinimumStay": "6 months",
+      "Description": "Affordable single rooms with basic amenities for students and professionals in Aurangabad, Bihar.",
+      "OwnerContacts": "9430011223",
+      "OwnerName": "Ajay Sharma",
+      "Facilities": {
+        "FloorNo": "01",
+        "TotalFloors": "3",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-05 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "95 sq ft",
+        "Furnishing": "Semi-Furnished",
+        "Balcony": "No",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "No",
+        "Parking": "Available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Guests allowed until 8 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking",
+        "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "No",
+        "Elevator": "No",
+        "WorkingSpace": "No",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 100m",
+        "Supermarket": "200m away",
+        "PublicTransport": "Bus stop 2 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "50m away"
+      },
+      "Images": {
+        
+        "Link01": "https://i.ibb.co/KwZ5b3H/rooms07.jpg",
+        "Link02": "https://i.ibb.co/hYYjkLx/rooms08.jpg",
+        "Link03": "https://i.ibb.co/WcVxgVg/rooms09.jpg"
+      },
+      "VirtualTour": "https://virtualtour.aurangabadresidency.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "8% off for stays longer than 10 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Manoj S.",
+          "Rating": 4,
+          "Comment": "Decent place with basic facilities, well-priced.",
+          "Date": "2024-08-14"
+        },
+        {
+          "UserName": "Sandeep P.",
+          "Rating": 5,
+          "Comment": "Great location and quiet environment.",
+          "Date": "2024-07-29"
+        }
+      ]
+    },
+    {
+      "id": "Rooms19",
+      "Name": "Daudnagar Classic Hostel",
+      "Type": "Hostel",
+      "State": "Bihar",
+      "City": "Daudnagar",
+      "RoomType": "Double",
+      "Occupancy": "2",
+      "Gender": "Female",
+      "Address": "Dehri Road",
+      "Landmark": "Near Kali Mandir",
+      "Rating": "4.1",
+      "TotalRating": "420",
+      "Review": "Good",
+      "TotalPrice": "4000",
+      "TotalDiscount": "5",
+      "ActualPrice": "3800",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-10-01",
+      "MinimumStay": "3 months",
+      "Description": "Comfortable double-sharing rooms for female students in a peaceful locality in Aurangabad.",
+      "OwnerContacts": "9876543201",
+      "OwnerName": "Sunita Devi",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "4",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-03 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "85 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "Yes",
+        "Parking": "No",
+        "PowerBackup": "No"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month notice required",
+        "GuestPolicy": "Guests allowed until 6 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "No",
+        "WorkingSpace": "No",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 150m",
+        "Supermarket": "100m away",
+        "PublicTransport": "Bus stop 5 minutes away",
+        "Hospital": "700m away",
+        "BankATM": "150m away"
+      },
+      "Images": {
+        
+        "Link01": "https://i.ibb.co/K5JZPRB/rooms01.jpg",
+        "Link02": "https://i.ibb.co/9TqHM29/rooms04.jpg",
+        "Link03": "https://i.ibb.co/KwZ5b3H/rooms07.jpg",
+        "Link04": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+      },
+      "VirtualTour": "https://virtualtour.aurangabadclassic.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "6% off for stays longer than 6 months",
+        "ReferralDiscount": "4% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Pooja T.",
+          "Rating": 4,
+          "Comment": "Very convenient for female students, safe and comfortable.",
+          "Date": "2024-09-03"
+        },
+        {
+          "UserName": "Neha R.",
+          "Rating": 3,
+          "Comment": "Basic amenities, but good for short stays.",
+          "Date": "2024-08-12"
+        }
+      ]
+    },
+    {
+      "id": "Rooms20",
+      "Name": "Lucknow Elite PG",
+      "Type": "PG",
+      "State": "Uttar Pradesh",
+      "City": "Lucknow",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Male",
+      "Address": "Gomti Nagar",
+      "Landmark": "Near Ambedkar Park",
+      "Rating": "4.3",
+      "TotalRating": "500",
+      "Review": "Very Good",
+      "TotalPrice": "7000",
+      "TotalDiscount": "8",
+      "ActualPrice": "6440",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-11-01",
+      "MinimumStay": "6 months",
+      "Description": "A comfortable PG for male students and professionals in Lucknow, with proximity to commercial hubs and a peaceful environment.",
+      "OwnerContacts": "8888222233",
+      "OwnerName": "Shyam Verma",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "4",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "02-06 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "100 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "Yes",
+        "Parking": "Available",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Two months' notice required",
+        "GuestPolicy": "Guests allowed until 9 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking indoors",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 200m",
+        "Supermarket": "150m away",
+        "PublicTransport": "Metro station 5 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "300m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/hXR2LCB/rooms05.jpg",
+        "Link02": "https://i.ibb.co/Y8ZFQKc/rooms06.jpg",
+        "Link03": "https://i.ibb.co/KwZ5b3H/rooms07.jpg"
+      },
+      "VirtualTour": "https://virtualtour.lucknowelitepg.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays longer than 12 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Amit K.",
+          "Rating": 4,
+          "Comment": "Nice PG, very clean and well-maintained.",
+          "Date": "2024-07-25"
+        },
+        {
+          "UserName": "Rahul V.",
+          "Rating": 5,
+          "Comment": "Amazing location and very comfortable rooms.",
+          "Date": "2024-08-10"
+        }
+      ]
+    },
+    {
+      "id": "Rooms21",
+      "Name": "Varanasi Comfort Stay",
+      "Type": "Hostel",
+      "State": "Uttar Pradesh",
+      "City": "Varanasi",
+      "RoomType": "Double",
+      "Occupancy": "2",
+      "Gender": "Female",
+      "Address": "Assi Ghat",
+      "Landmark": "Near Banaras Hindu University",
+      "Rating": "4.6",
+      "TotalRating": "300",
+      "Review": "Excellent",
+      "TotalPrice": "6000",
+      "TotalDiscount": "10",
+      "ActualPrice": "5400",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-20",
+      "MinimumStay": "3 months",
+      "Description": "Ideal for female students, this hostel offers safe and affordable accommodation in Varanasi, close to BHU and Assi Ghat.",
+      "OwnerContacts": "7777111122",
+      "OwnerName": "Suman Mishra",
+      "Facilities": {
+        "FloorNo": "03",
+        "TotalFloors": "5",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-04 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "90 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "No",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month's notice required",
+        "GuestPolicy": "Guests allowed until 7 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "Smoking allowed in designated areas only",
+        "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "No",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 100m",
+        "Supermarket": "200m away",
+        "PublicTransport": "Bus stop 3 minutes away",
+        "Hospital": "600m away",
+        "BankATM": "100m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/M58N1rP/Pg09.jpg",
+        "Link02": "https://i.ibb.co/KwZ5b3H/rooms07.jpg",
+        "Link03": "https://i.ibb.co/hYYjkLx/rooms08.jpg",
+        "Link04": "https://i.ibb.co/WcVxgVg/rooms09.jpg"
+      },
+      "VirtualTour": "https://virtualtour.varanasicomfort.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "12% off for stays longer than 10 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Neha D.",
+          "Rating": 5,
+          "Comment": "Very safe and comfortable for students, great location.",
+          "Date": "2024-09-05"
+        },
+        {
+          "UserName": "Shreya R.",
+          "Rating": 4,
+          "Comment": "The hostel is good, but power backup could be better.",
+          "Date": "2024-07-15"
+        }
+      ]
+    },
+    {
+      "id": "Rooms22",
+      "Name": "Kanpur Residency Hostel",
+      "Type": "Hostel",
+      "State": "Uttar Pradesh",
+      "City": "Kanpur",
+      "RoomType": "Triple",
+      "Occupancy": "3",
+      "Gender": "Male",
+      "Address": "Swaroop Nagar",
+      "Landmark": "Near IIT Kanpur",
+      "Rating": "4.2",
+      "TotalRating": "320",
+      "Review": "Very Good",
+      "TotalPrice": "4500",
+      "TotalDiscount": "5",
+      "ActualPrice": "4275",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-10-05",
+      "MinimumStay": "4 months",
+      "Description": "Affordable and spacious hostel for students near IIT Kanpur, with access to common study areas and recreational facilities.",
+      "OwnerContacts": "9988221133",
+      "OwnerName": "Vikas Sharma",
+      "Facilities": {
+        "FloorNo": "01",
+        "TotalFloors": "4",
+        "AttachedBathroom": "No",
+        "LastPaymentDate": "03-06 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "150 sq ft",
+        "Furnishing": "Semi-Furnished",
+        "Balcony": "No",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "Yes",
+        "Parking": "No",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month's notice required",
+        "GuestPolicy": "No guests allowed",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking indoors",
+        "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "No",
+        "WorkingSpace": "Yes",
+        "Gym": "Yes",
+        "GameRoom": "Yes",
+        "Cafeteria": "No",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 150m",
+        "Supermarket": "100m away",
+        "PublicTransport": "Bus stop 5 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "300m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/M58N1rP/Pg09.jpg",
+        "Link02": "https://i.ibb.co/WcVxgVg/rooms09.jpg",
+        "Link03": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+      },
+      "VirtualTour": "https://virtualtour.kanpurresidency.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "7% off for stays longer than 8 months",
+        "ReferralDiscount": "3% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Rohit M.",
+          "Rating": 4,
+          "Comment": "Good for students, rooms are spacious and well-maintained.",
+          "Date": "2024-09-10"
+        },
+        {
+          "UserName": "Ankit S.",
+          "Rating": 4,
+          "Comment": "Nice hostel but could use better laundry facilities.",
+          "Date": "2024-08-01"
+        }
+      ]
+    },
+    {
+      "id": "Rooms23",
+      "Name": "Varanasi Peace Hostel",
+      "Type": "Hostel",
+      "State": "Uttar Pradesh",
+      "City": "Varanasi",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Female",
+      "Address": "Ravindrapuri",
+      "Landmark": "Near Sankat Mochan Temple",
+      "Rating": "4.7",
+      "TotalRating": "450",
+      "Review": "Excellent",
+      "TotalPrice": "5000",
+      "TotalDiscount": "12",
+      "ActualPrice": "4400",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-11-15",
+      "MinimumStay": "6 months",
+      "Description": "A peaceful and safe hostel for female students and professionals in Varanasi, offering modern amenities and a great atmosphere.",
+      "OwnerContacts": "9998774455",
+      "OwnerName": "Shalini Pandey",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "3",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "01-05 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "80 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "No",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Two months' notice required",
+        "GuestPolicy": "Guests allowed until 8 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking indoors",
+        "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "No",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 50m",
+        "Supermarket": "100m away",
+        "PublicTransport": "Bus stop 2 minutes away",
+        "Hospital": "500m away",
+        "BankATM": "150m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/K5JZPRB/rooms01.jpg",
+        "Link02": "https://i.ibb.co/hXR2LCB/rooms05.jpg",
+        "Link03": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+      },
+      "VirtualTour": "https://virtualtour.varanasipeacehostel.com",
+      "BookingOptions": {
+        "InstantBook": false,
+        "RequestToBook": true
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays longer than 12 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Priya N.",
+          "Rating": 5,
+          "Comment": "Amazing place! Very safe and clean, perfect for students.",
+          "Date": "2024-08-28"
+        },
+        {
+          "UserName": "Ritu S.",
+          "Rating": 4,
+          "Comment": "Nice hostel, but the kitchen access timings are a bit limited.",
+          "Date": "2024-07-19"
+        }
+      ]
+    },
+    {
+      "id": "Rooms24",
+      "Name": "Mumbai Central Rooms",
+      "Type": "Room",
+      "State": "Maharashtra",
+      "City": "Mumbai",
+      "RoomType": "Double",
+      "Occupancy": "2",
+      "Gender": "Male",
+      "Address": "Mumbai Central",
+      "Landmark": "Near Mumbai Central Railway Station",
+      "Rating": "4.8",
+      "TotalRating": "950",
+      "Review": "Excellent",
+      "TotalPrice": "15000",
+      "TotalDiscount": "15",
+      "ActualPrice": "12750",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-20",
+      "MinimumStay": "3 months",
+      "Description": "Spacious double rooms with excellent connectivity to key Mumbai areas. Ideal for professionals working in central Mumbai.",
+      "OwnerContacts": "9876543210",
+      "OwnerName": "Sameer Desai",
+      "Facilities": {
+        "FloorNo": "05",
+        "TotalFloors": "10",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "10-15 of each month",
+        "SecurityCharges": "One Month Payment in Advance",
+        "RoomSize": "180 sq ft",
+        "Furnishing": "Fully Furnished",
+        "Balcony": "Yes",
+        "KitchenAccess": "No",
+        "LaundryFacilities": "Yes",
+        "Parking": "Yes",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "One month's notice required",
+        "GuestPolicy": "Guests allowed until 9 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking indoors",
+        "CancellationPolicy": "Free cancellation up to 10 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "Yes",
+        "FreeWifi": "Yes",
+        "TV": "Yes",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "Yes",
+        "Terrace": "Yes"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 50m",
+        "Supermarket": "200m away",
+        "PublicTransport": "Train station 5 minutes away",
+        "Hospital": "1km away",
+        "BankATM": "100m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/9TqHM29/rooms04.jpg",
+        "Link02": "https://i.ibb.co/Y8ZFQKc/rooms06.jpg"
+      },
+      "VirtualTour": "https://virtualtour.mumbaicentralrooms.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "10% off for stays longer than 12 months",
+        "ReferralDiscount": "5% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Amit G.",
+          "Rating": 5,
+          "Comment": "Great rooms, excellent location! Perfect for professionals.",
+          "Date": "2024-08-02"
+        },
+        {
+          "UserName": "Vikram P.",
+          "Rating": 4,
+          "Comment": "Rooms are spacious but slightly overpriced.",
+          "Date": "2024-07-10"
+        }
+      ]
+    },
+    {
+      "id": "Rooms25",
+      "Name": "Pune Stay Rooms",
+      "Type": "Room",
+      "State": "Maharashtra",
+      "City": "Pune",
+      "RoomType": "Single",
+      "Occupancy": "1",
+      "Gender": "Female",
+      "Address": "Kothrud",
+      "Landmark": "Near MIT College",
+      "Rating": "4.3",
+      "TotalRating": "500",
+      "Review": "Very Good",
+      "TotalPrice": "8000",
+      "TotalDiscount": "8",
+      "ActualPrice": "7360",
+      "Availability": "Yes",
+      "AvailableFrom": "2024-09-30",
+      "MinimumStay": "4 months",
+      "Description": "Comfortable single rooms in Kothrud, Pune, perfect for female students and working professionals.",
+      "OwnerContacts": "9998887766",
+      "OwnerName": "Neha Patil",
+      "Facilities": {
+        "FloorNo": "02",
+        "TotalFloors": "5",
+        "AttachedBathroom": "Yes",
+        "LastPaymentDate": "05-10 of each month",
+        "SecurityCharges": "Two Months Payment in Advance",
+        "RoomSize": "120 sq ft",
+        "Furnishing": "Semi-Furnished",
+        "Balcony": "No",
+        "KitchenAccess": "Yes",
+        "LaundryFacilities": "Yes",
+        "Parking": "No",
+        "PowerBackup": "Yes"
+      },
+      "Policies": {
+        "RoomLeavingCriteria": "Two months' notice required",
+        "GuestPolicy": "Guests allowed until 7 PM",
+        "PetPolicy": "No pets",
+        "SmokingPolicy": "No smoking indoors",
+        "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+      },
+      "OtherFacilities": {
+        "AC": "No",
+        "FreeWifi": "Yes",
+        "TV": "No",
+        "Elevator": "Yes",
+        "WorkingSpace": "Yes",
+        "Gym": "No",
+        "GameRoom": "No",
+        "Cafeteria": "No",
+        "Terrace": "No"
+      },
+      "NearbyAmenities": {
+        "Restaurants": "Within 100m",
+        "Supermarket": "300m away",
+        "PublicTransport": "Bus stop 3 minutes away",
+        "Hospital": "2km away",
+        "BankATM": "200m away"
+      },
+      "Images": {
+        "Link01": "https://i.ibb.co/M58N1rP/Pg09.jpg",
+        "Link02": "https://i.ibb.co/K5JZPRB/rooms01.jpg",
+        "Link03": "https://i.ibb.co/9TqHM29/rooms04.jpg"
+      },
+      "VirtualTour": "https://virtualtour.punestayrooms.com",
+      "BookingOptions": {
+        "InstantBook": true,
+        "RequestToBook": false
+      },
+      "SpecialOffers": {
+        "LongTermDiscount": "5% off for stays longer than 6 months",
+        "ReferralDiscount": "3% off for referring a friend"
+      },
+      "Reviews": [
+        {
+          "UserName": "Shruti K.",
+          "Rating": 4,
+          "Comment": "Nice rooms but could use a few more amenities like a cafeteria.",
+          "Date": "2024-07-25"
+        },
+        {
+          "UserName": "Meera J.",
+          "Rating": 5,
+          "Comment": "Safe and comfortable, perfect for students.",
+          "Date": "2024-06-18"
+        }
+      ]
+    },
+      {
+        "id": "Rooms26",
+        "Name": "Jaipur Elite Rooms",
+        "Type": "Room",
+        "State": "Rajasthan",
+        "City": "Jaipur",
+        "RoomType": "Single",
+        "Occupancy": "1",
+        "Gender": "Female",
+        "Address": "Vaishali Nagar",
+        "Landmark": "Near Ajmer Road",
+        "Rating": "4.4",
+        "TotalRating": "680",
+        "Review": "Comfortable and convenient for students",
+        "TotalPrice": "9000",
+        "TotalDiscount": "5",
+        "ActualPrice": "8550",
+        "Availability": "Yes",
+        "AvailableFrom": "2024-10-01",
+        "MinimumStay": "6 months",
+        "Description": "Well-furnished single rooms in a peaceful area of Jaipur, ideal for female students and working professionals.",
+        "OwnerContacts": "9876543211",
+        "OwnerName": "Sonia Sharma",
+        "Facilities": {
+          "FloorNo": "02",
+          "TotalFloors": "4",
+          "AttachedBathroom": "Yes",
+          "LastPaymentDate": "10th of each month",
+          "SecurityCharges": "One Month Payment in Advance",
+          "RoomSize": "130 sq ft",
+          "Furnishing": "Fully Furnished",
+          "Balcony": "Yes",
+          "KitchenAccess": "Yes",
+          "LaundryFacilities": "Yes",
+          "Parking": "No",
+          "PowerBackup": "Yes"
+        },
+        "Policies": {
+          "RoomLeavingCriteria": "One month's notice required",
+          "GuestPolicy": "Guests allowed until 8 PM",
+          "PetPolicy": "No pets",
+          "SmokingPolicy": "No smoking indoors",
+          "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+        },
+        "OtherFacilities": {
+          "AC": "Yes",
+          "FreeWifi": "Yes",
+          "TV": "No",
+          "Elevator": "No",
+          "WorkingSpace": "Yes",
+          "Gym": "No",
+          "GameRoom": "No",
+          "Cafeteria": "No",
+          "Terrace": "Yes"
+        },
+        "NearbyAmenities": {
+          "Restaurants": "Within 200m",
+          "Supermarket": "500m away",
+          "PublicTransport": "Bus stop 2 minutes away",
+          "Hospital": "1km away",
+          "BankATM": "300m away"
+        },
+        "Images": {
+          "Link01": "https://i.ibb.co/SPQ34w5/pg08.jpg",
+        "Link02": "https://i.ibb.co/M58N1rP/Pg09.jpg",
+        "Link03": "https://i.ibb.co/hYYjkLx/rooms08.jpg",
+        "Link04": "https://i.ibb.co/WcVxgVg/rooms09.jpg",
+        "Link05": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+        },
+        "VirtualTour": "https://virtualtour.jaipureliterooms.com",
+        "BookingOptions": {
+          "InstantBook": false,
+          "RequestToBook": true
+        },
+        "SpecialOffers": {
+          "LongTermDiscount": "10% off for stays longer than 12 months",
+          "ReferralDiscount": "3% off for referring a friend"
+        }
+      },
+      {
+        "id": "Hostel27",
+        "Name": "Chennai Student Hostel",
+        "Type": "Hostel",
+        "State": "Tamil Nadu",
+        "City": "Chennai",
+        "RoomType": "Shared",
+        "Occupancy": "3",
+        "Gender": "Male",
+        "Address": "Adyar",
+        "Landmark": "Near IIT Madras",
+        "Rating": "4.2",
+        "TotalRating": "820",
+        "Review": "Good place for students, close to key educational institutions",
+        "TotalPrice": "7000",
+        "TotalDiscount": "10",
+        "ActualPrice": "6300",
+        "Availability": "Yes",
+        "AvailableFrom": "2024-09-25",
+        "MinimumStay": "6 months",
+        "Description": "Affordable and well-maintained shared rooms for male students, located near educational hubs.",
+        "OwnerContacts": "9998887777",
+        "OwnerName": "Ravi Krishnan",
+        "Facilities": {
+          "FloorNo": "03",
+          "TotalFloors": "5",
+          "AttachedBathroom": "No",
+          "LastPaymentDate": "05th of each month",
+          "SecurityCharges": "Two Months Payment in Advance",
+          "RoomSize": "150 sq ft",
+          "Furnishing": "Semi-Furnished",
+          "Balcony": "Yes",
+          "KitchenAccess": "No",
+          "LaundryFacilities": "Yes",
+          "Parking": "Yes",
+          "PowerBackup": "Yes"
+        },
+        "Policies": {
+          "RoomLeavingCriteria": "Two months' notice required",
+          "GuestPolicy": "Guests allowed until 9 PM",
+          "PetPolicy": "No pets",
+          "SmokingPolicy": "Smoking allowed in designated areas",
+          "CancellationPolicy": "Free cancellation up to 10 days before check-in"
+        },
+        "OtherFacilities": {
+          "AC": "Yes",
+          "FreeWifi": "Yes",
+          "TV": "Yes",
+          "Elevator": "Yes",
+          "WorkingSpace": "Yes",
+          "Gym": "No",
+          "GameRoom": "No",
+          "Cafeteria": "No",
+          "Terrace": "Yes"
+        },
+        "NearbyAmenities": {
+          "Restaurants": "Within 100m",
+          "Supermarket": "150m away",
+          "PublicTransport": "Bus stop 3 minutes away",
+          "Hospital": "500m away",
+          "BankATM": "200m away"
+        },
+        "Images": {
+        "Link01": "https://i.ibb.co/9TqHM29/rooms04.jpg",
+        "Link02": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+        },
+        "VirtualTour": "https://virtualtour.chennaistudenthostel.com",
+        "BookingOptions": {
+          "InstantBook": true,
+          "RequestToBook": false
+        },
+        "SpecialOffers": {
+          "LongTermDiscount": "5% off for stays longer than 12 months",
+          "ReferralDiscount": "2% off for referring a friend"
+        }
+      },
+      {
+        "id": "Rooms28",
+        "Name": "Lucknow Deluxe Rooms",
+        "Type": "Room",
+        "State": "Uttar Pradesh",
+        "City": "Lucknow",
+        "RoomType": "Double",
+        "Occupancy": "2",
+        "Gender": "Male",
+        "Address": "Gomti Nagar",
+        "Landmark": "Near Ambedkar Park",
+        "Rating": "4.7",
+        "TotalRating": "720",
+        "Review": "Spacious and affordable",
+        "TotalPrice": "11000",
+        "TotalDiscount": "12",
+        "ActualPrice": "9680",
+        "Availability": "Yes",
+        "AvailableFrom": "2024-10-10",
+        "MinimumStay": "6 months",
+        "Description": "Modern double rooms located in a prime area of Lucknow, close to major commercial and recreational zones.",
+        "OwnerContacts": "9123456789",
+        "OwnerName": "Ankur Singh",
+        "Facilities": {
+          "FloorNo": "02",
+          "TotalFloors": "6",
+          "AttachedBathroom": "Yes",
+          "LastPaymentDate": "05th of each month",
+          "SecurityCharges": "Two Months Payment in Advance",
+          "RoomSize": "180 sq ft",
+          "Furnishing": "Fully Furnished",
+          "Balcony": "Yes",
+          "KitchenAccess": "Yes",
+          "LaundryFacilities": "Yes",
+          "Parking": "Yes",
+          "PowerBackup": "Yes"
+        },
+        "Policies": {
+          "RoomLeavingCriteria": "Two months' notice required",
+          "GuestPolicy": "Guests allowed until 8 PM",
+          "PetPolicy": "No pets",
+          "SmokingPolicy": "No smoking indoors",
+          "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+        },
+        "OtherFacilities": {
+          "AC": "Yes",
+          "FreeWifi": "Yes",
+          "TV": "No",
+          "Elevator": "Yes",
+          "WorkingSpace": "Yes",
+          "Gym": "No",
+          "GameRoom": "No",
+          "Cafeteria": "Yes",
+          "Terrace": "Yes"
+        },
+        "NearbyAmenities": {
+          "Restaurants": "Within 100m",
+          "Supermarket": "200m away",
+          "PublicTransport": "Bus stop 2 minutes away",
+          "Hospital": "800m away",
+          "BankATM": "300m away"
+        },
+        "Images": {
+        "Link01": "https://i.ibb.co/9TqHM29/rooms04.jpg",
+        "Link02": "https://i.ibb.co/hXR2LCB/rooms05.jpg",
+        "Link03": "https://i.ibb.co/KwZ5b3H/rooms07.jpg"
+        },
+        "VirtualTour": "https://virtualtour.lucknowdeluxerooms.com",
+        "BookingOptions": {
+          "InstantBook": true,
+          "RequestToBook": false
+        },
+        "SpecialOffers": {
+          "LongTermDiscount": "15% off for stays longer than 12 months",
+          "ReferralDiscount": "5% off for referring a friend"
+        }
+      },
+      {
+        "id": "Hostel29",
+        "Name": "Kolkata Youth Hostel",
+        "Type": "Hostel",
+        "State": "West Bengal",
+        "City": "Kolkata",
+        "RoomType": "Shared",
+        "Occupancy": "4",
+        "Gender": "Female",
+        "Address": "Salt Lake",
+        "Landmark": "Near Sector V",
+        "Rating": "4.5",
+        "TotalRating": "510",
+        "Review": "Excellent for student communities",
+        "TotalPrice": "6500",
+        "TotalDiscount": "8",
+        "ActualPrice": "5980",
+        "Availability": "Yes",
+        "AvailableFrom": "2024-09-20",
+        "MinimumStay": "6 months",
+        "Description": "Economical shared hostel for female students, close to IT and educational centers.",
+        "OwnerContacts": "9876543210",
+        "OwnerName": "Priya Das",
+        "Facilities": {
+          "FloorNo": "01",
+          "TotalFloors": "4",
+          "AttachedBathroom": "No",
+          "LastPaymentDate": "05th of each month",
+          "SecurityCharges": "One Month Payment in Advance",
+          "RoomSize": "120 sq ft",
+          "Furnishing": "Semi-Furnished",
+          "Balcony": "No",
+          "KitchenAccess": "No",
+          "LaundryFacilities": "Yes",
+          "Parking": "No",
+          "PowerBackup": "No"
+        },
+        "Policies": {
+          "RoomLeavingCriteria": "One month's notice required",
+          "GuestPolicy": "Guests allowed until 7 PM",
+          "PetPolicy": "No pets",
+          "SmokingPolicy": "No smoking indoors",
+          "CancellationPolicy": "Free cancellation up to 5 days before check-in"
+        },
+        "OtherFacilities": {
+          "AC": "No",
+          "FreeWifi": "Yes",
+          "TV": "No",
+          "Elevator": "No",
+          "WorkingSpace": "Yes",
+          "Gym": "No",
+          "GameRoom": "No",
+          "Cafeteria": "No",
+          "Terrace": "No"
+        },
+        "NearbyAmenities": {
+          "Restaurants": "Within 50m",
+          "Supermarket": "100m away",
+          "PublicTransport": "Bus stop 1 minute away",
+          "Hospital": "300m away",
+          "BankATM": "150m away"
+        },
+        "Images": {
+        "Link01": "https://i.ibb.co/hYYjkLx/rooms08.jpg",
+        "Link02": "https://i.ibb.co/WcVxgVg/rooms09.jpg",
+        "Link03": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+        },
+        "VirtualTour": "https://virtualtour.kolkatayouthhostel.com",
+        "BookingOptions": {
+          "InstantBook": false,
+          "RequestToBook": true
+        },
+        "SpecialOffers": {
+          "LongTermDiscount": "8% off for stays longer than 12 months",
+          "ReferralDiscount": "3% off for referring a friend"
+        }
+      },
+      {
+        "id": "Rooms30",
+        "Name": "Pune Premium Rooms",
+        "Type": "Room",
+        "State": "Maharashtra",
+        "City": "Pune",
+        "RoomType": "Single",
+        "Occupancy": "1",
+        "Gender": "Female",
+        "Address": "Kothrud",
+        "Landmark": "Near MIT College",
+        "Rating": "4.6",
+        "TotalRating": "610",
+        "Review": "Modern and secure for students",
+        "TotalPrice": "9500",
+        "TotalDiscount": "8",
+        "ActualPrice": "8740",
+        "Availability": "Yes",
+        "AvailableFrom": "2024-10-01",
+        "MinimumStay": "6 months",
+        "Description": "Modern single rooms with all necessary amenities for female students, located near key educational institutions.",
+        "OwnerContacts": "9988776655",
+        "OwnerName": "Neha Patil",
+        "Facilities": {
+          "FloorNo": "04",
+          "TotalFloors": "7",
+          "AttachedBathroom": "Yes",
+          "LastPaymentDate": "07th of each month",
+          "SecurityCharges": "One Month Payment in Advance",
+          "RoomSize": "120 sq ft",
+          "Furnishing": "Fully Furnished",
+          "Balcony": "No",
+          "KitchenAccess": "Yes",
+          "LaundryFacilities": "Yes",
+          "Parking": "Yes",
+          "PowerBackup": "Yes"
+        },
+        "Policies": {
+          "RoomLeavingCriteria": "One month's notice required",
+          "GuestPolicy": "Guests allowed until 7 PM",
+          "PetPolicy": "No pets",
+          "SmokingPolicy": "No smoking indoors",
+          "CancellationPolicy": "Free cancellation up to 7 days before check-in"
+        },
+        "OtherFacilities": {
+          "AC": "Yes",
+          "FreeWifi": "Yes",
+          "TV": "Yes",
+          "Elevator": "Yes",
+          "WorkingSpace": "Yes",
+          "Gym": "No",
+          "GameRoom": "No",
+          "Cafeteria": "No",
+          "Terrace": "No"
+        },
+        "NearbyAmenities": {
+          "Restaurants": "Within 100m",
+          "Supermarket": "300m away",
+          "PublicTransport": "Bus stop 5 minutes away",
+          "Hospital": "800m away",
+          "BankATM": "200m away"
+        },
+        "Images": {
+          "Link01": "https://i.ibb.co/hYYjkLx/rooms08.jpg",
+        "Link02": "https://i.ibb.co/WcVxgVg/rooms09.jpg",
+        "Link03": "https://i.ibb.co/Wgv3RmH/rooms19.jpg"
+        },
+        "VirtualTour": "https://virtualtour.punepremiumrooms.com",
+        "BookingOptions": {
+          "InstantBook": true,
+          "RequestToBook": false
+        },
+        "SpecialOffers": {
+          "LongTermDiscount": "12% off for stays longer than 12 months",
+          "ReferralDiscount": "4% off for referring a friend"
+        }
+      }
 ]
+
