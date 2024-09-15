@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import FilterComponent from "@/components/FilterOptions";
 import HotelsPgRoomDetails from "@/components/HotelsPgRoomDetails";
 import SearchInput from "@/components/searchInput";
@@ -43,7 +42,7 @@ export default function HomePage() {
   return (
     <div className="w-full min-h-screen relative overflow-hidden">
       {/*row 1st = Slideshow container */}
-      <div className="w-full h-[30vh] md:h-[40vh] relative overflow-hidden">
+      {/* <div className="w-full h-[30vh] md:h-[40vh] relative overflow-hidden">
         {images.map((image, index) => (
           <div
             key={index}
@@ -55,9 +54,9 @@ export default function HomePage() {
               <Image
                 src={image}
                 alt={`Slide ${index + 1}`}
-                layout="fill"
-                objectFit="cover"
-                priority={index === currentImageIndex}
+                width={100}
+                height={50}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
               />
             </div>
 
@@ -71,7 +70,35 @@ export default function HomePage() {
             </div>
           </div>
         ))}
+      </div> */}
+
+      {/* selected options pgs/rooms/hostels */}
+      <div className="w-full bg-blue-100 py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {options.map(({ name, icon: Icon, value }) => (
+                <button
+                  key={value}
+                  onClick={() => handleTabChange(value)}
+                  className={`flex items-center justify-center px-6 py-3 bg-gradient-to-r 
+                    ${
+                      activeTab === value
+                        ? "bg-blue-700 to-green-700 ring-2 ring-green-400 ring-opacity-50 border-4 border-white"
+                        : "from-green-400 to-green-600 hover:border-2"
+                    }
+                    text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform 
+                    hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50`}
+                >
+                  <Icon className="mr-3" size={24} />
+                  <span className="text-lg">{name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
+
       {/* Search and Filters */}
       <div className="bg-blue-100 p-4 md:pl-8 md:pr-8">
         <SearchInput></SearchInput>

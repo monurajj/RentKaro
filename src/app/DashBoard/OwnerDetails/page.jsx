@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FaHome, FaMoneyBillWave, FaUsers, FaStar, FaPlus, FaInfoCircle } from 'react-icons/fa';
 import AddRoomForm from "../../../components/AddroomForOwner";
+import { FaMinus } from "react-icons/fa";
 
 const TabButton = ({ active, onClick, children }) => (
   <button
@@ -121,7 +122,8 @@ const Dashboard = ({ ownerStats, rooms, onAddRoomClick, isAddRoomOpen }) => (
           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition duration-300 ease-in-out flex items-center"
           onClick={onAddRoomClick}
         >
-          <FaPlus className="mr-2" /> {isAddRoomOpen ? 'Close Form' : 'Add New Room'}
+          {isAddRoomOpen ? <FaMinus className="mr-2" /> : <FaPlus className="mr-2" />}
+          {isAddRoomOpen ? 'Close Form' : 'Add New Room'}
         </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
