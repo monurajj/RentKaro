@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config();
 
-const mongoURI = 'mongodb://localhost:27017/jai';
+
+const mongoURI = process.env.MONGO_URI
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
@@ -49,7 +51,7 @@ const roomDetailsSchema = new mongoose.Schema({
   BookingOptions: Object,
   SpecialOffers: Object,
   Reviews: Array,
-}, { collection: 'roomDetails' });
+}, { collection: 'RoomDetails' });
 
 const RoomDetails = mongoose.model('RoomDetails', roomDetailsSchema);
 
