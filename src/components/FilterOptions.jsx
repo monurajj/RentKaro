@@ -107,7 +107,7 @@ const FacilitiesFilter = () => {
   const { facilities, setFacilities } = useSearch();
   return (
     <FilterOption icon={FaHotel} label="Facilities">
-      {['WiFi', 'AC', 'TV', 'Parking', 'Gym'].map((facility) => (
+      {['FreeWifi', 'AC', 'TV', 'Cafeteria', 'Gym'].map((facility) => (
         <div key={facility} className="flex items-center mt-2">
           <Checkbox
             id={facility}

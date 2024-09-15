@@ -19,7 +19,7 @@ const ContactUs = () => {
           Get in Touch with Us
         </h1>
         <p className="text-center text-lg text-gray-700 mb-10">
-          We're here to help you find the perfect room, PG, or hostel. Feel free to reach out to us!
+          We&apos;re here to help you find the perfect room, PG, or hostel. Feel free to reach out to us!
         </p>
 
         {/* 24/7 Support Highlight */}

@@ -190,9 +190,11 @@ const ImageSlideshow = ({ images }) => {
 
   return (
     <div className="relative">
-      <img
+      <Image
         src={images[currentImageIndex]}
         alt="Room"
+        width={100}
+  height={50}
         className="w-full h-48 object-cover rounded-lg mb-4"
       />
       {/* Previous Button */}

@@ -24,13 +24,14 @@ export default function HomePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
-
+  
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]); // Added images.length here
+  
 
   return (
     <div className="w-full min-h-screen relative overflow-hidden">
