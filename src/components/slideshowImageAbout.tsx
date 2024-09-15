@@ -5,63 +5,80 @@ import data from '../../data.json'
 
 const SlideshowAboutPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [direction, setDirection] = useState('next');
   
-  // Fetching about page data
   const aboutPageData = data.find(item => item.id === "AboutpageImage");
-  // console.log('Fetched aboutPageData:', aboutPageData);
-  
-  // Extracting images array
   const images = aboutPageData ? Object.values(aboutPageData.Images) : [];
-  // console.log('Images array:', images);
 
   useEffect(() => {
-    if (images.length === 0) {
-      // console.log('No images available for the slideshow');
-      return;
-    }
+    if (images.length === 0) return;
     
-    // Set up image slideshow interval
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => {
-        const newIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
-        // console.log(`Switching to image index: ${newIndex}`);
-        return newIndex;
-      });
-    }, 1000);
+      setDirection('next');
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
 
-    // Clean up interval on component unmount
-    return () => {
-      // console.log('Clearing interval');
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [images.length]);
 
-  // console.log('Current image index:', currentImageIndex);
+  const goToPrevious = () => {
+    setDirection('prev');
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const goToNext = () => {
+    setDirection('next');
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   return (
-    <div className="w-auto h-[50vh] md:h-[40vh] relative overflow-hidden">
+    <div className="w-auto h-[50vh] md:h-[40vh] relative overflow-hidden group">
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out
+            ${index === currentImageIndex 
+              ? 'opacity-100 transform translate-x-0' 
+              : 'opacity-0 transform ' + 
+                (direction === 'next' ? 'translate-x-full' : '-translate-x-full')
+            }`}
         >
-          <div className="relative w-full h-full overflow-hidden">
-            <Image
-              src={image}
-              alt={`About Us Slide ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
+          <Image
+            src={image}
+            alt={`About Us Slide ${index + 1}`}
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       ))}
+      
+      {/* Navigation Arrows */}
+      <button 
+        onClick={goToPrevious} 
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        &#10094;
+      </button>
+      <button 
+        onClick={goToNext} 
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        &#10095;
+      </button>
+
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((_, index) => (
+          <div 
+            key={index} 
+            className={`w-3 h-3 rounded-full ${
+              index === currentImageIndex ? 'bg-white' : 'bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default SlideshowAboutPage;
-
-
-

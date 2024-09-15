@@ -43,21 +43,29 @@ function NavBar() {
   // }, []);
 
   return (
-    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-green-200 backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600 to-green-400">
+    <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full  backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600 to-green-400">
       <div className="w-full">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
+
+
+
+            
             {/* Logo */}
             <button className="flex items-center p-1" onClick={handleClickLogo}>
               <Image
                 src={logoImage}
                 alt="Logo"
-                className="w-12 h-12 object-cover rounded-full border-green-400 border-2"
+                className="w-12 h-12 object-cover rounded-full border-green-400 border-2 "
               />
-              <h1 className="ml-2 text-black text-2xl font-Uchen font-semibold">
+              <h1 className="ml-2 text-black text-2xl font-Uchen font-semibold ">
                 Rent <span>करो</span>
               </h1>
             </button>
+
+
+
+
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-x-6 text-black">

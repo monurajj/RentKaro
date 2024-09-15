@@ -56,7 +56,7 @@ const FilterOption = ({ icon: Icon, label, children, isMobile, onClose }) => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.1 }}
               className="mt-4"
             >
               {children}
@@ -233,7 +233,7 @@ const FilterComponent = () => {
   }, []);
 
   const clearAllFilters = () => {
-    setPrice([0, 50000]);
+    setPrice('');
     setOccupancy(1);
     setFacilities([]);
     setSortOrder(false);

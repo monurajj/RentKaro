@@ -1,15 +1,20 @@
 "use client"
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import AboutUs from '@/components/AboutUs';
 import LookingFor from '@/components/LookingFor';
-import data from "../../../data.json";
-import ContactUs from '../../components/contactUs'
+import ContactUs from '../../components/contactUs';
+import homePage01 from '../../assets/homePageImage01.png';
+import homePage02 from '../../assets/homePageImage02.png';
+import homePage03 from '../../assets/homePageImage03.png';
+import homePage04 from '../../assets/homePageImage04.png';
+
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = Object.values(data[0].Images);
+  // const images = Object.values(data[0].Images);
+  const images = [homePage01, homePage02, homePage03, homePage04];
 
-  
   const punchlines = [
     "Find Your Perfect Stay with Just One Click",
     "No More Running Around - Book Instantly",
@@ -25,7 +30,7 @@ export default function HomePage() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   return (
     <div className="w-full min-h-screen relative overflow-hidden">
@@ -39,16 +44,19 @@ export default function HomePage() {
             }`}
           >
             <div className="relative w-full h-full overflow-hidden">
-              <img
+              <Image
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
 
-            <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-black bg-opacity-40 flex flex-col justify-center items-center md:items-end text-white p-4 md:p-8">
+            <div className="absolute top-0 right-0 w-full md:w-1/2 h-full 
+            bg-gradient-to-l from-black md:from-black-400
+            flex flex-col justify-center items-center md:items-end text-white p-4 md:p-8">
               <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-4 text-center md:text-right max-w-sm md:max-w-md">
-                {punchlines[index % punchlines.length]}
+                {punchlines[index]}
               </h2>
               <p className="text-base md:text-xl text-center md:text-right max-w-xs md:max-w-md">
                 Your one-stop solution for hassle-free accommodation booking.

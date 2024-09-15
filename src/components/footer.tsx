@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logoImage from '../assets/DemoLogo.png'
+import logoImage from '../assets/Logo.png'
 import Image from 'next/image';
 
 const Footer = () => {
@@ -24,10 +24,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-green-200">Home</a></li>
-              <li><a href="#" className="hover:text-green-200">Search Rooms</a></li>
-              <li><a href="#" className="hover:text-green-200">List Your Property</a></li>
-              <li><a href="#" className="hover:text-green-200">About Us</a></li>
+              <li><a href="/DashBoard/OwnerDetails" className="hover:text-green-200">Home</a></li>
+              <li><a href="/DashBoard/AllRooms" className="hover:text-green-200">Search Rooms</a></li>
+              <li><a href="/DashBoard/OwnerDetails" className="hover:text-green-200">List Your Property</a></li>
+              <li><a href="/DashBoard#aboutUs" className="hover:text-green-200">About Us</a></li>
             </ul>
           </div>
           <div>
@@ -35,7 +35,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone size={18} className="mr-2" />
-                <span>+1 (123) 456-7890</span>
+                <span>+9876543210</span>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-2" />
@@ -43,20 +43,20 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <MapPin size={18} className="mr-2" />
-                <span>123 Rental Street, City, Country</span>
+                <span>131001 RU university , sonipat Haryana</span>
               </li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-green-200">
+              <a href="#" target='blank' className="hover:text-green-200">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="hover:text-green-200">
+              <a href="#" target='blank' className="hover:text-green-200">
                 <Twitter size={24} />
               </a>
-              <a href="#" className="hover:text-green-200">
+              <a href="#" target='blank' className="hover:text-green-200">
                 <Instagram size={24} />
               </a>
             </div>
