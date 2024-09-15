@@ -136,7 +136,6 @@ const HotelsPgRoomDetails = () => {
                     <li>Parking: {item.Facilities.Parking}</li>
                   </ul>
                 </div>
-
                 {/* Other Facilities */}
                 <div className="md:w-1/4 w-full md:pl-6 mb-4 md:mb-0">
                   <h3 className="text-xl font-semibold text-blue-600 mb-2">
