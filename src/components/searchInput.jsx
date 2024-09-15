@@ -10,7 +10,7 @@ const SearchInput = ({ onSearch }) => {
     <div className="w-full max-w-4xl mx-auto">
       <form className="mb-6">
         <div className="flex items-center h-14 px-4 rounded-lg border border-gray-300 bg-white shadow-sm focus-within:ring-2 focus-within:ring-green-500 focus-within:border-green-500">
-          <FaSearchLocation className="text-gray-400" />
+          <FaSearchLocation className="text-gray-400"/>
           <input
             type="text"
             value={searchQuery}
