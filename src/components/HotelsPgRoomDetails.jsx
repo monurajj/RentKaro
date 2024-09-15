@@ -121,7 +121,7 @@ const HotelsPgRoomDetails = () => {
                 </div>
 
                 {/* Facilities */}
-                <div className="md:w-1/4 w-full md:pl-6 mb-4 md:mb-0">
+                <div className="hidden md:block md:w-1/4 w-full md:pl-6 mb-4 md:mb-0">
                   <h3 className="text-xl font-semibold text-blue-600 mb-2">
                     Facilities
                   </h3>

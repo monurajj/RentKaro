@@ -52,7 +52,9 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-black bg-opacity-40 flex flex-col justify-center items-center md:items-end text-white p-4 md:p-8">
+            <div className="absolute top-0 right-0 w-full md:w-1/2 h-full 
+            bg-gradient-to-l from-black md:from-black-400
+            flex flex-col justify-center items-center md:items-end text-white p-4 md:p-8">
               <h2 className="text-xl md:text-3xl font-bold mb-2 md:mb-4 text-center md:text-right max-w-sm md:max-w-md">
                 {punchlines[index]}
               </h2>
