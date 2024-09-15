@@ -75,12 +75,16 @@ const RoomAdd = () => {
 
   return (
     <div className="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8 bg-white shadow-lg rounded-lg text-black">
-      <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-6 sm:mb-8">Add Your Room Details</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-600 mb-6 sm:mb-8">
+        Add Your Room Details
+      </h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* Room Details Inputs */}
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Room Name</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Room Name
+            </label>
             <input
               type="text"
               name="name"
@@ -91,7 +95,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Room Type</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Room Type
+            </label>
             <input
               type="text"
               name="type"
@@ -102,7 +108,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">State</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              State
+            </label>
             <input
               type="text"
               name="state"
@@ -113,7 +121,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">City</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              City
+            </label>
             <input
               type="text"
               name="city"
@@ -124,7 +134,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Room Type (Solo/Couples/Groups)</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Room Type (Solo/Couples/Groups)
+            </label>
             <input
               type="text"
               name="roomType"
@@ -135,7 +147,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Occupancy</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Occupancy
+            </label>
             <input
               type="number"
               name="occupancy"
@@ -146,7 +160,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Gender Allowed</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Gender Allowed
+            </label>
             <select
               name="gender"
               value={roomDetails.gender}
@@ -160,7 +176,9 @@ const RoomAdd = () => {
             </select>
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Available From</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Available From
+            </label>
             <input
               type="date"
               name="availableFrom"
@@ -171,7 +189,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Minimum Stay (Months)</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Minimum Stay (Months)
+            </label>
             <input
               type="text"
               name="minimumStay"
@@ -182,7 +202,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Room Size (sq ft)</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Room Size (sq ft)
+            </label>
             <input
               type="text"
               name="roomSize"
@@ -193,7 +215,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Total Price (₹)</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Total Price (₹)
+            </label>
             <input
               type="number"
               name="totalPrice"
@@ -204,7 +228,9 @@ const RoomAdd = () => {
             />
           </div>
           <div>
-            <label className="block text-green-600 font-semibold mb-1">Discount (%)</label>
+            <label className="block text-green-600 font-semibold mb-1">
+              Discount (%)
+            </label>
             <input
               type="number"
               name="totalDiscount"
@@ -218,7 +244,9 @@ const RoomAdd = () => {
 
         {/* Description Field */}
         <div>
-          <label className="block text-green-600 font-semibold mb-1">Description</label>
+          <label className="block text-green-600 font-semibold mb-1">
+            Description
+          </label>
           <textarea
             name="description"
             value={roomDetails.description}
@@ -231,7 +259,9 @@ const RoomAdd = () => {
 
         {/* Image Upload (Multiple) */}
         <div>
-          <label className="block text-green-600 font-semibold mb-1">Room Images</label>
+          <label className="block text-green-600 font-semibold mb-1">
+            Room Images
+          </label>
           <input
             type="file"
             name="images"
@@ -244,8 +274,14 @@ const RoomAdd = () => {
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {roomDetails.imagePreviews.map((preview, index) => (
               <div key={index} className="text-center">
-                <img 
-                src={preview} alt={`Room Image ${index + 1}`} className="w-full h-48 object-cover rounded-lg" />
+                <Image
+                  src={preview}
+                  alt={`Room Image ${index + 1}`}
+                  layout="responsive"
+                  width={100}
+                  height={50}
+                  className="w-[30%] h-48 object-cover rounded-lg"
+                />
                 <p className="text-sm mt-2">{roomDetails.images[index].name}</p>
               </div>
             ))}
