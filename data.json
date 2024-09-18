@@ -41,6 +41,7 @@
       "Description": "Modern hostel with a vibrant community, perfect for digital nomads and young professionals.",
       "OwnerContacts": "9876543210",
       "OwnerName": "Rahul Sharma",
+      "RoomOwner":"True",
       "Facilities": {
         "FloorNo": "04",
         "TotalFloors": "6",

@@ -1,21 +1,30 @@
-import { Home, Info, MessageCircle, Phone, Search, User, X } from 'lucide-react';
+import { Home, Info, MessageCircle, Phone, Search, User, X, LogOut } from 'lucide-react';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { auth } from '../app/lib/fireBaseConfig';
+import { useRouter } from 'next/navigation';
 
 const SidePanel = ({ isOpen, onClose }) => {
   const panelRef = useRef(null);
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+
   const menuItems = [
     { id: 'find-accommodation', name: "Find Accommodation", icon: Search, href: "/DashBoard/AllRooms" },
     { id: 'list-property', name: "List Your Property", icon: Home, href: "/DashBoard/OwnerDetails" },
-    // { id: 'for-tenants', name: "For Tenants", icon: User, href: "/tenants" },
-    // { id: 'for-landlords', name: "For Landlords", icon: DollarSign, href: "/landlords" },
-    // { id: 'rooms', name: "Rooms", icon: Bed, href: "/DashBoard?tab=rooms" },
-    // { id: 'hostels', name: "Hostels", icon: Hotel, href: "/hostels" },
-    // { id: 'pg-accommodations', name: "PG Accommodations", icon: Home, href: "/pg-accommodations" },
     { id: 'contact-us', name: "Contact Us", icon: Phone, href: "/DashBoard#contactUs" },
     { id: 'chat-support', name: "Chat Support", icon: MessageCircle, href: "/DashBoard#contactUs" },
     { id: 'about-us', name: "About Us", icon: Info, href: "/DashBoard#aboutUs" },
   ];
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -37,13 +46,24 @@ const SidePanel = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      localStorage.clear();
+      router.push('/');
+      onClose();
+    } catch (error) {
+      console.error("Error signing out: ", error);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-100">
       <div 
         ref={panelRef}
-        className={`fixed inset-y-0 right-0 w-80 bg-white shadow-lg flex flex-col h-screen transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-y-0 right-0 w-80 bg-white shadow-lg flex flex-col h-screen transform transition-transform duration-300 ease-in-out h-min ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -52,11 +72,18 @@ const SidePanel = ({ isOpen, onClose }) => {
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-md">
               <User size={24} />
             </div>
-            <div className="text-white">
-              <Link href={'/Login'} className="hover:underline font-semibold transition-all duration-200 ease-in-out">Sign In</Link>
-              <span className="mx-2">|</span>
-              <Link href={'/signup'} className="hover:underline font-semibold transition-all duration-200 ease-in-out">Register</Link>
-            </div>
+            {user ? (
+              <div className="text-white">
+                <p className="font-semibold">{user.displayName || user.email}</p>
+                <Link href="/profile" className="text-sm hover:underline" onClick={onClose}>My Profile</Link>
+              </div>
+            ) : (
+              <div className="text-white">
+                <Link href={'/Login'} className="hover:underline font-semibold transition-all duration-200 ease-in-out" onClick={onClose}>Sign In</Link>
+                <span className="mx-2">|</span>
+                <Link href={'/signup'} className="hover:underline font-semibold transition-all duration-200 ease-in-out" onClick={onClose}>Register</Link>
+              </div>
+            )}
           </div>
           <button 
             onClick={onClose}
@@ -65,7 +92,7 @@ const SidePanel = ({ isOpen, onClose }) => {
             <X size={24} />
           </button>
         </div>
-        <nav className="flex-grow overflow-y-auto py-6 px-4 space-y-2">
+        <nav className="flex-grow overflow-y-auto py-4 px-4 space-y-2">
           {menuItems.map((item) => (
             <Link
               key={item.id}
@@ -79,6 +106,17 @@ const SidePanel = ({ isOpen, onClose }) => {
               </div>
             </Link>
           ))}
+          {user && (
+            <button
+              onClick={handleSignOut}
+              className="w-full text-left px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105"
+            >
+              <div className="flex items-center gap-4">
+                <LogOut className="mr-4 h-6 w-6 text-blue-500" />
+                <span className="font-medium">Sign Out</span>
+              </div>
+            </button>
+          )}
         </nav>
       </div>
     </div>
