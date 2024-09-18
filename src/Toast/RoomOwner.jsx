@@ -42,7 +42,7 @@ const RoomToast = ({ onClose, position = "bottom-right" }) => {
         <div>
           <p className="font-bold">Room Addition Feature Unavailable</p>
           <span className="text-sm">
-            We're working on improving this feature. Room addition is currently
+            We&apos;re working on improving this feature. Room addition is currently
             under construction and will be available soon. Thank you for your
             patience.
           </span>

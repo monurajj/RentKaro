@@ -32,7 +32,7 @@ const RoomOwnerLandingPage = () => {
         </div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h1 className="text-5xl font-bold mb-6">
-            Maximize Your Property's Potential with Rent Kro
+            Maximize Your Property&apos;s Potential with Rent Kro
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join thousands of successful property owners who trust Rent Kro to
