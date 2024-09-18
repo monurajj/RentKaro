@@ -18,7 +18,6 @@ const RoomOwnerLandingPage = () => {
   const handleClickMouseOut = () => {
     setShowToast(false)
   }
-
   return (
     <div className="min-h-screen bg-blue-100 text-gray-900">
       <section className="relative bg-blue-600 text-white py-20">
