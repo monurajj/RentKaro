@@ -37,7 +37,6 @@ const Toast = ({ onClose, position = "bottom-right" }) => {
       <div className="flex items-center space-x-3">
         {/* Alert Icon */}
         <FaExclamationTriangle className="text-yellow-300" size={24} />
-
         {/* Message */}
         <div>
           <p className="font-bold">Chat Support Unavailable</p>

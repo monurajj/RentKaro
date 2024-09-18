@@ -17,20 +17,6 @@ const TabButton = ({ active, onClick, children }) => (
 );
 
 
-
-const PolicyInfo = () => (
-  <div className="bg-white p-6 rounded-lg shadow-md mt-6 text-black">
-    <h2 className="text-2xl font-semibold text-blue-800 mb-4">Room Owner Policies</h2>
-    <ul className="list-disc pl-5 space-y-2">
-      <li>All room owners must comply with local zoning and housing regulations.</li>
-      <li>Owners are responsible for maintaining clean and safe accommodations for guests.</li>
-      <li>A service fee of 3% will be deducted from each booking.</li>
-      <li>Owners must respond to booking requests within 24 hours.</li>
-      <li>Cancellation policies must be clearly stated in the room listing.</li>
-    </ul>
-  </div>
-);
-
 const Dashboard = ({ ownerStats, rooms, onAddRoomClick, isAddRoomOpen }) => (
   <>
 
@@ -71,12 +57,12 @@ const RoomOwnerPage = () => {
         <p className="text-green-600">Manage your rooms</p>
       </header>
       <div className="mb-4">
-        <TabButton active={activeTab === 'registration'} onClick={() => setActiveTab('registration')}>
+        {/* <TabButton active={activeTab === 'registration'} onClick={() => setActiveTab('registration')}>
           Registration
-        </TabButton>
-        <TabButton active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')}>
+        </TabButton> */}
+        {/* <TabButton active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')}>
           Show My Properties
-        </TabButton>
+        </TabButton> */}
       </div>
 
       {activeTab === 'registration' ? (
