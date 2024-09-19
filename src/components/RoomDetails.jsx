@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Star, MapPin, Users, Calendar, Clock, DollarSign, Wifi, Tv, Dumbbell, Coffee, Award, ChevronLeft, ChevronRight, Phone, User, Home, Shield, Utensils, ShoppingCart, Bus, Hospital, CreditCard, Gift, FileText } from 'lucide-react';
 import { FaRegSnowflake } from "react-icons/fa";
 import { GiElevator } from "react-icons/gi";
+import Link from 'next/link';
 
 
 const RoomDetails = ({ room }) => {
@@ -62,7 +63,7 @@ const RoomDetails = ({ room }) => {
               <p className="font-semibold text-blue-600 text-lg">₹{savings}</p>
             </div>
 
-            <button className="btn-1 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Book Now</button>
+            <Link href="/DashBoard/BookingDone" className="btn-1 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 text-center">Book Now</Link>
           </div>
         </div>
 
