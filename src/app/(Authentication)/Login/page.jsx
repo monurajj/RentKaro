@@ -25,11 +25,14 @@ export default function Login() {
         e.preventDefault();
         try {
             const result = await signInWithPopup(auth, provider);
+            console.log('Google sign-in successful:', result);
             localStorage.setItem('email', result.user.email);
             router.push('/');
         } catch (error) {
             console.error('Error during Google sign-in:', error);
-            setEmailError('Failed to sign in with Google. Please try again.');
+            console.error('Error code:', error.code);
+            console.error('Error message:', error.message);
+            setEmailError(`Failed to sign in with Google: ${error.message}`);
         }
     };
 
