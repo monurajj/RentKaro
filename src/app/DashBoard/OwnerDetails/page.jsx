@@ -56,14 +56,14 @@ const RoomOwnerPage = () => {
         <h1 className="text-3xl font-bold text-blue-800">Room Owner Portal</h1>
         <p className="text-green-600">Manage your rooms</p>
       </header>
-      <div className="mb-4">
-        {/* <TabButton active={activeTab === 'registration'} onClick={() => setActiveTab('registration')}>
+      {/* <div className="mb-4">
+        <TabButton active={activeTab === 'registration'} onClick={() => setActiveTab('registration')}>
           Registration
-        </TabButton> */}
-        {/* <TabButton active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')}>
+        </TabButton>
+        <TabButton active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')}>
           Show My Properties
-        </TabButton> */}
-      </div>
+        </TabButton>
+      </div> */}
 
       {activeTab === 'registration' ? (
         <>

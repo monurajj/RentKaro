@@ -97,9 +97,9 @@ function NavBar() {
                   >
                     <FaUser />
                     <span>{user.displayName || user.email}</span>
-                    <FaCaretDown />
+                    {/* <FaCaretDown /> */}
                   </button>
-                  {isProfileMenuOpen && (
+                  {/* {isProfileMenuOpen && (
                     <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1">
                       <Link href="/" className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         My Profile
@@ -112,7 +112,7 @@ function NavBar() {
                         Sign Out
                       </button>
                     </div>
-                  )}
+                  )} */}
                 </div>
 
 
