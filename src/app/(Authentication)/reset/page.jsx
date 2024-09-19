@@ -21,7 +21,7 @@ export default function Reset() {
                 position: "top-center",
                 autoClose: 3000,
             });
-            router.push('/login');
+            router.push('/Login');
         } catch (error) {
             console.error('Error during password reset:', error);
             toast.error('Error sending reset email: ' + error.message, {
