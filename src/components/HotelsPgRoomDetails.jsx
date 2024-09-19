@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearch } from "@/context/filterContext";
+import data from "../../data.json"
 
 const HotelsPgRoomDetails = () => {
   const [data, setData] = useState([]);
@@ -18,26 +19,7 @@ const HotelsPgRoomDetails = () => {
     selectedStates,
   } = useSearch();
 
-  // console.log(searchQuery, 'inroompage')
-  
-  const filteredData = data
-    .filter(
-      (item) =>
-        item.Name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.Type.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.State.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .filter(
-      (item) =>
-        (!selectedStates.length || selectedStates.includes(item.State)) &&
-        (!price || price >= parseInt(item.ActualPrice)) &&
-        occupancy <= parseInt(item.Occupancy) &&
-        facilities.every((facility) => item.OtherFacilities[facility] === "Yes")
-    )
-    .sort((a, b) =>
-      sortOrder ? b.ActualPrice - a.ActualPrice : a.ActualPrice - b.ActualPrice
-    );
-
+  console.log(searchQuery, 'inroompage')
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -60,14 +42,33 @@ const HotelsPgRoomDetails = () => {
 
     fetchData();
   }, [activeTab]);
+  
+  const filteredData = data
+    .filter(
+      (item) =>
+        item.Name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.Type.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.State.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .filter(
+      (item) =>
+        (!selectedStates.length || selectedStates.includes(item.State)) &&
+        (!price || price >= parseInt(item.ActualPrice)) &&
+        occupancy <= parseInt(item.Occupancy) &&
+        facilities.every((facility) => item.OtherFacilities[facility] === "Yes")
+    )
+    .sort((a, b) =>
+      sortOrder ? b.ActualPrice - a.ActualPrice : a.ActualPrice - b.ActualPrice
+    );
+
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="min-h-screen p-8 flex flex-col items-center">
-      {filteredData.length !== 0 ? (
-        filteredData.map((item, index) => {
+      {data.length !== 0 ? (
+        data.map((item, index) => {
           if (item.id && item.id.startsWith("Rooms")) {
             return (
               <div

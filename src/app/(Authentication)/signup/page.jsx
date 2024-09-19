@@ -19,7 +19,9 @@ export default function Signup() {
         e.preventDefault();
         try {
             const result = await signInWithPopup(auth, provider);
+            const idToken = await result.user.getIdToken(); // Fetch the ID token
             localStorage.setItem('email', result.user.email);
+            localStorage.setItem('idToken', idToken); // Optionally store the token in localStorage
             toast.success("Sign-up successful! Redirecting...", {
                 position: "top-center",
                 autoClose: 1500,
@@ -33,6 +35,7 @@ export default function Signup() {
             });
         }
     };
+    
 
     const handleSignup = async (e) => {
         e.preventDefault();

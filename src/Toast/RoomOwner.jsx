@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FaExclamationTriangle } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const Toast = ({ onClose, position = "bottom-right" }) => {
+const RoomToast = ({ onClose, position = "bottom-right" }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
@@ -21,8 +21,8 @@ const Toast = ({ onClose, position = "bottom-right" }) => {
   // Framer Motion animation variants for smooth entrance and exit
   const toastAnimation = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }, 
-    exit: { opacity: 0, y: 50 }, 
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 50 },
   };
 
   return (
@@ -40,10 +40,11 @@ const Toast = ({ onClose, position = "bottom-right" }) => {
 
         {/* Message */}
         <div>
-          <p className="font-bold">Chat Support Unavailable</p>
+          <p className="font-bold">Room Addition Feature Unavailable</p>
           <span className="text-sm">
-            We apologize for the inconvenience. Our chat support is currently
-            under construction and will be available soon.
+            We&apos;re working on improving this feature. Room addition is currently
+            under construction and will be available soon. Thank you for your
+            patience.
           </span>
         </div>
       </div>
@@ -51,4 +52,4 @@ const Toast = ({ onClose, position = "bottom-right" }) => {
   );
 };
 
-export default Toast;
+export default RoomToast;

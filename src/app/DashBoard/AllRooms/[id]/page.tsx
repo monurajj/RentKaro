@@ -4,7 +4,7 @@ import data from '../../../../../data.json';
 import React from 'react';
 import RoomsDetails from '../../../../components/RoomDetails';
 
-export default function RoomsDetailsPage() { // Renamed component
+export default function RoomsDetailsPage() { 
     const params = useParams();
     const room = data.find((item) => item.id === params.id); // Use strict equality (===)
 

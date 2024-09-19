@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin, MessageCircle, Clock } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from 'react';
-import ChatToast from './ChatToast'
+import ChatToast from '../Toast/ChatToast'
 
 const ContactUs = () => {
   const [showToast, setShowToast] = useState(false);
