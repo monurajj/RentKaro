@@ -96,7 +96,7 @@ function NavBar() {
                     className="flex items-center space-x-1 text-black transition"
                   >
                     <FaUser />
-                    <span>{user.displayName || user.email}</span>
+                    <span>{user.displayName || user.email.split('@')[0]}</span>
                     {/* <FaCaretDown /> */}
                   </button>
                   {/* {isProfileMenuOpen && (
