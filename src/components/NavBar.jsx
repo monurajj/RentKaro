@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logoImage from "../assets/Logo.png";
+import logoImage from "../assets/updatedLodo01.png";
 import { FaBars, FaTimes, FaUser, FaHome, FaPhoneAlt, FaQuestionCircle, FaComments, FaCaretDown } from "react-icons/fa";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../app/lib/fireBaseConfig";
@@ -73,7 +73,7 @@ function NavBar() {
               <Image
                 src={logoImage}
                 alt="Logo"
-                className="w-12 h-12 object-cover rounded-full border-green-400 border-2"
+                className="w-12 h-12 object-cover rounded-full border-green-400 border-2 "
               />
               <h1 className="ml-2 text-black text-2xl font-Uchen font-semibold">
                 Rent <span>करो</span>
@@ -130,8 +130,9 @@ function NavBar() {
                 </Link>
               )}
 
+              {!user && (
               <div className="flex flex-col justify-center items-start gap-[2px] flex-1 border-r-[1px] border-gray-300"></div>
-              
+              )}
               {!user && (
                 <Link href={"/signup"} className="relative flex group mt-[0.34rem]">
                   <p className="transition-all group-hover:text hover-cursor-pointer">
