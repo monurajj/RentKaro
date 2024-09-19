@@ -6,8 +6,6 @@ import SlideshowImage from "./slideshowImageAbout";
 import Link from "next/link";
 import { useTabContext } from "@/context/pagecontext";
 
-
-
 const AboutUs = () => {
   const { activeTab, setActiveTab } = useTabContext();
   const handleClickGetStarted=(ActiveValue)=>{
