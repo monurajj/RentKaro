@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import AmodeRanganImage from "../assets/AmodeRAnjan.jpeg";
+import AmodeRanganImage from '../assets/AmodeRanjan.png'
 import PrinceImage from "../assets/PrinceShahooImage.png";
 import RitikRajImage from '../assets/ritikraj.jpeg'
 import ExposerRooms from "../assets/ExposerRoom.png";
