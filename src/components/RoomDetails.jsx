@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Star, MapPin, Users, Calendar, Clock, DollarSign, Wifi, Tv, Dumbbell, Coffee, Award, ChevronLeft, ChevronRight, Phone, User, Home, Shield, Utensils, ShoppingCart, Bus, Hospital, CreditCard, Gift, FileText } from 'lucide-react';
 import { FaRegSnowflake } from "react-icons/fa";
 import { GiElevator } from "react-icons/gi";
 import Link from 'next/link';
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../app/lib/fireBaseConfig";
 
 
 const RoomDetails = ({ room }) => {
@@ -18,6 +20,19 @@ const RoomDetails = ({ room }) => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
   const savings = parseInt(room.TotalPrice) - parseInt(room.ActualPrice);
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+
   return (
     <div className="max-w-7xl mx-auto p-6 bg-white shadow-lg rounded-lg text-gray-800">
       <h1 className="text-3xl font-bold text-blue-600 mb-4">{room.Name}</h1>
@@ -63,7 +78,9 @@ const RoomDetails = ({ room }) => {
               <p className="font-semibold text-blue-600 text-lg">₹{savings}</p>
             </div>
 
-            <Link href="/DashBoard/BookingDone" className="btn-1 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 text-center">Book Now</Link>
+            <Link 
+            href= {user ? "/DashBoard/BookingDone" : "/Login"}
+            className="btn-1 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300 text-center">Book Now</Link>
           </div>
         </div>
 

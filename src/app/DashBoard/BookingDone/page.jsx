@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Clock, Loader, ArrowRight } from 'lucide-react';
 
+
 const FalseBooking = () => {
   const [stage, setStage] = useState(0);
   const router = useRouter();

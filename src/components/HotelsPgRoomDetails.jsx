@@ -1,9 +1,13 @@
+import { useSearch } from "@/context/filterContext";
 import { useTabContext } from "@/context/pagecontext";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useSearch } from "@/context/filterContext";
-import data from "../../data.json"
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../app/lib/fireBaseConfig";
+import { Oval } from 'react-loader-spinner';
+import { motion } from 'framer-motion';
+
 
 const HotelsPgRoomDetails = () => {
   const [data, setData] = useState([]);
@@ -19,12 +23,25 @@ const HotelsPgRoomDetails = () => {
     selectedStates,
   } = useSearch();
 
-  console.log(searchQuery, 'inroompage')
+  const ApiEndPoints = process.env.NEXT_PUBLIC_API_URL;
+
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
-      const url = `https://server-rentkaro.vercel.app/jai/rooms/roomtype/${activeTab}`;
+      const url = `${ApiEndPoints}/jai/rooms/roomtype/${activeTab}`;
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -42,7 +59,7 @@ const HotelsPgRoomDetails = () => {
 
     fetchData();
   }, [activeTab]);
-  
+
   const filteredData = data
     .filter(
       (item) =>
@@ -61,9 +78,61 @@ const HotelsPgRoomDetails = () => {
       sortOrder ? b.ActualPrice - a.ActualPrice : a.ActualPrice - b.ActualPrice
     );
 
+    if (isLoading) {
+      return (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '40vh' }}>
+          <Oval 
+            height={40}
+            width={40}
+            color="#4fa94d"
+            wrapperStyle={{}}
+            visible={true}
+            ariaLabel="oval-loading"
+            secondaryColor="#4fa94d"
+            strokeWidth={2}
+            strokeWidthSecondary={2}
+          />
+        </div>
+      );
+    }
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  // if (error) return <div>Error: {error}</div>;
+  if (error){
+    return (
+      <motion.div
+        className="flex flex-col items-center justify-center min-h-[20rem] bg-blue-100"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
+          className="text-6xl mb-4"
+          animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.1, 1.1, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          😢
+        </motion.div>
+  
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-red-600 mb-2 animate-pulse">
+            Oops! Something went wrong
+          </h1>
+          <p className="text-lg text-red-500">
+            {error || "We're having trouble loading the data. Please try again later."}
+          </p>
+        </div>
+  
+        {/* You can add a button to retry or redirect */}
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-6 px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-200"
+        >
+          Retry
+        </button>
+      </motion.div>
+    );
+  };
+  
 
   return (
     <div className="min-h-screen p-8 flex flex-col items-center">
@@ -115,7 +184,12 @@ const HotelsPgRoomDetails = () => {
                       View Details
                     </Link>
 
-                    <Link href="/DashBoard/BookingDone" className="btn-11 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                    <Link
+                      href={
+                        user ? "/DashBoard/BookingDone" : "/Login"
+                      }
+                      className="btn-11 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+                    >
                       Book Now
                     </Link>
                   </div>
@@ -195,7 +269,7 @@ const ImageSlideshow = ({ images }) => {
         src={images[currentImageIndex]}
         alt="Room"
         width={100}
-  height={50}
+        height={50}
         className="w-full h-48 object-cover rounded-lg mb-4"
       />
       {/* Previous Button */}
