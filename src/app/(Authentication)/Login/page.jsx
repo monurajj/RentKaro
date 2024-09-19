@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -12,6 +12,7 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [generalError, setGeneralError] = useState(''); // Added for general errors
     const router = useRouter();
 
     useEffect(() => {
@@ -25,14 +26,19 @@ export default function Login() {
         e.preventDefault();
         try {
             const result = await signInWithPopup(auth, provider);
-            console.log('Google sign-in successful:', result);
             localStorage.setItem('email', result.user.email);
             router.push('/');
         } catch (error) {
             console.error('Error during Google sign-in:', error);
-            console.error('Error code:', error.code);
-            console.error('Error message:', error.message);
-            setEmailError(`Failed to sign in with Google: ${error.message}`);
+            let message = 'Failed to sign in with Google. Please try again.';
+            
+            if (error.code === 'auth/unauthorized-domain') {
+                message = 'Sign-in failed due to an unauthorized domain. Please contact support.';
+            } else if (error.code === 'auth/popup-closed-by-user') {
+                message = 'Google sign-in was cancelled.';
+            }
+
+            setGeneralError(message);
         }
     };
 
@@ -40,20 +46,21 @@ export default function Login() {
         e.preventDefault();
         setEmailError('');
         setPasswordError('');
+        setGeneralError(''); // Clear general error message
         try {
             await signInWithEmailAndPassword(auth, email, password);
             localStorage.setItem('email', email);
             router.push('/');
         } catch (error) {
             console.error('Error during email sign-in:', error);
-            // console.log(error.code, 'errormessage')
-            
+            let message = 'An error occurred during sign-in. Please try again.';
+
             switch (error.code) {
-                case 400:
+                case 'auth/user-not-found':
                     setEmailError('No user found with this email address.');
                     break;
-                case 'auth/invalid-credential':
-                    setPasswordError('Email or Password is invalid. Please try again.');
+                case 'auth/wrong-password':
+                    setPasswordError('Incorrect password. Please try again.');
                     break;
                 case 'auth/invalid-email':
                     setEmailError('Invalid email address. Please check and try again.');
@@ -65,7 +72,7 @@ export default function Login() {
                     setPasswordError('Too many failed login attempts. Please try again later.');
                     break;
                 default:
-                    setEmailError('An error occurred during sign-in. Please try again.');
+                    setGeneralError(message);
             }
         }
     };
@@ -90,7 +97,7 @@ export default function Login() {
 
             <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-0">
                 <div className="bg-white p-6 md:p-10 rounded-lg shadow-lg w-full md:w-[70vh] md:h-[80vh]">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8 text-center text-blue-600">Welcome Back</h1>
+                    <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-blue-600">Welcome Back</h1>
                     <p className="text-center text-gray-600 mb-6 md:mb-8">Find your perfect stay with ease</p>
                     <form onSubmit={handleEmailSignIn} className="space-y-4 md:space-y-6">
                         <div>
@@ -133,11 +140,15 @@ export default function Login() {
                             Sign In
                         </button>
                         {passwordError && 
-                        <p className="w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                        <p className="w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-500 ">
                             {passwordError}
                         </p>}
+                        {generalError && 
+                        <p className="w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            {generalError}
+                        </p>}
                     </form>
-                    <div className="mt-6 flex flex-col space-y-4">
+                    <div className="mt-1 flex flex-col space-y-4">
                         <button onClick={handleResetPassword} className="text-sm text-blue-600 hover:text-blue-700 transition duration-150 ease-in-out">
                             Forgot your password?
                         </button>
