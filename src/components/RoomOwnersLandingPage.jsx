@@ -10,7 +10,6 @@ import HappyPropertiesOwner from "../assets/happypropertiesowner.jpg";
 import IncomeImage from "../assets/IncomeImage.png";
 import RoomToast from "../Toast/RoomOwner"
 import { useState } from "react";
-
 const RoomOwnerLandingPage = () => {
   const [showToast, setShowToast] = useState(false);
   const handleClickMouseOn = () => {
