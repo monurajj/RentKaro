@@ -94,7 +94,6 @@ export default function Login() {
                     className="rounded-lg shadow-lg max-w-full h-auto md:h-[80%] md:w-[80%] object-contain"
                 />
             </div>
-
             <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-0">
                 <div className="bg-white p-6 md:p-10 rounded-lg shadow-lg w-full md:w-[70vh] md:h-[80vh]">
                     <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-center text-blue-600">Welcome Back</h1>
