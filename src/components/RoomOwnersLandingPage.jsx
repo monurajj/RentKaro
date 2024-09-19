@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import AmodeRanganImage from "../assets/AmodeRAnjan.jpeg";
 import PrinceImage from "../assets/PrinceShahooImage.png";
+import RitikRajImage from '../assets/ritikraj.jpeg'
 import ExposerRooms from "../assets/ExposerRoom.png";
 import ReliableCustomers from "../assets/reliablecustomers.jpg";
 import TimeSavingImage from "../assets/timesaving.png";
@@ -257,21 +258,21 @@ const testimonials = [
     name: "Amode Ranjan",
     location: "Patna, Bihar",
     comment:
-      "Rent Kro made it so easy to find tenants. Their support team is fantastic!",
+      "Rent Kro has transformed the way I manage my rental properties. The platform is intuitive, and the support team is always ready to help.",
     image: AmodeRanganImage,
   },
   {
     name: "Ritik Raj",
     location: "Jharkhand, Ranchi",
     comment:
-      "I never imagined renting my property would be this hassle-free. Thanks to Rent Kro!",
-    image: PrinceImage,
+      "The quality of tenants I've found through Rent Kro is outstanding. The screening process really works, and I feel secure with every booking.",
+    image: RitikRajImage,
   },
   {
     name: "Prince Shahoo",
     location: "Maharastra, Mumbai",
     comment:
-      "I never imagined renting my property would be this hassle-free. Thanks to Rent Kro!",
+      "I've been able to maintain a consistent occupancy rate thanks to Rent Kro's wide reach. It's a game-changer for property owners!",
     image: PrinceImage,
   },
 ];
