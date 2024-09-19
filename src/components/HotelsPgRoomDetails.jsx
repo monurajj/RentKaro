@@ -24,7 +24,7 @@ const HotelsPgRoomDetails = () => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
-      const url = `http://localhost:5001/jai/rooms/roomtype/${activeTab}`;
+      const url = `https://server-rentkaro.vercel.app/jai/rooms/roomtype/${activeTab}`;
       try {
         const response = await fetch(url);
         if (!response.ok) {

@@ -28,6 +28,7 @@ export default function Signup() {
             });
             router.push('/');
         } catch (error) {
+            console.log(err, 'errormessage')
             console.error('Error during Google sign-up:', error);
             toast.error('Error during Google sign-up: ' + error.message, {
                 position: "top-center",
@@ -126,6 +127,12 @@ export default function Signup() {
                         <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-150 ease-in-out">
                             Sign Up
                         </button>
+                        {/* <p>password</p> */}
+                        { password.length < 8  &&  password.length > 1 &&
+                        <p className="w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Password must be more than 8 characters
+                        </p>
+                        }
                     </form>
                     <div className="mt-6 flex flex-col space-y-4">
                         <button onClick={handleSignIn} className="text-sm text-gray-600 hover:text-gray-700 transition duration-150 ease-in-out">
