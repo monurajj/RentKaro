@@ -67,8 +67,8 @@ const HotelsPgRoomDetails = () => {
 
   return (
     <div className="min-h-screen p-8 flex flex-col items-center">
-      {data.length !== 0 ? (
-        data.map((item, index) => {
+      {filteredData.length !== 0 ? (
+        filteredData.map((item, index) => {
           if (item.id && item.id.startsWith("Rooms")) {
             return (
               <div

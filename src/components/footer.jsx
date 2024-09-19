@@ -24,7 +24,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/DashBoard/OwnerDetails" className="hover:text-green-200">Home</a></li>
+              <li><a href="/DashBoard" className="hover:text-green-200">Home</a></li>
               <li><a href="/DashBoard/AllRooms" className="hover:text-green-200">Search Rooms</a></li>
               <li><a href="/DashBoard/OwnerDetails" className="hover:text-green-200">List Your Property</a></li>
               <li><a href="/DashBoard#aboutUs" className="hover:text-green-200">About Us</a></li>

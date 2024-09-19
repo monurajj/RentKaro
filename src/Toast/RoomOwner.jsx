@@ -34,10 +34,9 @@ const RoomToast = ({ onClose, position = "bottom-right" }) => {
       variants={toastAnimation}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-3 bg-red-500 text-white rounded-lg shadow-lg p-4">
         {/* Alert Icon */}
-        <FaExclamationTriangle className="text-yellow-300" size={24} />
-
+        <FaExclamationTriangle className="text-yellow-500 mr-2" size={24} />
         {/* Message */}
         <div>
           <p className="font-bold">Room Addition Feature Unavailable</p>
