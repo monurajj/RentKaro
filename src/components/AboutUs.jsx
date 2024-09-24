@@ -229,7 +229,7 @@ const AboutUs = () => {
 
               <div className="text-center group">
                 <ThumbsUp
-                  className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:skew-y-3 group-hover:scale-110 duration-300 ease-in-out"
+                  className="text-green-600 h-12 w-12 mx-auto transition-transform transform group-hover:skew-y-3 group-hover:scale-110 duration-300 ease-in-out "
                   aria-hidden="true"
                 />
                 <p className="mt-2 text-lg font-medium text-gray-900 transition-transform transform group-hover:-translate-y-1 group-hover:scale-105 duration-300 ease-in-out">

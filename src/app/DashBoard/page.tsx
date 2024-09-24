@@ -8,12 +8,18 @@ import homePage01 from '../../assets/homePageImage01.png';
 import homePage02 from '../../assets/homePageImage02.png';
 import homePage03 from '../../assets/homePageImage03.png';
 import homePage04 from '../../assets/homePageImage04.png';
+// import homePage05 from '../../assets/homepageimage01.jpeg';
+import homePage06 from '../../assets/homepageimage02.jpeg';
+import homePage07 from '../../assets/homepageimage03.jpeg';
+// import homePage08 from '../../assets/homepageimageo4.png';
+
 
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   // const images = Object.values(data[0].Images);
-  const images = [homePage01, homePage02, homePage03, homePage04];
+  const images = [homePage01, homePage02, homePage03, homePage04, homePage06, homePage07];
+  // const images = [homePage05, homePage06, homePage07];
 
   const punchlines = [
     "Find Your Perfect Stay with Just One Click",

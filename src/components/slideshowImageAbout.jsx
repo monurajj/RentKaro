@@ -1,15 +1,23 @@
 "use client"
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import data from '../../data.json'
+// import data from '../../data.json'
+import aboutpageimage01 from "../assets/aboutpageiamge01.png"
+import aboutpageimage02 from "../assets/aboutpageimage02.jpeg"
+import aboutpageimage03 from "../assets/aboutpageimage03.jpeg"
+import aboutpageimage04 from "../assets/aboutpageimage04.jpeg"
+import aboutpageimage05 from "../assets/aboutpageiamge05.jpeg"
+// import aboutpageimage06 from "../assets/aboutpageimage06.jpeg"
+
 
 const SlideshowAboutPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [direction, setDirection] = useState('next');
   
-  const aboutPageData = data.find(item => item.id === "AboutpageImage");
-  const images = aboutPageData ? Object.values(aboutPageData.Images) : [];
+  // const aboutPageData = data.find(item => item.id === "AboutpageImage");
+  // const images = aboutPageData ? Object.values(aboutPageData.Images) : [];
 
+  const images = [aboutpageimage01, aboutpageimage02, aboutpageimage03, aboutpageimage04, aboutpageimage05]
   useEffect(() => {
     if (images.length === 0) return;
     
