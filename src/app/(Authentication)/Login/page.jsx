@@ -148,24 +148,24 @@ export default function Login() {
                         </p>}
                     </form>
                     <div className="mt-1 flex flex-col space-y-4">
-                        <button onClick={handleResetPassword} className="text-sm text-blue-600 hover:text-blue-700 transition duration-150 ease-in-out">
+                        <button onClick={handleResetPassword} className="text-sm text-blue-600 hover:text-blue-700 transition duration-150 ease-in-out mt-4">
                             Forgot your password?
                         </button>
-                        <button onClick={handleNavigateToSignUp} className="text-sm text-gray-600 hover:text-gray-700 transition duration-150 ease-in-out">
+                        <button onClick={handleNavigateToSignUp} className="text-sm text-gray-600 hover:text-gray-700 transition duration-150 ease-in-out mt-4">
                             Don&apos;t have an account? <span className="text-blue-600 font-medium">Create New One</span>
                         </button>
-                        <div className="relative">
+                        {/* <div className="relative">
                             <div className="absolute inset-0 flex items-center">
                                 <div className="w-full border-t border-gray-300"></div>
                             </div>
                             <div className="relative flex justify-center text-sm">
                                 <span className="px-2 bg-white text-gray-500">Or continue with</span>
                             </div>
-                        </div>
-                        <button onClick={handleGoogleSignIn} className="w-full flex items-center justify-center py-3 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                        </div> */}
+                        {/* <button onClick={handleGoogleSignIn} className="w-full flex items-center justify-center py-3 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
                             <FaGoogle className="h-5 w-5 text-red-500 mr-2" />
                             Sign In with Google
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>
