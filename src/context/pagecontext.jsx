@@ -1,11 +1,12 @@
 // TabContext.js
 "use client"
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, use, useContext, useEffect, useState } from 'react';
 
 const TabContext = createContext();
 
 export const TabProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState('pg');
+  // const [currentPage, setCurrentPage] = useState('')
   console.log("set active tab", activeTab)
   
   useEffect(() => {

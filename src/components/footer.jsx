@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logoImage from '../assets/Logo.png'
+import logoImage from '../assets/updatedLodo01.png'
 import Image from 'next/image';
 
 const Footer = () => {
@@ -9,11 +9,11 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="mb-4">
+            <div className="mb-4 ">
               <Image
                 src={logoImage} 
                 alt="Rentkaro Logo" 
-                className="h-20 w-20 rounded-[50%]"
+                className="h-20 w-20 rounded-[50%] border-2 border-green-500"
               />
             </div>
             <h3 className="text-2xl font-bold mb-2">Rentkaro</h3>
