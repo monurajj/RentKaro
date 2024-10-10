@@ -41,7 +41,7 @@ const HotelsPgRoomDetails = () => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
-      const url = `${ApiEndPoints}/jai/rooms/roomtype/${activeTab}`;
+      const url = `${ApiEndPoints}/rooms/roomtype/${activeTab}`;
       try {
         const response = await fetch(url);
         if (!response.ok) {
