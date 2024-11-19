@@ -77,7 +77,7 @@ const SidePanel = ({ isOpen, onClose }) => {
             </div>
             {user ? (
               <div className="text-white">
-                <p className="font-semibold"> Welcome '{user}'</p>
+                <p className="font-semibold"> Welcome {user}</p>
                 {/* <Link href="/profile" className="text-sm hover:underline" onClick={onClose}>My Profile</Link> */}
               </div>
             ) : (
