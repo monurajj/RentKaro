@@ -2,14 +2,14 @@ import { Phone, Mail, MapPin, MessageCircle, Clock } from 'lucide-react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useState } from 'react';
 import ChatToast from '../Toast/ChatToast'
+import { Router } from 'next/router';
+import Link from 'next/link';
 
 const ContactUs = () => {
   const [showToast, setShowToast] = useState(false);
-  const handleClickMouseOn = () => {
-    setShowToast(true)
-  }
-  const handleClickMouseOut = () => {
-    setShowToast(false)
+
+  const handleClickChat =()=>{
+    
   }
 
   return (
@@ -78,16 +78,18 @@ const ContactUs = () => {
             <div className="flex items-center justify-center bg-green-50 p-6 rounded-lg shadow-sm">
               <MessageCircle className="mr-4 text-green-500" size={48} />
               <div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-700 text-lg pb-4">
                   Our team is ready to assist you! Start a chat for quick support.
                 </p>
-                <button 
-                  className=" mt-6 px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300"
-                  onMouseEnter={handleClickMouseOn}
-                  onMouseLeave={handleClickMouseOut}
+                <Link href={"./chatbot"}
+                  className=" mt-8 px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300"
+                  // onMouseEnter={handleClickMouseOn}
+                  // onMouseLeave={handleClickMouseOut}
+                  onClick={handleClickChat()}
+
                 >
                   Start Chat
-                </button>
+                </Link>
               </div>
             </div>
           </div>

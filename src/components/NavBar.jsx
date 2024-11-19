@@ -1,17 +1,23 @@
 "use client";
 import SidePanel from "@/Modal/sidePanelOptiions";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, useRef, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import {
+  FaBars,
+  FaTimes,
+  FaUser,
+  FaCaretDown,
+  FaHome,
+  FaPhoneAlt,
+  FaComments,
+  FaQuestionCircle,
+} from "react-icons/fa";
 import logoImage from "../assets/updatedLodo01.png";
-import { FaBars, FaTimes, FaUser, FaHome, FaPhoneAlt, FaQuestionCircle, FaComments, FaCaretDown } from "react-icons/fa";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../app/lib/fireBaseConfig";
 
 function NavBar() {
-  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -21,30 +27,51 @@ function NavBar() {
   const router = useRouter();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-    return () => unsubscribe();
+    const token = localStorage.getItem("token");
+    if (token) {
+      const username = localStorage.getItem("username");
+      setUser(username);
+    }
   }, []);
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (profileMenuRef.current && !profileMenuRef.current.contains(event.target)) {
+    const handleClickOutside = (event) => {
+      if (
+        profileMenuRef.current &&
+        !profileMenuRef.current.contains(event.target)
+      ) {
         setIsProfileMenuOpen(false);
       }
-    }
+    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleSignOut = async () => {
-    await signOut(auth);
-    localStorage.clear();
-    router.push('/');
+    try {
+      // Clear all storage
+      localStorage.clear(); // This will clear all localStorage items
+      // or specifically clear required items:
+      // localStorage.removeItem("token");
+      // localStorage.removeItem("username");
+      // localStorage.removeItem("refreshToken");
+      
+      // Reset user state
+      setUser(null);
+      
+      // Close any open menus
+      setIsProfileMenuOpen(false);
+      setIsMobileMenuOpen(false);
+      
+      // Force a hard refresh and redirect to home page
+      router.push('/');
+      router.refresh();
+      
+      // Optional: If the above doesn't work, force a page reload
+      window.location.href = '/';
+    } catch (error) {
+      console.error('Error during sign out:', error);
+    }
   };
 
   const togglePanel = () => {
@@ -60,21 +87,23 @@ function NavBar() {
   };
 
   const handleClickLogo = () => {
-    router.push("./");
+    router.push("/");
   };
 
   return (
     <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full backdrop-blur-lg transition-all bg-gradient-to-r from-blue-600/45 to-green-400">
-    {/* //  <nav className="sticky z-[100] h-14 inset-x-0 top-0 w-full backdrop-blur-lg bg-blue-700/45"> */}
       <div className="w-full">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
-            <button className="flex items-center p-1" onClick={handleClickLogo}>
+            <button
+              className="flex items-center p-1"
+              onClick={handleClickLogo}
+            >
               <Image
                 src={logoImage}
                 alt="Logo"
-                className="w-12 h-12 object-cover rounded-full border-green-400 border-2 "
+                className="w-12 h-12 object-cover rounded-full border-green-400 border-2"
               />
               <h1 className="ml-2 text-black text-2xl font-Uchen font-semibold">
                 Rent <span>करो</span>
@@ -91,21 +120,24 @@ function NavBar() {
               </Link>
 
               {user ? (
-                <div className="relative mt-1 " ref={profileMenuRef}>
+                <div className="relative mt-1" ref={profileMenuRef}>
                   <button
                     onClick={toggleProfileMenu}
                     className="flex items-center space-x-1 text-black transition"
                   >
                     <FaUser />
-                    <span>{user.displayName || user.email.split('@')[0]}</span>
-                    {/* <FaCaretDown /> */}
+                    <span>{user}</span>
+                    <FaCaretDown />
                   </button>
-                  {/* {isProfileMenuOpen && (
-                    <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1">
-                      <Link href="/" className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+
+                  {isProfileMenuOpen && (
+                    <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                      <Link
+                        href="/"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
                         My Profile
                       </Link>
-
                       <button
                         onClick={handleSignOut}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -113,34 +145,24 @@ function NavBar() {
                         Sign Out
                       </button>
                     </div>
-                  )} */}
+                  )}
                 </div>
-
-
-
-
               ) : (
-
-
-
-                <Link href={"/Login"} className="relative group mt-[0.34rem]">
-                  <p className="transition-all group-hover:text hover-cursor-pointer">
-                    Sign In
-                  </p>
-                  <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                </Link>
-              )}
-
-              {!user && (
-              <div className="flex flex-col justify-center items-start gap-[2px] flex-1 border-r-[1px] border-gray-300"></div>
-              )}
-              {!user && (
-                <Link href={"/signup"} className="relative flex group mt-[0.34rem]">
-                  <p className="transition-all group-hover:text hover-cursor-pointer">
-                    Sign Up
-                  </p>
-                  <span className="absolute left-0 right-0 -bottom-0.5 h-1 bg-emerald-300 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                </Link>
+                <>
+                  <Link href={"/Login"} className="relative group mt-[0.34rem]">
+                    <p className="transition-all group-hover:text hover-cursor-pointer">
+                      Sign In
+                    </p>
+                  </Link>
+                  <Link
+                    href={"/signup"}
+                    className="relative group mt-[0.34rem]"
+                  >
+                    <p className="transition-all group-hover:text hover-cursor-pointer">
+                      Sign Up
+                    </p>
+                  </Link>
+                </>
               )}
 
               <button
@@ -154,7 +176,11 @@ function NavBar() {
             {/* Mobile Menu Icon */}
             <div className="md:hidden flex items-center">
               <button onClick={toggleMobileMenu} className="text-black">
-                {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                {isMobileMenuOpen ? (
+                  <FaTimes size={24} />
+                ) : (
+                  <FaBars size={24} />
+                )}
               </button>
             </div>
           </div>
@@ -167,19 +193,22 @@ function NavBar() {
             }`}
           >
             <ul className="flex flex-col space-y-4 p-4">
-            {user ? (
+              {user ? (
                 <div className="relative z-50" ref={profileMenuRef}>
                   <button
                     onClick={toggleProfileMenu}
                     className="flex items-center space-x-1 text-black transition"
                   >
                     <FaUser />
-                    <span>{user.displayName || user.email}</span>
+                    <span>{user}</span>
                     <FaCaretDown />
                   </button>
                   {isProfileMenuOpen && (
                     <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1">
-                      <Link href="/" className="block px-4 py-2 text-sm text-gray-700 mt-2">
+                      <Link
+                        href="/"
+                        className="block px-4 py-2 text-sm text-gray-700 mt-2"
+                      >
                         My Profile
                       </Link>
                       <button
@@ -192,8 +221,11 @@ function NavBar() {
                   )}
                 </div>
               ) : (
-                <Link href={"/Login"} className="text-black hover:text-emerald-500 transition relative group flex items-center">
-                  <FaUser className="mr-2"/>
+                <Link
+                  href={"/Login"}
+                  className="text-black hover:text-emerald-500 transition relative group flex items-center"
+                >
+                  <FaUser className="mr-2" />
                   <p className="transition-all group-hover:text hover-cursor-pointer">
                     Sign In
                   </p>
@@ -246,7 +278,9 @@ function NavBar() {
       </div>
 
       {/* Render the SidePanel */}
-      {!isMobileMenuOpen && <SidePanel isOpen={isPanelOpen} onClose={togglePanel} />}
+      {!isMobileMenuOpen && (
+        <SidePanel isOpen={isPanelOpen} onClose={togglePanel} />
+      )}
     </nav>
   );
 }
