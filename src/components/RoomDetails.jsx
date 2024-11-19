@@ -4,8 +4,7 @@ import { Star, MapPin, Users, Calendar, Clock, DollarSign, Wifi, Tv, Dumbbell, C
 import { FaRegSnowflake } from "react-icons/fa";
 import { GiElevator } from "react-icons/gi";
 import Link from 'next/link';
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../app/lib/fireBaseConfig";
+
 
 
 const RoomDetails = ({ room }) => {
@@ -21,15 +20,13 @@ const RoomDetails = ({ room }) => {
   };
   const savings = parseInt(room.TotalPrice) - parseInt(room.ActualPrice);
   const [user, setUser] = useState(null);
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-    return () => unsubscribe();
+    const token = localStorage.getItem("token");
+    if (token) {
+      const username = localStorage.getItem("username");
+      setUser(username);
+    }
   }, []);
 
 

@@ -1,7 +1,6 @@
 import { Home, Info, MessageCircle, Phone, Search, User, X, LogOut } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../app/lib/fireBaseConfig';
 import { useRouter } from 'next/navigation';
 
@@ -18,13 +17,17 @@ const SidePanel = ({ isOpen, onClose }) => {
     { id: 'about-us', name: "About Us", icon: Info, href: "/DashBoard#aboutUs" },
   ];
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
+  useEffect(()=>{
+    const username = localStorage.getItem("username");
+    setUser(username);
+  },[])
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUser(currentUser);
+  //   });
 
-    return () => unsubscribe();
-  }, []);
+  //   return () => unsubscribe();
+  // }, []);
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -74,8 +77,8 @@ const SidePanel = ({ isOpen, onClose }) => {
             </div>
             {user ? (
               <div className="text-white">
-                <p className="font-semibold">{user.displayName || user.email}</p>
-                <Link href="/profile" className="text-sm hover:underline" onClick={onClose}>My Profile</Link>
+                <p className="font-semibold"> Welcome '{user}'</p>
+                {/* <Link href="/profile" className="text-sm hover:underline" onClick={onClose}>My Profile</Link> */}
               </div>
             ) : (
               <div className="text-white">
