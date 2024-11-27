@@ -26,14 +26,26 @@ function NavBar() {
   const [user, setUser] = useState(null);
   const router = useRouter();
 
+  // Effect to check and set user on component mount
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      const username = localStorage.getItem("username");
-      setUser(username);
-    }
+    const checkUserAuthentication = () => {
+      try {
+        const token = localStorage.getItem("token");
+        const username = localStorage.getItem("username");
+        if (token && username) {
+          setUser(username);
+        } else {
+          setUser(null);
+        }
+      } catch (error) {
+        console.error("Error checking authentication:", error);
+        setUser(null);
+      }
+    };
+    checkUserAuthentication();
   }, []);
 
+  // Effect to handle click outside of profile menu
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -43,34 +55,33 @@ function NavBar() {
         setIsProfileMenuOpen(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+
+  // Improved sign-out method with more robust handling
   const handleSignOut = async () => {
     try {
-      // Clear all storage
-      localStorage.clear(); // This will clear all localStorage items
-      // or specifically clear required items:
-      // localStorage.removeItem("token");
-      // localStorage.removeItem("username");
-      // localStorage.removeItem("refreshToken");
-      
-      // Reset user state
+      // Systematically clear all authentication-related items
+      const itemsToRemove = [
+        "token", 
+        "username", 
+        "refreshToken", 
+        "userId",  // Add any other tokens or user-related items
+      ];
+
+      itemsToRemove.forEach(item => localStorage.removeItem(item));
       setUser(null);
-      
-      // Close any open menus
       setIsProfileMenuOpen(false);
       setIsMobileMenuOpen(false);
-      
-      // Force a hard refresh and redirect to home page
       router.push('/');
-      router.refresh();
       
-      // Optional: If the above doesn't work, force a page reload
-      window.location.href = '/';
+      window.location.reload();
     } catch (error) {
       console.error('Error during sign out:', error);
+      // Optionally show a user-friendly error toast or notification
     }
   };
 
@@ -83,6 +94,7 @@ function NavBar() {
   };
 
   const toggleProfileMenu = () => {
+    setIsPanelOpen(false)
     setIsProfileMenuOpen(!isProfileMenuOpen);
   };
 
@@ -104,6 +116,7 @@ function NavBar() {
                 src={logoImage}
                 alt="Logo"
                 className="w-12 h-12 object-cover rounded-full border-green-400 border-2"
+                priority  // Added priority for faster loading
               />
               <h1 className="ml-2 text-black text-2xl font-Uchen font-semibold">
                 Rent <span>करो</span>
@@ -120,7 +133,7 @@ function NavBar() {
               </Link>
 
               {user ? (
-                <div className="relative mt-1" ref={profileMenuRef}>
+                <div className="relative mt-1" >
                   <button
                     onClick={toggleProfileMenu}
                     className="flex items-center space-x-1 text-black transition"
@@ -131,9 +144,12 @@ function NavBar() {
                   </button>
 
                   {isProfileMenuOpen && (
-                    <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                    ref={profileMenuRef}
+                    >
                       <Link
-                        href="/"
+                        onClick={toggleProfileMenu}
+                        href="/profile"  // Updated to a more specific route
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         My Profile
@@ -171,6 +187,7 @@ function NavBar() {
               >
                 <GiHamburgerMenu className="h-[2rem] w-[2rem]" />
               </button>
+
             </ul>
 
             {/* Mobile Menu Icon */}
@@ -194,7 +211,7 @@ function NavBar() {
           >
             <ul className="flex flex-col space-y-4 p-4">
               {user ? (
-                <div className="relative z-50" ref={profileMenuRef}>
+                <div className="relative z-50" >
                   <button
                     onClick={toggleProfileMenu}
                     className="flex items-center space-x-1 text-black transition"
@@ -204,19 +221,22 @@ function NavBar() {
                     <FaCaretDown />
                   </button>
                   {isProfileMenuOpen && (
-                    <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1">
+                    <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1" ref={profileMenuRef}>
                       <Link
-                        href="/"
+                      onClick={toggleProfileMenu}
+                        href="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 mt-2"
                       >
                         My Profile
                       </Link>
+
                       <button
                         onClick={handleSignOut}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="z-[100] block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Sign Out
                       </button>
+
                     </div>
                   )}
                 </div>
@@ -279,7 +299,7 @@ function NavBar() {
 
       {/* Render the SidePanel */}
       {!isMobileMenuOpen && (
-        <SidePanel isOpen={isPanelOpen} onClose={togglePanel} />
+        <SidePanel isOpen={isPanelOpen} onClose={togglePanel} setIsPanelOpen={setIsPanelOpen}/>
       )}
     </nav>
   );

@@ -26,15 +26,11 @@ const HotelsPgRoomDetails = () => {
   const ApiEndPoints = process.env.NEXT_PUBLIC_API_URL;
 
   const [user, setUser] = useState(null);
+
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-    return () => unsubscribe();
+    const username = localStorage.getItem("username");
+    setUser(username)
   }, []);
 
   useEffect(() => {

@@ -14,11 +14,11 @@ export const SearchProvider = ({ children }) => {
     const [price, setPrice] = useState('')
 
     //   console.log(searchQuery, "searchInput")
-      console.log(price, "pricefilter")
-      console.log(sortOrder, "order")
-      console.log(occupancy, "occupancy")
-      console.log(facilities, "facilities")
-      console.log(selectedStates, 'selectedstate')
+      // console.log(price, "pricefilter")
+      // console.log(sortOrder, "order")
+      // console.log(occupancy, "occupancy")
+      // console.log(facilities, "facilities")
+      // console.log(selectedStates, 'selectedstate')
 
     return (
         <SearchContext.Provider value={{ searchQuery, setSearchQuery, 

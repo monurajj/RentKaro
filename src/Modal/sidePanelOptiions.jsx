@@ -4,11 +4,36 @@ import { useEffect, useRef, useState } from 'react';
 import { auth } from '../app/lib/fireBaseConfig';
 import { useRouter } from 'next/navigation';
 
-const SidePanel = ({ isOpen, onClose }) => {
+const SidePanel = ({ isOpen, onClose, setIsPanelOpen }) => {
   const panelRef = useRef(null);
   const [user, setUser] = useState(null);
   const router = useRouter();
 
+  const handleSignOut = async () => {
+    try {
+      // Systematically clear all authentication-related items
+      const itemsToRemove = [
+        "token", 
+        "username", 
+        "refreshToken", 
+        "userId",  // Add any other tokens or user-related items
+      ];
+
+      itemsToRemove.forEach(item => localStorage.removeItem(item));
+      setUser(null);
+      setIsProfileMenuOpen(false);
+      setIsMobileMenuOpen(false);
+      router.push('/');
+      
+      window.location.reload();
+    } catch (error) {
+      console.error('Error during sign out:', error);
+      // Optionally show a user-friendly error toast or notification
+    }
+  };
+  const turnOff = ()=>{
+    setIsPanelOpen(false)
+  }
   const menuItems = [
     { id: 'find-accommodation', name: "Find Accommodation", icon: Search, href: "/DashBoard/AllRooms" },
     { id: 'list-property', name: "List Your Property", icon: Home, href: "/DashBoard/OwnerDetails" },
@@ -49,17 +74,6 @@ const SidePanel = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
-  const handleSignOut = async () => {
-    try {
-      await signOut(auth);
-      localStorage.clear();
-      router.push('/');
-      onClose();
-    } catch (error) {
-      console.error("Error signing out: ", error);
-    }
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -96,19 +110,21 @@ const SidePanel = ({ isOpen, onClose }) => {
           </button>
         </div>
         <nav className="flex-grow overflow-y-auto py-4 px-4 space-y-2">
-          {menuItems.map((item) => (
+          {menuItems.map((item) => {
+            console.log(item)
+            return(
             <Link
               key={item.id}
               href={item.href}
               className="block w-full"
-              onClick={onClose}
+              onClick={turnOff}
             >
               <div className="flex items-center text-left px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105 gap-4">
                 <item.icon className="mr-4 h-6 w-6 text-blue-500" />
                 <span className="font-medium">{item.name}</span>
               </div>
             </Link>
-          ))}
+          )})}
           {user && (
             <button
               onClick={handleSignOut}
@@ -116,7 +132,8 @@ const SidePanel = ({ isOpen, onClose }) => {
             >
               <div className="flex items-center gap-4">
                 <LogOut className="mr-4 h-6 w-6 text-blue-500" />
-                <span className="font-medium">Sign Out</span>
+                <span className="font-medium"
+                onClick={handleSignOut}>Sign Out</span>
               </div>
             </button>
           )}
