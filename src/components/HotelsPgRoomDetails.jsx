@@ -3,8 +3,8 @@ import { useTabContext } from "@/context/pagecontext";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../app/lib/fireBaseConfig";
+// import { onAuthStateChanged, signOut } from "firebase/auth";
+// import { auth } from "../app/lib/fireBaseConfig";
 import { Oval } from 'react-loader-spinner';
 import { motion } from 'framer-motion';
 

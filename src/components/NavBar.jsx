@@ -52,7 +52,8 @@ function NavBar() {
         profileMenuRef.current &&
         !profileMenuRef.current.contains(event.target)
       ) {
-        setIsProfileMenuOpen(false);
+        // setIsProfileMenuOpen(false);
+        return
       }
     };
 
@@ -94,7 +95,7 @@ function NavBar() {
   };
 
   const toggleProfileMenu = () => {
-    setIsPanelOpen(false)
+    // setIsPanelOpen(false)
     setIsProfileMenuOpen(!isProfileMenuOpen);
   };
 
@@ -223,7 +224,7 @@ function NavBar() {
                   {isProfileMenuOpen && (
                     <div className="absolute right-0 mt-4 w-48 bg-white rounded-md shadow-lg py-1" ref={profileMenuRef}>
                       <Link
-                      onClick={toggleProfileMenu}
+                        onClick={toggleProfileMenu}
                         href="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 mt-2"
                       >
