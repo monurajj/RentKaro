@@ -19,7 +19,7 @@ export default function Signup() {
         setErrorMessage('');
 
         try {
-            const response = await fetch('https://server-rentkaro.onrender.com/signup', {
+            const response = await fetch('https://server-rentkaro-original.vercel.app/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

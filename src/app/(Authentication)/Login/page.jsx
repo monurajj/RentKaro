@@ -13,6 +13,8 @@ export default function Login() {
     const [generalError, setGeneralError] = useState('');
     const router = useRouter();
 
+    // const  apiurl= process.env.NEXT_PUBLIC_API_URL
+
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
         if (storedToken) {
@@ -32,7 +34,7 @@ export default function Login() {
             : { username: emailOrUsername, password };
         
         try {
-            const response = await fetch('https://server-rentkaro.onrender.com/login', {
+            const response = await fetch('https://server-rentkaro-original.vercel.app/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
